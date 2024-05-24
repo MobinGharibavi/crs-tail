@@ -691,12 +691,20 @@ video {
   top: 1.12rem;
 }
 
-.top-\[3\.75rem\] {
-  top: 3.75rem;
+.top-\[2\.75rem\] {
+  top: 2.75rem;
 }
 
 .top-\[4\.25rem\] {
   top: 4.25rem;
+}
+
+.-left-5 {
+  left: -1.25rem;
+}
+
+.top-5 {
+  top: 1.25rem;
 }
 
 .isolate {
@@ -1050,6 +1058,10 @@ video {
   height: 2rem;
 }
 
+.h-\[0\.125rem\] {
+  height: 0.125rem;
+}
+
 .h-\[10\.5rem\] {
   height: 10.5rem;
 }
@@ -1113,6 +1125,10 @@ video {
 
 .h-screen {
   height: 100vh;
+}
+
+.h-72 {
+  height: 18rem;
 }
 
 .max-h-\[16\.5rem\] {
@@ -1195,6 +1211,10 @@ video {
   width: 24rem;
 }
 
+.w-\[27\.375rem\] {
+  width: 27.375rem;
+}
+
 .w-\[29rem\] {
   width: 29rem;
 }
@@ -1234,6 +1254,10 @@ video {
 
 .w-screen {
   width: 100vw;
+}
+
+.w-60 {
+  width: 15rem;
 }
 
 .min-w-\[13\.25rem\] {
@@ -1312,6 +1336,11 @@ video {
   border-collapse: separate;
 }
 
+.rotate-90 {
+  --tw-rotate: 90deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .\!transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) !important;
 }
@@ -1330,6 +1359,10 @@ video {
 
 .transform-none {
   transform: none;
+}
+
+.cursor-auto {
+  cursor: auto;
 }
 
 .cursor-pointer {
@@ -1838,6 +1871,14 @@ video {
   gap: 5.5rem;
 }
 
+.gap-1 {
+  gap: 0.25rem;
+}
+
+.gap-1\.5 {
+  gap: 0.375rem;
+}
+
 .gap-x-20 {
   -moz-column-gap: 5rem;
        column-gap: 5rem;
@@ -2213,6 +2254,10 @@ video {
   border-radius: 9999px;
 }
 
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
 .rounded-b {
   border-bottom-right-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem;
@@ -2373,6 +2418,11 @@ video {
 
 .border-none {
   border-style: none;
+}
+
+.border-\[\#307FF8\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(48 127 248 / var(--tw-border-opacity));
 }
 
 .border-\[\#E1E2E4\] {
@@ -2648,6 +2698,11 @@ video {
   padding-right: 1.75rem;
 }
 
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
 .px-\[2\.5rem\] {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
@@ -2752,6 +2807,10 @@ video {
 
 .pt-\[10\.5rem\] {
   padding-top: 10.5rem;
+}
+
+.pb-5 {
+  padding-bottom: 1.25rem;
 }
 
 .text-left {
@@ -3063,6 +3122,11 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.text-gray-400 {
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
+}
+
 .underline {
   text-decoration-line: underline;
 }
@@ -3109,16 +3173,16 @@ video {
   -moz-osx-font-smoothing: auto;
 }
 
+.opacity-30 {
+  opacity: 0.3;
+}
+
 .opacity-50 {
   opacity: 0.5;
 }
 
 .opacity-\[0\.2\] {
   opacity: 0.2;
-}
-
-.opacity-\[0\.3\] {
-  opacity: 0.3;
 }
 
 .bg-blend-normal {
@@ -3796,8 +3860,16 @@ body {
 }
 
 @media (max-width: 1200px) {
+  .mobile\:fixed {
+    position: fixed;
+  }
+
   .mobile\:relative {
     position: relative;
+  }
+
+  .mobile\:top-0 {
+    top: 0px;
   }
 
   .mobile\:top-\[12rem\] {
@@ -3847,6 +3919,10 @@ body {
     display: none;
   }
 
+  .mobile\:h-\[100vh\] {
+    height: 100vh;
+  }
+
   .mobile\:h-\[12rem\] {
     height: 12rem;
   }
@@ -3857,6 +3933,10 @@ body {
 
   .mobile\:max-h-\[calc\(100vh-20rem\)\] {
     max-height: calc(100vh - 20rem);
+  }
+
+  .mobile\:w-\[100vw\] {
+    width: 100vw;
   }
 
   .mobile\:w-fit {
@@ -3916,6 +3996,10 @@ body {
 
   .mobile\:border-0 {
     border-width: 0px;
+  }
+
+  .mobile\:p-6 {
+    padding: 1.5rem;
   }
 
   .mobile\:px-0 {
@@ -4008,14 +4092,6 @@ body {
   right: 1.5rem;
 }
 
-.ltr\:right-8:where([dir="ltr"], [dir="ltr"] *) {
-  right: 2rem;
-}
-
-.ltr\:right-5:where([dir="ltr"], [dir="ltr"] *) {
-  right: 1.25rem;
-}
-
 .ltr\:ml-2:where([dir="ltr"], [dir="ltr"] *) {
   margin-left: 0.5rem;
 }
@@ -4056,6 +4132,10 @@ body {
 
 .rtl\:right-4:where([dir="rtl"], [dir="rtl"] *) {
   right: 1rem;
+}
+
+.rtl\:-left-16:where([dir="rtl"], [dir="rtl"] *) {
+  left: -4rem;
 }
 
 .rtl\:mr-2:where([dir="rtl"], [dir="rtl"] *) {
