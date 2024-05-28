@@ -8,7 +8,7 @@ import "./search-inputs.js";
 const Calender = document.querySelector(".calender");
 const date = document.querySelector(".Date");
 
-const showAndCloseCalender = (event) => {
+const showAndCloseCalender = () => {
   Calender.classList.toggle("hidden");
 };
 
