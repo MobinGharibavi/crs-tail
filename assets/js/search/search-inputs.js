@@ -18,11 +18,18 @@ ariportLists.forEach((list) => {
 		const airport = target.closest('.js-airport');
 		if (!airport) return;
 
-		const ariportName = airport.querySelector('span').nextSibling.nodeValue.trim();
-		const relatedInput = list.id === 'origin_airports_list' ? originInput : destinationInput;
-		relatedInput.value = ariportName;
+		 // Extract the text node value after the <span> element
+		 const airportTextNode = airport.querySelector('span').nextSibling;
 
-		hideElement(list);
+		 // Check if the text node exists and trim its value
+		 if (airportTextNode && airportTextNode.nodeType === Node.TEXT_NODE) {
+		   const airportName = airportTextNode.nodeValue.trim().replace(/\s+/g, ' ');
+		   const relatedInput = list.id === 'origin_airports_list' ? originInput : destinationInput;
+		   relatedInput.value = airportName;
+	 
+		   // Optionally hide the element
+		   hideElement(list);
+		 }
 	});
 });
 

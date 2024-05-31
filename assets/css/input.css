@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url(https://fonts.googleapis.com/css?family=Sanchez);
 /* classes inside @layer can be used with tailwind utilities. example: rtl:turn */
 @layer utilities {
   /* to rotate images and icons when using rtl layout */
@@ -111,3 +112,4 @@ body {
     transform: rotate(-360deg);
   }
 }
+
