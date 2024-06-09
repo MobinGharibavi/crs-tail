@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/output.css" />
+    <title>modal</title>
+</head>
+
+<body>
+    <div class="fixed bg-black/50 top-0 z-40 flex justify-center items-center left-0 w-full h-full">
+        <div class="w-[39.25rem] mobile:w-[30.75rem] flex flex-col z-50 bg-white rounded-xl p-4 gap-3">
+            <div class="flex items-center gap-3">
+                <button>
+                    <img src="/icons/close.svg" alt="">
+                </button>
+                <span class="text-2xl font-bold">
+                    Add route
+                </span>
+            </div>
+
+            <div class="justify-center flex flex-col gap-2 relative">
+                <div class="relative h-full">
+                    <input type="text" id="origin_input"
+                        class="block border h-full border-[#DCDFE4] w-full px-5 lg:placeholder:px-3 pt-8 pb-5  outline-none rounded-2xl text-gray-900 bg-gray-50  appearance-none focus:outline-none focus:ring-0 peer"
+                        placeholder=" " />
+                    <label for="origin_input"
+                        class="absolute text-sm translate-x-2 text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-1 scale-105 top-4 z-10 origin-[0] start-2.5  peer-placeholder-shown:scale-125 peer-placeholder-shown:translate-x-2 peer-placeholder-shown:translate-y-2 peer-focus:scale-105 peer-focus:-translate-y-1">Origin</label>
+                </div>
+                <button type="button" class="h-full">
+                    <img id="swap_search_btn"
+                        class=" w-[50px] rotate-90 h-[50px] rounded-[50%] absolute bg-white border-2 z-10 lg:-translate-x-1/2 right-5 -translate-y-1/2 top-1/2 p-3 flex justify-center ltr:right-5 items-center "
+                        src="/icons/UpdateMain/change.svg" alt="..." />
+
+                    <div class="relative h-full">
+                        <input type="text" id="destination_input"
+                            class="block border border-[#DCDFE4] w-full px-10 lg:placeholder:px-3 pt-8  pb-5 outline-none rounded-2xl text-gray-900 bg-gray-50 appearance-none focus:outline-none focus:ring-0 peer"
+                            placeholder=" " />
+                        <label for="destination_input"
+                            class="absolute text-sm translate-x-6 text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-1 scale-105 top-4 z-10 origin-[0] start-2.5  peer-placeholder-shown:scale-125 peer-placeholder-shown:translate-x-6 peer-placeholder-shown:translate-y-4 peer-focus:scale-105 peer-focus:-translate-y-1">Destinations</label>
+                    </div>
+                </button>
+            </div>
+
+            <button class="bg-crs-first text-white rounded-xl py-4">Add</button>
+        </div>
+    </div>
+</body>
+
+</html>
