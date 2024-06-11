@@ -10,7 +10,7 @@
 	<title>crstrip.com</title>
 </head>
 
-<body class="bg-[#FCF3ED]">
+<body class="bg-[#FCEAE1]">
 	<div class="font-Kalameh">
 		<div class="bg-crs-first text-white py-4 px-20 mobile:px-8">
 			<nav class=" flex justify-between">
@@ -27,19 +27,74 @@
 
 				<div class="flex items-center gap-3 mobile:hidden">
 
-					<div class="flex items-center gap-3">
-						<img src="/icons/UpdateMain/english.svg" alt="" />
-						<span>
-							English
-						</span>
-						<img src="/icons/UpdateMain/arrow-down.svg" alt="" />
+					<div id="languages_parent" class="relative cursor-pointer">
+						<div id="inner_lang" class="flex items-center gap-3">
+							<img src="/icons/UpdateMain/english.svg" alt="" />
+							<span>
+								English
+							</span>
+							<img src="/icons/UpdateMain/arrow-down.svg" alt="" />
+						</div>
+
+						<div id="languages"
+							class="flex hidden text-[#1D1B20] flex-col gap-5 py-5 z-50 top-10 px-5 justify-center items-center absolute bg-white rounded-lg shadow">
+							<div class="flex cursor-pointer items-center pr-10 gap-2">
+								<img src="/icons/UpdateMain/farsi.svg" alt="..." />
+								<span>Farsi</span>
+							</div>
+							<div class="flex cursor-pointer items-center gap-2">
+								<img src="/icons/UpdateMain/arabic.svg" alt="..." />
+								<span>Arabic</span>
+							</div>
+							<div class="flex cursor-pointer items-center gap-2">
+								<img src="/icons/UpdateMain/english.svg" alt="..." />
+								<span>English</span>
+							</div>
+						</div>
 					</div>
-					<div class="flex items-center gap-2">
+					<div id="profile_parent" class="flex cursor-pointer relative items-center gap-2">
 						<img src="/icons/UpdateMain/user.svg" alt="" />
 						<span>
 							Ayoub Gharibavi
 						</span>
 						<img src="/icons/UpdateMain/arrow-down.svg" alt="" />
+
+						<div id="profile" class="absolute hidden text-[#1D1B20]">
+							<div
+								class="flex text-[#1D1B20] flex-col w-60 gap-5 py-5 z-50 h-max  top-5 px-5 absolute bg-white rounded-lg shadow">
+								<div class="flex border-b pb-2 justify-between">
+									<div class="flex flex-col gap-2"><span class="text-[#605D64]">Wallet </span>
+										<div class="flex items-center gap-3"><span>12,000,000</span>
+											<p class="text-[#605D64]">USD</p>
+										</div>
+									</div><button>
+
+										<img src="/icons/UpdateMain/add.svg" alt="" />
+									</button>
+								</div>
+								<div class="flex cursor-pointer items-center gap-4">
+									<img src="/icons/UpdateMain/acc.svg" alt="" />
+									<span>Account</span>
+								</div>
+								<div class="flex cursor-pointer items-center gap-4">
+									<img src="/icons/UpdateMain/transaction.svg" alt="" />
+									<span>Transactions</span>
+								</div>
+								<div class="flex cursor-pointer items-center gap-4">
+									<img src="/icons/UpdateMain/ticket.svg" alt="" />
+									<span>Tickets</span>
+								</div>
+
+								<div class="flex cursor-pointer items-center gap-4">
+									<img src="/icons/UpdateMain/support-2.svg" alt="" />
+									<span>Support</span>
+								</div>
+								<div class="flex cursor-pointer text-[#EE0035] items-center gap-4">
+									<img src="/icons/UpdateMain/logout.svg" alt="" />
+									<span>Log out</span>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 
@@ -121,7 +176,7 @@
 						<div class="flex gap-6">
 							<div class="flex cursor-pointer relative items-center gap-2">
 								<div id="way_btn" class="flex items-center gap-2">
-									<span>One way</span>
+									<span id="inner_way">One way</span>
 									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
 										aria-hidden="true" role="img" class="icon" width="1.5rem" height="1.5rem"
 										viewBox="0 0 48 48">
@@ -132,9 +187,9 @@
 								<div
 									class="absolute bottom-0 left-0 z-50 h-max w-full bg-white shadow-xl rounded-lg px-4">
 									<div id="way"
-										class="hidden flex flex-col rounded-lg px-5 w-[15rem] z-50 bg-white shadow absolute left-0 top-2.5">
-										<span class="border-b py-2">One way</span>
-										<span class="border-b py-2">Round Trip</span>
+										class="hidden flex flex-col rounded-lg w-[15rem] z-50 bg-white shadow absolute left-0 top-2.5">
+										<span class="border-b py-2 px-5">One way</span>
+										<span class="border-b py-2 px-5">Round Trip</span>
 									</div>
 								</div>
 							</div>
@@ -149,11 +204,11 @@
 								<div
 									class="absolute bottom-0 left-0 z-50 h-max w-full bg-white shadow-xl rounded-lg px-4">
 									<div id="class_type"
-										class="flex hidden flex-col rounded-lg px-5 w-[15rem] z-50 bg-white shadow absolute left-0 top-2.5">
-										<span class="border-b py-2">All</span>
-										<span class="border-b py-2">Economy</span>
-										<span class="border-b py-2">Business Class</span>
-										<span class="border-b py-2">First Class</span>
+										class="flex hidden flex-col rounded-lg  w-[15rem] z-50 bg-white shadow absolute left-0 top-2.5">
+										<span class="border-b py-2 px-5">All</span>
+										<span class="border-b py-2 px-5">Economy</span>
+										<span class="border-b py-2 px-5">Business Class</span>
+										<span class="border-b py-2 px-5">First Class</span>
 									</div>
 								</div>
 							</div>
@@ -161,7 +216,7 @@
 						<div class="flex flex-col lg:flex-row gap-2">
 							<div class="justify-center flex flex-col gap-5 lg:gap-0 lg:flex-row relative">
 								<div class="relative h-full">
-									<input type="text" id="origin_input"
+									<input type="text" autocomplete="off" id="origin_input"
 										class="block border h-full border-[#DCDFE4] w-96 mobile:w-full px-5 lg:placeholder:px-3 py-[11px] mobile:pt-8 outline-none rounded-2xl text-gray-900 bg-gray-50  appearance-none focus:outline-none focus:ring-0 peer"
 										placeholder=" " />
 									<label for="origin_input"
@@ -173,7 +228,7 @@
 										src="/icons/UpdateMain/change.svg" alt="..." />
 
 									<div class="relative h-full">
-										<input type="text" id="destination_input"
+										<input type="text" autocomplete="off" id="destination_input"
 											class="block border h-full border-[#DCDFE4] w-96 mobile:w-full px-10 lg:placeholder:px-3 py-[11px] mobile:pt-8 outline-none rounded-2xl  text-gray-900 bg-gray-50  appearance-none focus:outline-none focus:ring-0 peer"
 											placeholder=" " />
 										<label for="destination_input"
@@ -186,62 +241,62 @@
 									<!--v-if-->
 									<div
 										class="js-airport flex justify-between items-center px-4 py-[0.62rem] mobile:py-4 mobile:text-lg text-[#514037] hover:bg-[#F0F1F2] active:bg-crs-active cursor-pointer bg-[#F0F1F2]">
-										<span class="pt-1">NJF</span> Al Najaf
-										Airport
+										<span class="airport-code pt-1">NJF</span>
+										<span class="airport-name">Al Najaf Airport</span>
 									</div>
 									<hr
 										class="mx-1 border-t-[0.125rem] border-transparent border-l-[0.25rem] border-r-[0.25rem] border-t-[#F0F1F2] h-0" />
 									<div
 										class="js-airport flex justify-between items-center px-4 py-[0.62rem] mobile:py-4 mobile:text-lg text-[#514037] hover:bg-[#F0F1F2] active:bg-crs-active cursor-pointer">
-										<span class="pt-1">MHD</span> Mashhad
-										Airport
+										<span class="airport-code pt-1">MHD</span>
+										<span class="airport-name">Mashhad Airport</span>
 									</div>
 									<hr
 										class="mx-1 border-t-[0.125rem] border-transparent border-l-[0.25rem] border-r-[0.25rem] border-t-[#F0F1F2] h-0" />
 									<div
 										class="js-airport flex justify-between items-center px-4 py-[0.62rem] mobile:py-4 mobile:text-lg text-[#514037] hover:bg-[#F0F1F2] active:bg-crs-active cursor-pointer">
-										<span class="pt-1">BGW</span> Baghdad
-										Airport
+										<span class="airport-code pt-1">BGW</span>
+										<span class="airport-name">Baghdad Airport</span>
 									</div>
 									<hr
 										class="mx-1 border-t-[0.125rem] border-transparent border-l-[0.25rem] border-r-[0.25rem] border-t-[#F0F1F2] h-0" />
 									<div
 										class="js-airport flex justify-between items-center px-4 py-[0.62rem] mobile:py-4 mobile:text-lg text-[#514037] hover:bg-[#F0F1F2] active:bg-crs-active cursor-pointer">
-										<span class="pt-1">IKA</span> Imam
-										Khomeini Airport
+										<span class="airport-code pt-1">IKA</span>
+										<span class="airport-name">Imam Khomeini Airport</span>
 									</div>
 								</div>
+
 
 
 								<div id="origin_airports_list"
 									class="hidden min-w-[24.0625rem] rounded-[0.5rem] mobile:rounded-none border-[0.125rem] border-[#E1E2E4] bg-white max-h-[24rem] overflow-auto FirefoxScroll shadow-lg mobile:border-0 mobile:shadow-none select absolute top-[5rem] rtl:right-0 ltr:left-0 z-50 mobile:top-[4.5rem] mobile:w-full mobile:max-h-[calc(100vh-20rem)]"
 									tabindex="0">
-									<!--v-if-->
 									<div
 										class="js-airport flex justify-between items-center px-4 py-[0.62rem] mobile:py-4 mobile:text-lg text-[#514037] hover:bg-[#F0F1F2] active:bg-crs-active cursor-pointer bg-[#F0F1F2]">
-										<span class="pt-1">NJF</span> Al Najaf
-										Airport
+										<span class="airport-code pt-1">NJF</span>
+										<span class="airport-name">Al Najaf Airport</span>
 									</div>
 									<hr
 										class="mx-1 border-t-[0.125rem] border-transparent border-l-[0.25rem] border-r-[0.25rem] border-t-[#F0F1F2] h-0" />
 									<div
 										class="js-airport flex justify-between items-center px-4 py-[0.62rem] mobile:py-4 mobile:text-lg text-[#514037] hover:bg-[#F0F1F2] active:bg-crs-active cursor-pointer">
-										<span class="pt-1">MHD</span> Mashhad
-										Airport
+										<span class="airport-code pt-1">MHD</span>
+										<span class="airport-name">Mashhad Airport</span>
 									</div>
 									<hr
 										class="mx-1 border-t-[0.125rem] border-transparent border-l-[0.25rem] border-r-[0.25rem] border-t-[#F0F1F2] h-0" />
 									<div
 										class="js-airport flex justify-between items-center px-4 py-[0.62rem] mobile:py-4 mobile:text-lg text-[#514037] hover:bg-[#F0F1F2] active:bg-crs-active cursor-pointer">
-										<span class="pt-1">BGW</span> Baghdad
-										Airport
+										<span class="airport-code pt-1">BGW</span>
+										<span class="airport-name">Baghdad Airport</span>
 									</div>
 									<hr
 										class="mx-1 border-t-[0.125rem] border-transparent border-l-[0.25rem] border-r-[0.25rem] border-t-[#F0F1F2] h-0" />
 									<div
 										class="js-airport flex justify-between items-center px-4 py-[0.62rem] mobile:py-4 mobile:text-lg text-[#514037] hover:bg-[#F0F1F2] active:bg-crs-active cursor-pointer">
-										<span class="pt-1">IKA</span> Imam
-										Khomeini Airport
+										<span class="airport-code pt-1">IKA</span>
+										<span class="airport-name">Imam Khomeini Airport</span>
 									</div>
 								</div>
 							</div>
@@ -1315,10 +1370,10 @@
 								</div>
 							</div>
 							<div tabindex="0" id="passengers_input"
-								class="rounded-[16px] relative border flex-grow border-[#DCDFE4] px-6 py-[11px] cursor-pointer">
-								<div class="flex items-center h-full">
+								class="rounded-[16px] relative border w-14 flex-grow border-[#DCDFE4] px-6 py-[11px] cursor-pointer">
+								<div class="flex items-center overflow-auto h-full">
 									<div id="passengers_summary"
-										class="text-[#101D3B] h-full w-full  pt-[1.5rem] flex items-center text-lg leading-[1.875rem]">
+										class="text-[#101D3B] whitespace-nowrap overflow-auto h-full w-full  pt-[1.5rem] flex items-center text-lg leading-[1.875rem]">
 										1 Adult
 									</div>
 									<div class="top-[0.7rem] text-xs leading-[1.25rem] block h-fit text-[#80889E] absolute rtl:right-12 ltr:left-5 transition-all"
@@ -1442,7 +1497,7 @@
 							1.500.00 تومان
 						</span>
 					</div>
-					
+
 				</div>
 				<!-- <div id="inner_fast_search" class="flex flex-col gap-3"> -->
 				<!-- insert -->

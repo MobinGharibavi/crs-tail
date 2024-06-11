@@ -1,3 +1,4 @@
+import "./nav-bar.js";
 import "./menu.js";
 import "./passengers.js";
 // import "./radio-inputs.js";

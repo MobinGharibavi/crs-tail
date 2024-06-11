@@ -12,7 +12,7 @@ export default {
         crs: {
           first: "#FF5A00",
           second: "#FFEBE0",
-          footer: "#FFE6D9",
+          footer: "#FFCEB5",
           hover: "#FF902926",
           active: "#FFDAC6",
           linear: "#FFA371",

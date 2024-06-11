@@ -28,6 +28,41 @@ const dataForFastSearch = [
     destination: "Shiraz",
     detail: "1.500.00 تومان",
   },
+  {
+    origin: "Tehran",
+    destination: "Shiraz",
+    detail: "1.500.00 تومان",
+  },
+  {
+    origin: "Tehran",
+    destination: "Shiraz",
+    detail: "1.500.00 تومان",
+  },
+  {
+    origin: "Tehran",
+    destination: "Shiraz",
+    detail: "1.500.00 تومان",
+  },
+  {
+    origin: "Tehran",
+    destination: "Shiraz",
+    detail: "1.500.00 تومان",
+  },
+  {
+    origin: "Tehran",
+    destination: "Shiraz",
+    detail: "1.500.00 تومان",
+  },
+  {
+    origin: "Tehran",
+    destination: "Shiraz",
+    detail: "1.500.00 تومان",
+  },
+  {
+    origin: "Tehran",
+    destination: "Shiraz",
+    detail: "1.500.00 تومان",
+  },
 ];
 
 if (!existItem || !existItem.length) {
@@ -104,15 +139,17 @@ const render = () => {
     );
   });
 
-  fastSearchInner.insertAdjacentHTML(
-    "beforeend",
-    `
-      <div
-					class="border w-full h-10 flex justify-center items-center border-dashed bg-[#F6FAFF] rounded border-[#8CB8FB]">
-					<img src="/icons/UpdateMain/plus.svg" alt="" />
-				</div>
+  if (dataOfStorage.length < 12) {
+    fastSearchInner.insertAdjacentHTML(
+      "beforeend",
       `
-  );
+        <div
+            class="border w-full h-10 flex justify-center items-center border-dashed bg-[#F6FAFF] rounded border-[#8CB8FB]">
+            <img src="/icons/UpdateMain/plus.svg" alt="" />
+          </div>
+        `
+    );
+  }
 
   dataOfStorage.forEach((i, index) => {
     const div = document.createElement("div");
