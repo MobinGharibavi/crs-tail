@@ -9,6 +9,14 @@ const modal = document.getElementById("modal");
 const closeModalBtn = document.getElementById("close_modal");
 const addDataBtn = document.getElementById("add_data_Modal");
 const swapBtn = document.getElementById("swap_search_btn_modal");
+let originValue = document.getElementById("origin_input_modal");
+let destinationValue = document.getElementById("destination_input_modal");
+const originAriportsList = document.getElementById(
+  "origin_airports_list_modal"
+);
+const destinationAriportsList = document.getElementById(
+  "destination_airports_list_modal"
+);
 
 const existItem = JSON.parse(localStorage.getItem("fast_search"));
 
@@ -78,6 +86,104 @@ editBtn.addEventListener("click", showAndHideFastSearch);
 cancelBtn.addEventListener("click", showAndHideFastSearch);
 confirmBtn.addEventListener("click", showAndHideFastSearch);
 
+// search start
+const searchInputs = [originValue, destinationValue];
+const ariportLists = [originAriportsList, destinationAriportsList];
+
+/* Swap search input values */
+swapBtn.addEventListener("click", () => {
+  [originValue.value, destinationValue.value] = [
+    destinationValue.value,
+    originValue.value,
+  ];
+});
+
+/* Handle input dropdowns */
+ariportLists.forEach((list) => {
+  list.addEventListener("click", ({ target }) => {
+    const airport = target.closest(".js-airport");
+    if (!airport) return;
+
+    const airportName = airport
+      .querySelector(".airport-name")
+      .textContent.trim();
+    const airportCode = airport
+      .querySelector(".airport-code")
+      .textContent.trim();
+    const relatedInput =
+      list.id === "origin_airports_list_modal" ? originValue : destinationValue;
+
+    relatedInput.value = `${airportName}`;
+
+    hideElement(list);
+  });
+});
+
+searchInputs.forEach((input) => {
+  input.addEventListener("input", () => {
+    const list =
+      input.id === "origin_input_modal"
+        ? originAriportsList
+        : destinationAriportsList;
+    filterAirportList(input.value, list);
+  });
+
+  input.addEventListener("click", () => {
+    if (input.id === "origin_input_modal") {
+      showElement(originAriportsList);
+      hideElement(destinationAriportsList);
+    } else {
+      showElement(destinationAriportsList);
+      hideElement(originAriportsList);
+    }
+  });
+});
+
+document.body.addEventListener("click", ({ target }) => {
+  const targetIsInput = searchInputs.includes(target);
+  const targetIsList =
+    target.closest("#origin_airports_list_modal") ||
+    target.closest("#destination_airports_list_modal");
+  if (targetIsInput || targetIsList) return;
+
+  ariportLists.forEach((list) => hideElement(list));
+});
+
+/* Utilities */
+function hideElement(element) {
+  if (element) element.classList.add("hidden");
+}
+
+function showElement(element) {
+  if (element) element.classList.remove("hidden");
+}
+
+function filterAirportList(query, list) {
+  const items = list.querySelectorAll(".js-airport");
+  const normalizedQuery = query.toLowerCase().trim();
+
+  items.forEach((item) => {
+    const airportName = item
+      .querySelector(".airport-name")
+      .textContent.toLowerCase()
+      .trim();
+    const airportCode = item
+      .querySelector(".airport-code")
+      .textContent.toLowerCase()
+      .trim();
+
+    if (
+      airportName.includes(normalizedQuery) ||
+      airportCode.includes(normalizedQuery)
+    ) {
+      item.classList.remove("hidden");
+    } else {
+      item.classList.add("hidden");
+    }
+  });
+}
+// search end
+
 let dataOfStorage = JSON.parse(localStorage.getItem("fast_search"));
 
 const deleteFastSearchData = (index) => {
@@ -88,20 +194,27 @@ const deleteFastSearchData = (index) => {
 
 // Function to open modal
 function openModal() {
+  // originValue.value = "";
+  // destinationValue.value = "";
   modal.classList.remove("hidden");
   modal.classList.add("flex");
 }
 
 // Function to close modal
 function closeModal() {
+  // originValue.value = "";
+  // destinationValue.value = "";
   modal.classList.add("hidden");
   modal.classList.remove("flex");
 }
 closeModalBtn.addEventListener("click", closeModal);
 
-let originValue = document.getElementById("origin_input_modal");
-let destinationValue = document.getElementById("destination_input_modal");
 const addData = () => {
+  // Check if the input values are null or empty
+  if (!originValue.value.trim() || !destinationValue.value.trim()) {
+    alert("Both origin and destination fields are required.");
+    return;
+  }
   dataOfStorage.push({
     origin: originValue.value,
     destination: destinationValue.value,
@@ -110,16 +223,19 @@ const addData = () => {
   localStorage.setItem("fast_search", JSON.stringify(dataOfStorage));
   render();
   closeModal();
+
+  originValue.value = "";
+  destinationValue.value = "";
 };
 addDataBtn.addEventListener("click", addData);
 
 // Function to swap origin and destination input values
-const swapValues = () => {
-  const temp = originValue.value;
-  originValue.value = destinationValue.value;
-  destinationValue.value = temp;
-};
-swapBtn.addEventListener("click", swapValues);
+// const swapValues = () => {
+//   const temp = originValue.value;
+//   originValue.value = destinationValue.value;
+//   destinationValue.value = temp;
+// };
+// swapBtn.addEventListener("click", swapValues);
 
 const render = () => {
   innerEdit.innerHTML = ""; // Clear existing content
@@ -144,11 +260,13 @@ const render = () => {
       "beforeend",
       `
         <div
-            class="border w-full h-10 flex justify-center items-center border-dashed bg-[#F6FAFF] rounded border-[#8CB8FB]">
+            class="border w-full h-10 flex cursor-pointer justify-center items-center border-dashed bg-[#F6FAFF] rounded border-[#8CB8FB]">
             <img src="/icons/UpdateMain/plus.svg" alt="" />
           </div>
         `
     );
+  } else {
+    closeModal();
   }
 
   dataOfStorage.forEach((i, index) => {
@@ -173,8 +291,15 @@ const render = () => {
   // document.querySelectorAll("#inner_fast_search .border").forEach((img) => {
   //   img.addEventListener("click", openModal);
   // });
+
+  // Attach event listener to the plus button if it exists
   const addOpenModal = document.querySelector("#inner_fast_search .border");
-  addOpenModal.addEventListener("click", openModal);
+  if (addOpenModal) {
+    addOpenModal.addEventListener("click", openModal);
+  } else {
+    // Close the modal if dataOfStorage length is 12 or more
+    closeModal();
+  }
 };
 
 document.addEventListener("DOMContentLoaded", () => {

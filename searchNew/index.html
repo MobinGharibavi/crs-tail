@@ -1652,11 +1652,42 @@
 
 				<div class="justify-center flex flex-col gap-2 relative">
 					<div class="relative h-full">
-						<input type="text" id="origin_input_modal"
+						<input type="text" autocomplete="off" id="origin_input_modal"
 							class="block border h-full border-[#DCDFE4] w-full px-5 lg:placeholder:px-3 pt-8 pb-5  outline-none rounded-2xl text-gray-900 bg-gray-50  appearance-none focus:outline-none focus:ring-0 peer"
 							placeholder=" " />
 						<label for="origin_input_modal"
 							class="absolute text-sm translate-x-2 text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-1 scale-105 top-4 z-10 origin-[0] start-2.5  peer-placeholder-shown:scale-125 peer-placeholder-shown:translate-x-2 peer-placeholder-shown:translate-y-2 peer-focus:scale-105 peer-focus:-translate-y-1">Origin</label>
+
+							<div id="origin_airports_list_modal"
+							class="hidden w-full rounded-[0.5rem] mobile:rounded-none border-[0.125rem] border-[#E1E2E4] bg-white max-h-[24rem] overflow-auto FirefoxScroll shadow-lg mobile:border-0 mobile:shadow-none select absolute top-[5rem] rtl:right-0 ltr:left-0 z-50 mobile:top-[4.5rem] mobile:max-h-[calc(100vh-20rem)]"
+							tabindex="0">
+							<div
+								class="js-airport flex justify-between items-center px-4 py-[0.62rem] mobile:py-4 mobile:text-lg text-[#514037] hover:bg-[#F0F1F2] active:bg-crs-active cursor-pointer bg-[#F0F1F2]">
+								<span class="airport-code pt-1">NJF</span>
+								<span class="airport-name">Al Najaf Airport</span>
+							</div>
+							<hr
+								class="mx-1 border-t-[0.125rem] border-transparent border-l-[0.25rem] border-r-[0.25rem] border-t-[#F0F1F2] h-0" />
+							<div
+								class="js-airport flex justify-between items-center px-4 py-[0.62rem] mobile:py-4 mobile:text-lg text-[#514037] hover:bg-[#F0F1F2] active:bg-crs-active cursor-pointer">
+								<span class="airport-code pt-1">MHD</span>
+								<span class="airport-name">Mashhad Airport</span>
+							</div>
+							<hr
+								class="mx-1 border-t-[0.125rem] border-transparent border-l-[0.25rem] border-r-[0.25rem] border-t-[#F0F1F2] h-0" />
+							<div
+								class="js-airport flex justify-between items-center px-4 py-[0.62rem] mobile:py-4 mobile:text-lg text-[#514037] hover:bg-[#F0F1F2] active:bg-crs-active cursor-pointer">
+								<span class="airport-code pt-1">BGW</span>
+								<span class="airport-name">Baghdad Airport</span>
+							</div>
+							<hr
+								class="mx-1 border-t-[0.125rem] border-transparent border-l-[0.25rem] border-r-[0.25rem] border-t-[#F0F1F2] h-0" />
+							<div
+								class="js-airport flex justify-between items-center px-4 py-[0.62rem] mobile:py-4 mobile:text-lg text-[#514037] hover:bg-[#F0F1F2] active:bg-crs-active cursor-pointer">
+								<span class="airport-code pt-1">IKA</span>
+								<span class="airport-name">Imam Khomeini Airport</span>
+							</div>
+						</div>
 					</div>
 					<button type="button" class="h-full">
 						<img id="swap_search_btn_modal"
@@ -1664,11 +1695,43 @@
 							src="/icons/UpdateMain/change.svg" alt="..." />
 
 						<div class="relative h-full">
-							<input type="text" id="destination_input_modal"
+							<input type="text" autocomplete="off" id="destination_input_modal"
 								class="block border border-[#DCDFE4] w-full px-10 lg:placeholder:px-3 pt-8  pb-5 outline-none rounded-2xl text-gray-900 bg-gray-50 appearance-none focus:outline-none focus:ring-0 peer"
 								placeholder=" " />
 							<label for="destination_input_modal"
 								class="absolute text-sm translate-x-6 text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-1 scale-105 top-4 z-10 origin-[0] start-2.5  peer-placeholder-shown:scale-125 peer-placeholder-shown:translate-x-6 peer-placeholder-shown:translate-y-4 peer-focus:scale-105 peer-focus:-translate-y-1">Destinations</label>
+
+								<div id="destination_airports_list_modal"
+									class="hidden w-full rounded-[0.5rem] mobile:rounded-none border-[0.125rem] border-[#E1E2E4] bg-white max-h-[24rem] overflow-auto FirefoxScroll shadow-lg mobile:border-0 mobile:shadow-none select absolute select top-[5rem] rtl:right-0 ltr:right-0 z-50 mobile:top-[10.5rem] mobile:max-h-[calc(100vh-20rem)]"
+									tabindex="0">
+									<!--v-if-->
+									<div
+										class="js-airport flex justify-between items-center px-4 py-[0.62rem] mobile:py-4 mobile:text-lg text-[#514037] hover:bg-[#F0F1F2] active:bg-crs-active cursor-pointer bg-[#F0F1F2]">
+										<span class="airport-code pt-1">NJF</span>
+										<span class="airport-name">Al Najaf Airport</span>
+									</div>
+									<hr
+										class="mx-1 border-t-[0.125rem] border-transparent border-l-[0.25rem] border-r-[0.25rem] border-t-[#F0F1F2] h-0" />
+									<div
+										class="js-airport flex justify-between items-center px-4 py-[0.62rem] mobile:py-4 mobile:text-lg text-[#514037] hover:bg-[#F0F1F2] active:bg-crs-active cursor-pointer">
+										<span class="airport-code pt-1">MHD</span>
+										<span class="airport-name">Mashhad Airport</span>
+									</div>
+									<hr
+										class="mx-1 border-t-[0.125rem] border-transparent border-l-[0.25rem] border-r-[0.25rem] border-t-[#F0F1F2] h-0" />
+									<div
+										class="js-airport flex justify-between items-center px-4 py-[0.62rem] mobile:py-4 mobile:text-lg text-[#514037] hover:bg-[#F0F1F2] active:bg-crs-active cursor-pointer">
+										<span class="airport-code pt-1">BGW</span>
+										<span class="airport-name">Baghdad Airport</span>
+									</div>
+									<hr
+										class="mx-1 border-t-[0.125rem] border-transparent border-l-[0.25rem] border-r-[0.25rem] border-t-[#F0F1F2] h-0" />
+									<div
+										class="js-airport flex justify-between items-center px-4 py-[0.62rem] mobile:py-4 mobile:text-lg text-[#514037] hover:bg-[#F0F1F2] active:bg-crs-active cursor-pointer">
+										<span class="airport-code pt-1">IKA</span>
+										<span class="airport-name">Imam Khomeini Airport</span>
+									</div>
+								</div>
 						</div>
 					</button>
 				</div>
