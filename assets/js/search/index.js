@@ -8,5 +8,3 @@ import "./search-inputs.js";
 import "./Calendar.js";
 import "./type_way.js";
 import "./fast-search.js";
-
-

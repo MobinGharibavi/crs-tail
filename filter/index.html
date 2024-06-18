@@ -1,0 +1,2047 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/output.css" />
+    <script type="module" src="../assets/js/filter/index.js"></script>
+    <title>Filter</title>
+</head>
+
+<body class="bg-[#FCEAE1]">
+    <div class="font-Kalameh">
+        <div class="bg-crs-first mobile:px-8">
+            <nav class="bg-white px-20 py-4 flex justify-between">
+                <div class="flex items-center gap-10">
+                    <img src="/logo/crstrip.svg" class="w-[6.188rem] h-7" alt="logo" />
+
+                    <div class="flex items-center gap-8 mobile:hidden">
+                        <a href="#">services</a>
+                        <a href="#">Support</a>
+                        <a href="#">About us</a>
+                        <a href="#">Connect us</a>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-3 mobile:hidden">
+
+                    <div id="languages_parent" class="relative cursor-pointer">
+                        <div id="inner_lang" class="flex items-center gap-3">
+                            <img src="/icons/UpdateMain/english.svg" alt="" />
+                            <span>
+                                English
+                            </span>
+                            <img src="/icons/UpdateMain/arrow.svg" alt="" />
+                        </div>
+
+                        <div id="languages"
+                            class="flex hidden text-[#1D1B20] flex-col gap-5 py-5 z-50 top-10 px-5 justify-center items-center absolute bg-white rounded-lg shadow">
+                            <div class="flex cursor-pointer items-center pr-10 gap-2">
+                                <img src="/icons/UpdateMain/farsi.svg" alt="..." />
+                                <span>Farsi</span>
+                            </div>
+                            <div class="flex cursor-pointer items-center gap-2">
+                                <img src="/icons/UpdateMain/arabic.svg" alt="..." />
+                                <span>Arabic</span>
+                            </div>
+                            <div class="flex cursor-pointer items-center gap-2">
+                                <img src="/icons/UpdateMain/english.svg" alt="..." />
+                                <span>English</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="profile_parent" class="flex cursor-pointer relative items-center gap-2">
+                        <img src="/icons/UpdateMain/user-b.svg" alt="" />
+                        <span>
+                            Ayoub Gharibavi
+                        </span>
+                        <img src="/icons/UpdateMain/arrow.svg" alt="" />
+
+                        <div id="profile" class="absolute hidden text-[#1D1B20]">
+                            <div
+                                class="flex text-[#1D1B20] flex-col w-60 gap-5 py-5 z-50 h-max  top-5 px-5 absolute bg-white rounded-lg shadow">
+                                <div class="flex border-b pb-2 justify-between">
+                                    <div class="flex flex-col gap-2"><span class="text-[#605D64]">Wallet </span>
+                                        <div class="flex items-center gap-3"><span>12,000,000</span>
+                                            <p class="text-[#605D64]">USD</p>
+                                        </div>
+                                    </div><button>
+
+                                        <img src="/icons/UpdateMain/add.svg" alt="" />
+                                    </button>
+                                </div>
+                                <div class="flex cursor-pointer items-center gap-4">
+                                    <img src="/icons/UpdateMain/acc.svg" alt="" />
+                                    <span>Account</span>
+                                </div>
+                                <div class="flex cursor-pointer items-center gap-4">
+                                    <img src="/icons/UpdateMain/transaction.svg" alt="" />
+                                    <span>Transactions</span>
+                                </div>
+                                <div class="flex cursor-pointer items-center gap-4">
+                                    <img src="/icons/UpdateMain/ticket.svg" alt="" />
+                                    <span>Tickets</span>
+                                </div>
+
+                                <div class="flex cursor-pointer items-center gap-4">
+                                    <img src="/icons/UpdateMain/support-2.svg" alt="" />
+                                    <span>Support</span>
+                                </div>
+                                <div class="flex cursor-pointer text-[#EE0035] items-center gap-4">
+                                    <img src="/icons/UpdateMain/logout.svg" alt="" />
+                                    <span>Log out</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="sidebar_menu_icon" class="hidden mobile:block">
+                    <img class="h-8 cursor-pointer" src="/icons/main/menu-w.svg" alt="menu" />
+
+                    <div id="sidebar_menu"
+                        class="fixed mobile:hidden left-0 top-0 w-[100vw] h-[100vh] bg-[#0000004D] backdrop-blur-[0.125rem] z-[100]">
+                        <div
+                            class="w-[21.25rem] h-full bg-white rtl:rounded-l-[2rem] ltr:rounded-r-[2rem] flex flex-col justify-between">
+                            <div>
+                                <div
+                                    class="mt-8 flex gap-4 items-center text-lg px-6 justify-between text-[2.15rem] font-bold text-[#1C0E07]">
+                                    <img class="h-8 cursor-pointer" src="/images/UpdateMain/logo.svg" alt="search">
+                                    <img class="h-8 cursor-pointer" src="/icons/main/close.svg" alt="close" />
+                                </div>
+                                <ul class="mt-10 text-xl text-[#5B4A42] px-6 space-y-3">
+                                    <li
+                                        class="text-crs-first bg-crs-active h-14 rounded-[0.75rem] flex gap-4 px-4 items-center cursor-pointer">
+
+                                        Home
+                                    </li>
+                                    <li class="h-14 rounded-[0.75rem] flex gap-4 px-4 items-center cursor-pointer">
+                                        Contact Us
+                                    </li>
+                                    <li class="h-14 rounded-[0.75rem] flex gap-4 px-4 items-center cursor-pointer">
+                                        About Us
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="px-6">
+                                <div dir="rtl"
+                                    class="flex p-1 mb-16 h-[3rem] bg-[#F7F7F9] rounded-[0.5rem] min-w-[13.25rem] text-[#514037]">
+                                    <div
+                                        class="w-1/3 grow cursor-pointer flex items-center justify-center rounded-[0.5rem]">
+                                        فارسی
+                                    </div>
+                                    <div
+                                        class="w-1/3 grow cursor-pointer flex items-center justify-center rounded-[0.5rem]">
+                                        عربی
+                                    </div>
+                                    <div
+                                        class="w-1/3 grow cursor-pointer flex items-center justify-center rounded-[0.5rem] text-crs-first bg-white">
+                                        English
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <header class="flex gap-4 px-20 py-10 flex-col">
+                <div class="flex items-center justify-between">
+                    <div class="flex text-white items-center gap-1">
+                        <img src="/icons/UpdateMain/warn.svg" alt="logo" />
+                        <p>
+                            Prices are calculated for an adult
+                        </p>
+                    </div>
+
+                    <div class="flex text-white items-center gap-2">
+                        <div class="flex items-center gap-0.5">
+                            <span>252</span>
+                            <span>Results</span>
+                        </div>
+
+                        <div class="flex items-center gap-2">
+                            <img src="/icons/UpdateMain/cloudy.svg" alt="logo" />
+                            <span>35° C - sunny</span>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="bg-white text-black gap-5 shadow py-5 px-6 rounded-xl flex flex-col">
+
+                    <div class="flex flex-col gap-5">
+                        <div class="flex gap-6">
+                            <div class="flex cursor-pointer relative items-center gap-2">
+                                <div id="way_btn" class="flex items-center gap-2">
+                                    <span id="inner_way">One way</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        aria-hidden="true" role="img" class="icon" width="1.5rem" height="1.5rem"
+                                        viewBox="0 0 48 48">
+                                        <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="4" d="M36 18L24 30L12 18"></path>
+                                    </svg>
+                                </div>
+                                <div
+                                    class="absolute bottom-0 left-0 z-50 h-max w-full bg-white shadow-xl rounded-lg px-4">
+                                    <div id="way"
+                                        class="hidden flex flex-col rounded-lg w-[15rem] z-50 bg-white shadow absolute left-0 top-2.5">
+                                        <span class="border-b py-2 px-5">One way</span>
+                                        <span class="border-b py-2 px-5">Round Trip</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex cursor-pointer relative items-center gap-2">
+                                <span id="class_type_btn">Economy</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    aria-hidden="true" role="img" class="icon" width="1.5rem" height="1.5rem"
+                                    viewBox="0 0 48 48">
+                                    <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="4" d="M36 18L24 30L12 18"></path>
+                                </svg>
+                                <div
+                                    class="absolute bottom-0 left-0 z-50 h-max w-full bg-white shadow-xl rounded-lg px-4">
+                                    <div id="class_type"
+                                        class="flex hidden flex-col rounded-lg  w-[15rem] z-50 bg-white shadow absolute left-0 top-2.5">
+                                        <span class="border-b py-2 px-5">All</span>
+                                        <span class="border-b py-2 px-5">Economy</span>
+                                        <span class="border-b py-2 px-5">Business Class</span>
+                                        <span class="border-b py-2 px-5">First Class</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col lg:flex-row gap-2">
+                            <div class="justify-center flex flex-col gap-5 lg:gap-0 lg:flex-row relative">
+                                <div class="relative h-full">
+                                    <input type="text" autocomplete="off" id="origin_input"
+                                        class="block border h-full border-[#DCDFE4] w-96 mobile:w-full px-5 lg:placeholder:px-3 py-[11px] mobile:pt-8 outline-none rounded-2xl text-gray-900 bg-gray-50  appearance-none focus:outline-none focus:ring-0 peer"
+                                        placeholder=" " />
+                                    <label for="origin_input"
+                                        class="absolute text-sm translate-x-2 text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-1 scale-105 top-4 z-10 origin-[0] start-2.5  peer-placeholder-shown:scale-125 peer-placeholder-shown:translate-x-2 peer-placeholder-shown:translate-y-4 peer-focus:scale-105 peer-focus:-translate-y-1">Origin</label>
+                                </div>
+                                <button type="button" class="h-full">
+                                    <img id="swap_search_btn"
+                                        class=" w-[50px] rotate-90 lg:rotate-0 h-[50px] rounded-[50%] absolute bg-white border-2 z-10 lg:-translate-x-1/2 lg:left-1/2 -translate-y-1/2 top-1/2 p-3 flex justify-center ltr:right-5 items-center "
+                                        src="/icons/UpdateMain/change.svg" alt="..." />
+
+                                    <div class="relative h-full">
+                                        <input type="text" autocomplete="off" id="destination_input"
+                                            class="block border h-full border-[#DCDFE4] w-96 mobile:w-full px-10 lg:placeholder:px-3 py-[11px] mobile:pt-8 outline-none rounded-2xl  text-gray-900 bg-gray-50  appearance-none focus:outline-none focus:ring-0 peer"
+                                            placeholder=" " />
+                                        <label for="destination_input"
+                                            class="absolute text-sm translate-x-6 text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-1 scale-105 top-4 z-10 origin-[0] start-2.5  peer-placeholder-shown:scale-125 peer-placeholder-shown:translate-x-6 peer-placeholder-shown:translate-y-4 peer-focus:scale-105 peer-focus:-translate-y-1">Destinations</label>
+                                    </div>
+                                </button>
+                                <div id="destination_airports_list"
+                                    class="hidden min-w-[24.0625rem] rounded-[0.5rem] mobile:rounded-none border-[0.125rem] border-[#E1E2E4] bg-white max-h-[24rem] overflow-auto FirefoxScroll shadow-lg mobile:border-0 mobile:shadow-none select absolute select top-[5rem] rtl:right-0 ltr:right-0 z-50 mobile:top-[10.5rem] mobile:w-full mobile:max-h-[calc(100vh-20rem)]"
+                                    tabindex="0">
+                                    <!--v-if-->
+                                    <div
+                                        class="js-airport flex justify-between items-center px-4 py-[0.62rem] mobile:py-4 mobile:text-lg text-[#514037] hover:bg-[#F0F1F2] active:bg-crs-active cursor-pointer bg-[#F0F1F2]">
+                                        <span class="airport-code pt-1">NJF</span>
+                                        <span class="airport-name">Al Najaf Airport</span>
+                                    </div>
+                                    <hr
+                                        class="mx-1 border-t-[0.125rem] border-transparent border-l-[0.25rem] border-r-[0.25rem] border-t-[#F0F1F2] h-0" />
+                                    <div
+                                        class="js-airport flex justify-between items-center px-4 py-[0.62rem] mobile:py-4 mobile:text-lg text-[#514037] hover:bg-[#F0F1F2] active:bg-crs-active cursor-pointer">
+                                        <span class="airport-code pt-1">MHD</span>
+                                        <span class="airport-name">Mashhad Airport</span>
+                                    </div>
+                                    <hr
+                                        class="mx-1 border-t-[0.125rem] border-transparent border-l-[0.25rem] border-r-[0.25rem] border-t-[#F0F1F2] h-0" />
+                                    <div
+                                        class="js-airport flex justify-between items-center px-4 py-[0.62rem] mobile:py-4 mobile:text-lg text-[#514037] hover:bg-[#F0F1F2] active:bg-crs-active cursor-pointer">
+                                        <span class="airport-code pt-1">BGW</span>
+                                        <span class="airport-name">Baghdad Airport</span>
+                                    </div>
+                                    <hr
+                                        class="mx-1 border-t-[0.125rem] border-transparent border-l-[0.25rem] border-r-[0.25rem] border-t-[#F0F1F2] h-0" />
+                                    <div
+                                        class="js-airport flex justify-between items-center px-4 py-[0.62rem] mobile:py-4 mobile:text-lg text-[#514037] hover:bg-[#F0F1F2] active:bg-crs-active cursor-pointer">
+                                        <span class="airport-code pt-1">IKA</span>
+                                        <span class="airport-name">Imam Khomeini Airport</span>
+                                    </div>
+                                </div>
+
+
+
+                                <div id="origin_airports_list"
+                                    class="hidden min-w-[24.0625rem] rounded-[0.5rem] mobile:rounded-none border-[0.125rem] border-[#E1E2E4] bg-white max-h-[24rem] overflow-auto FirefoxScroll shadow-lg mobile:border-0 mobile:shadow-none select absolute top-[5rem] rtl:right-0 ltr:left-0 z-50 mobile:top-[4.5rem] mobile:w-full mobile:max-h-[calc(100vh-20rem)]"
+                                    tabindex="0">
+                                    <div
+                                        class="js-airport flex justify-between items-center px-4 py-[0.62rem] mobile:py-4 mobile:text-lg text-[#514037] hover:bg-[#F0F1F2] active:bg-crs-active cursor-pointer bg-[#F0F1F2]">
+                                        <span class="airport-code pt-1">NJF</span>
+                                        <span class="airport-name">Al Najaf Airport</span>
+                                    </div>
+                                    <hr
+                                        class="mx-1 border-t-[0.125rem] border-transparent border-l-[0.25rem] border-r-[0.25rem] border-t-[#F0F1F2] h-0" />
+                                    <div
+                                        class="js-airport flex justify-between items-center px-4 py-[0.62rem] mobile:py-4 mobile:text-lg text-[#514037] hover:bg-[#F0F1F2] active:bg-crs-active cursor-pointer">
+                                        <span class="airport-code pt-1">MHD</span>
+                                        <span class="airport-name">Mashhad Airport</span>
+                                    </div>
+                                    <hr
+                                        class="mx-1 border-t-[0.125rem] border-transparent border-l-[0.25rem] border-r-[0.25rem] border-t-[#F0F1F2] h-0" />
+                                    <div
+                                        class="js-airport flex justify-between items-center px-4 py-[0.62rem] mobile:py-4 mobile:text-lg text-[#514037] hover:bg-[#F0F1F2] active:bg-crs-active cursor-pointer">
+                                        <span class="airport-code pt-1">BGW</span>
+                                        <span class="airport-name">Baghdad Airport</span>
+                                    </div>
+                                    <hr
+                                        class="mx-1 border-t-[0.125rem] border-transparent border-l-[0.25rem] border-r-[0.25rem] border-t-[#F0F1F2] h-0" />
+                                    <div
+                                        class="js-airport flex justify-between items-center px-4 py-[0.62rem] mobile:py-4 mobile:text-lg text-[#514037] hover:bg-[#F0F1F2] active:bg-crs-active cursor-pointer">
+                                        <span class="airport-code pt-1">IKA</span>
+                                        <span class="airport-name">Imam Khomeini Airport</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="rounded-[16px] Date relative flex-grow border border-[#DCDFE4] px-6 py-[11px] cursor-pointer">
+                                <div>
+                                    <p class="text-sm text-[#938F96]">
+                                        Departure Date
+                                    </p>
+                                    <p class="font-bold mt-1">
+                                        25 September
+                                    </p>
+                                </div>
+                                <div class="bg-white hidden h-[29.625rem] w-[46.5rem] calender-gregorian
+								rounded-[1rem] pt-4 border-[0.125rem] border-[#E1E2E4] cursor-auto mobile:overflow-auto absolute top-[4.75rem] ltr:left-0 rtl:right-0 z-[999999] mobile:w-[100vw] mobile:h-[100vh] mobile:fixed mobile:top-0"
+                                    style="box-shadow: rgba(0, 27, 78, 0.09) 0px 2rem 2.5rem -0.675rem;">
+                                    <div class="flex justify-between items-center px-6"><span
+                                            class="text-lg font-bold text-[#2C160B] leading-[1.875rem] mobile:hidden">Departure
+                                            Date</span>
+                                        <img id="calendar_popup_close_btn_ge"
+                                            class="w-8 cursor-pointer hidden mobile:block" src="/icons/search/exit.svg"
+                                            alt="exit">
+                                        <div class="flex items-center gap-6"><span
+                                                class="text-[#307FF8] text-sm leading-[1.5rem] cursor-pointer">Today</span>
+                                            <div
+                                                class="flex items-center gap-2 text-sm text-[#514037] leading-[1.5rem]">
+                                                <span>Return Date</span>
+                                                <label class="inline-flex items-center cursor-pointer">
+                                                    <input type="checkbox" value="" class="sr-only peer" />
+                                                    <div
+                                                        class="relative w-11 h-6 bg-[#AEB4C1] rounded-full peer peer-focus:ring-4 peer-focus:ring-blue-300 peer-checked:after:translate-x-full peer-checked:before:content-['\2713']
+													peer-checked:before:left-2
+													rtl:peer-checked:after:-translate-x-full before:content-['x']
+													before:absolute  before:right-2.5 before:text-white
+													 peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600">
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr class="border-0 h-[0.125rem] mx-4 mt-3 bg-[#F0F1F2]" />
+                                    <div dir="ltr" class="flex mt-3 gap-8 px-4 mobile:flex-col">
+                                        <div class="w-1/2 mobile:w-full">
+                                            <div class="flex items-center justify-between px-2"><img
+                                                    class="w-6 h-6 cursor-pointer mobile:hidden"
+                                                    src="/icons/ui/arrow-left.svg" alt="left">
+                                                <div class="w-10 h-10 hidden mobile:block"></div><span
+                                                    class="font-bold leading-[1.75rem] text-[#514037] pt-1">January
+                                                    2024</span>
+                                                <div class="w-10 h-10"></div>
+                                            </div>
+                                            <div
+                                                class="grid gap-2 grid-cols-[repeat(7,minmax(2.5rem,2.5rem))] justify-center content-center justify-items-stretch mt-2 mx-auto auto-rows-[2.5rem] text-center align-middle">
+                                                <div
+                                                    class="text-xs font-medium text-[#A69F9B] justify-center flex items-center">
+                                                    SUN</div>
+                                                <div
+                                                    class="text-xs font-medium text-[#A69F9B] justify-center flex items-center">
+                                                    MON</div>
+                                                <div
+                                                    class="text-xs font-medium text-[#A69F9B] justify-center flex items-center">
+                                                    TUE</div>
+                                                <div
+                                                    class="text-xs font-medium text-[#A69F9B] justify-center flex items-center">
+                                                    WED</div>
+                                                <div
+                                                    class="text-xs font-medium text-[#A69F9B] justify-center flex items-center">
+                                                    THU</div>
+                                                <div
+                                                    class="text-xs font-medium text-[#A69F9B] justify-center flex items-center">
+                                                    FRI</div>
+                                                <div
+                                                    class="text-xs font-medium text-[#A69F9B] justify-center flex items-center">
+                                                    SAT</div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>1</span>
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>2</span>
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>3</span>
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>4</span>
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>5</span>
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>6</span>
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>7</span>
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>8</span>
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>9</span>
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>10</span>
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>11</span>
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>12</span>
+
+                                                    <span class="text-xs group-hover:text-white text-[#EE0035]">
+                                                        1.200
+                                                    </span>
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>13</span>
+
+                                                    <span class="text-xs group-hover:text-white text-[#81756F]">
+                                                        900
+                                                    </span>
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>14</span>
+
+                                                    <span class="text-xs group-hover:text-white text-[#2AB930]">
+                                                        800
+                                                    </span>
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>15</span>
+
+                                                    <span class="text-xs group-hover:text-white text-[#81756F]">
+                                                        950
+                                                    </span>
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>16</span>
+
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>17</span>
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>18</span>
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>19</span>
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>20</span>
+
+                                                    <span class="text-xs group-hover:text-white text-[#81756F]">
+                                                        890
+                                                    </span>
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>21</span>
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>22</span>
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>23</span>
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>24</span>
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>25</span>
+
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>26</span>
+
+                                                    <span class="text-xs group-hover:text-white text-[#2AB930]">
+                                                        770
+                                                    </span>
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>27</span>
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>28</span>
+
+                                                    <span class="text-xs group-hover:text-white text-[#EE0035]">
+                                                        1.200
+                                                    </span>
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>29</span>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="w-1/2 mobile:w-full">
+                                            <div class="flex items-center justify-between px-2"><img
+                                                    class="w-6 h-6 cursor-pointer hidden mobile:flex"
+                                                    src="/icons/ui/arrow-left.svg" alt="left">
+                                                <div class="w-10 h-10 mobile:hidden"></div><span
+                                                    class="font-bold leading-[1.75rem] text-[#514037] pt-1">February
+                                                    2024</span><img class="w-6 h-6 cursor-pointer rotate-180"
+                                                    src="/icons/ui/arrow-left.svg" alt="left">
+                                            </div>
+                                            <div
+                                                class="grid gap-2 grid-cols-[repeat(7,minmax(2.5rem,2.5rem))] justify-center content-center justify-items-stretch mt-2 mx-auto auto-rows-[2.5rem] text-center align-middle">
+                                                <div
+                                                    class="text-xs font-medium text-[#A69F9B] justify-center flex items-center">
+                                                    SUN</div>
+                                                <div
+                                                    class="text-xs font-medium text-[#A69F9B] justify-center flex items-center">
+                                                    MON</div>
+                                                <div
+                                                    class="text-xs font-medium text-[#A69F9B] justify-center flex items-center">
+                                                    TUE</div>
+                                                <div
+                                                    class="text-xs font-medium text-[#A69F9B] justify-center flex items-center">
+                                                    WED</div>
+                                                <div
+                                                    class="text-xs font-medium text-[#A69F9B] justify-center flex items-center">
+                                                    THU</div>
+                                                <div
+                                                    class="text-xs font-medium text-[#A69F9B] justify-center flex items-center">
+                                                    FRI</div>
+                                                <div
+                                                    class="text-xs font-medium text-[#A69F9B] justify-center flex items-center">
+                                                    SAT</div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>1</span>
+
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>2</span>
+
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>3</span>
+
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>4</span>
+
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>5</span>
+
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>6</span>
+
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>7</span>
+
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>8</span>
+
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>9</span>
+
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>10</span>
+
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>11</span>
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>12</span>
+
+                                                    <span class="text-xs group-hover:text-white text-[#EE0035]">
+                                                        1.200
+                                                    </span>
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>13</span>
+
+                                                    <span class="text-xs group-hover:text-white text-[#81756F]">
+                                                        900
+                                                    </span>
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>14</span>
+
+                                                    <span class="text-xs group-hover:text-white text-[#2AB930]">
+                                                        800
+                                                    </span>
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>15</span>
+
+                                                    <span class="text-xs group-hover:text-white text-[#81756F]">
+                                                        950
+                                                    </span>
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>16</span>
+
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>17</span>
+
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>18</span>
+
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>19</span>
+
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>20</span>
+
+                                                    <span class="text-xs group-hover:text-white text-[#81756F]">
+                                                        890
+                                                    </span>
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>21</span>
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>22</span>
+
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>23</span>
+
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>24</span>
+
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>25</span>
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>26</span>
+
+                                                    <span class="text-xs group-hover:text-white text-[#2AB930]">
+                                                        770
+                                                    </span>
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>27</span>
+
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>28</span>
+
+                                                    <span class="text-xs group-hover:text-white text-[#EE0035]">
+                                                        1.200
+                                                    </span>
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>29</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr class="border-0 h-[0.125rem] mx-4 mt-3 bg-[#F0F1F2]">
+                                    <div
+                                        class="flex justify-between items-center mt-3 px-4 pb-4 mobile:flex-col mobile:gap-y-6 mobile:mt-6">
+                                        <div
+                                            class="flex p-1 h-[2.5rem] bg-[#F7F7F9] rounded-[0.5rem] min-w-[13.25rem] text-xs text-[#514037]">
+                                            <div
+                                                class="w-1/2 cursor-pointer jalali-btn flex items-center justify-center rounded-[0.5rem]">
+                                                Jalali</div>
+                                            <div
+                                                class="w-1/2 cursor-pointer flex items-center justify-center rounded-[0.5rem] text-crs-first bg-white">
+                                                Gregorian</div>
+                                        </div>
+                                        <div class="flex gap-2 leading-[1.5rem] text-sm mobile:hidden">
+                                            <div id="calendar_popup_cancel_btn_ge"
+                                                class="flex px-8 h-10 items-center text-[#307FF8] border-[0.125rem] border-[#307FF8] rounded-[0.625rem] pt-1 cursor-pointer">
+                                                Cancel</div>
+                                            <div id="calendar_popup_confirm_btn_ge"
+                                                class="flex px-8 h-10 items-center text-white bg-[#307FF8] rounded-[0.625rem] pt-1 cursor-pointer">
+                                                Confirm</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-white hidden h-[29.625rem] w-[46.5rem] calender-jalali
+								rounded-[1rem] pt-4 border-[0.125rem] border-[#E1E2E4] cursor-auto mobile:overflow-auto absolute top-[4.75rem] ltr:left-0 rtl:right-0 z-[999999] mobile:w-[100vw] mobile:h-[100vh] mobile:fixed mobile:top-0"
+                                    style="box-shadow: rgba(0, 27, 78, 0.09) 0px 2rem 2.5rem -0.675rem;">
+                                    <div class="flex justify-between items-center px-6"><span
+                                            class="text-lg font-bold text-[#2C160B] leading-[1.875rem] mobile:hidden">Departure
+                                            Date</span>
+                                        <img id="calendar_popup_close_btn_ja"
+                                            class="w-8 cursor-pointer hidden mobile:block" src="/icons/search/exit.svg"
+                                            alt="exit">
+                                        <div class="flex items-center gap-6"><span
+                                                class="text-[#307FF8] text-sm leading-[1.5rem] cursor-pointer">Today</span>
+                                            <div
+                                                class="flex items-center gap-2 text-sm text-[#514037] leading-[1.5rem]">
+                                                <span>Return Date</span>
+                                                <label class="inline-flex items-center cursor-pointer">
+                                                    <input type="checkbox" value="" class="sr-only peer" />
+                                                    <div
+                                                        class="relative w-11 h-6 bg-[#AEB4C1] rounded-full peer peer-focus:ring-4 peer-focus:ring-blue-300 peer-checked:after:translate-x-full peer-checked:before:content-['\2713']
+													peer-checked:before:left-2
+													rtl:peer-checked:after:-translate-x-full before:content-['x']
+													before:absolute  before:right-2.5 before:text-white
+													 peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600">
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr class="border-0 h-[0.125rem] mx-4 mt-3 bg-[#F0F1F2]" />
+                                    <div dir="ltr" class="flex mt-3 gap-8 px-4 mobile:flex-col">
+                                        <div class="w-1/2 mobile:w-full">
+                                            <div class="flex items-center justify-between px-2"><img
+                                                    class="w-6 h-6 cursor-pointer mobile:hidden"
+                                                    src="/icons/ui/arrow-left.svg" alt="left">
+                                                <div class="w-10 h-10 hidden mobile:block"></div><span
+                                                    class="font-bold leading-[1.75rem] text-[#514037] pt-1">اردیبهشت
+                                                    2024</span>
+                                                <div class="w-10 h-10"></div>
+                                            </div>
+                                            <div
+                                                class="grid gap-2 grid-cols-[repeat(7,minmax(2.5rem,2.5rem))] justify-center content-center justify-items-stretch mt-2 mx-auto auto-rows-[2.5rem] text-center align-middle">
+                                                <div
+                                                    class="text-xs font-medium text-[#A69F9B] justify-center flex items-center">
+                                                    SUN</div>
+                                                <div
+                                                    class="text-xs font-medium text-[#A69F9B] justify-center flex items-center">
+                                                    MON</div>
+                                                <div
+                                                    class="text-xs font-medium text-[#A69F9B] justify-center flex items-center">
+                                                    TUE</div>
+                                                <div
+                                                    class="text-xs font-medium text-[#A69F9B] justify-center flex items-center">
+                                                    WED</div>
+                                                <div
+                                                    class="text-xs font-medium text-[#A69F9B] justify-center flex items-center">
+                                                    THU</div>
+                                                <div
+                                                    class="text-xs font-medium text-[#A69F9B] justify-center flex items-center">
+                                                    FRI</div>
+                                                <div
+                                                    class="text-xs font-medium text-[#A69F9B] justify-center flex items-center">
+                                                    SAT</div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>1</span>
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>2</span>
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>3</span>
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>4</span>
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>5</span>
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>6</span>
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>7</span>
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>8</span>
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>9</span>
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>10</span>
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>11</span>
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>12</span>
+
+                                                    <span class="text-xs group-hover:text-white text-[#EE0035]">
+                                                        1.200
+                                                    </span>
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>13</span>
+
+                                                    <span class="text-xs group-hover:text-white text-[#81756F]">
+                                                        900
+                                                    </span>
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>14</span>
+
+                                                    <span class="text-xs group-hover:text-white text-[#2AB930]">
+                                                        800
+                                                    </span>
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>15</span>
+
+                                                    <span class="text-xs group-hover:text-white text-[#81756F]">
+                                                        950
+                                                    </span>
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>16</span>
+
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>17</span>
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>18</span>
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>19</span>
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>20</span>
+
+                                                    <span class="text-xs group-hover:text-white text-[#81756F]">
+                                                        890
+                                                    </span>
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>21</span>
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>22</span>
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>23</span>
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>24</span>
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>25</span>
+
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>26</span>
+
+                                                    <span class="text-xs group-hover:text-white text-[#2AB930]">
+                                                        770
+                                                    </span>
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>27</span>
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>28</span>
+
+                                                    <span class="text-xs group-hover:text-white text-[#EE0035]">
+                                                        1.200
+                                                    </span>
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>29</span>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="w-1/2 mobile:w-full">
+                                            <div class="flex items-center justify-between px-2"><img
+                                                    class="w-6 h-6 cursor-pointer hidden mobile:flex"
+                                                    src="/icons/ui/arrow-left.svg" alt="left">
+                                                <div class="w-10 h-10 mobile:hidden"></div><span
+                                                    class="font-bold leading-[1.75rem] text-[#514037] pt-1">خرداد
+                                                    2024</span><img class="w-6 h-6 cursor-pointer rotate-180"
+                                                    src="/icons/ui/arrow-left.svg" alt="left">
+                                            </div>
+                                            <div
+                                                class="grid gap-2 grid-cols-[repeat(7,minmax(2.5rem,2.5rem))] justify-center content-center justify-items-stretch mt-2 mx-auto auto-rows-[2.5rem] text-center align-middle">
+                                                <div
+                                                    class="text-xs font-medium text-[#A69F9B] justify-center flex items-center">
+                                                    SUN</div>
+                                                <div
+                                                    class="text-xs font-medium text-[#A69F9B] justify-center flex items-center">
+                                                    MON</div>
+                                                <div
+                                                    class="text-xs font-medium text-[#A69F9B] justify-center flex items-center">
+                                                    TUE</div>
+                                                <div
+                                                    class="text-xs font-medium text-[#A69F9B] justify-center flex items-center">
+                                                    WED</div>
+                                                <div
+                                                    class="text-xs font-medium text-[#A69F9B] justify-center flex items-center">
+                                                    THU</div>
+                                                <div
+                                                    class="text-xs font-medium text-[#A69F9B] justify-center flex items-center">
+                                                    FRI</div>
+                                                <div
+                                                    class="text-xs font-medium text-[#A69F9B] justify-center flex items-center">
+                                                    SAT</div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>1</span>
+
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>2</span>
+
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>3</span>
+
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>4</span>
+
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>5</span>
+
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>6</span>
+
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>7</span>
+
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>8</span>
+
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>9</span>
+
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>10</span>
+
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>11</span>
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>12</span>
+
+                                                    <span class="text-xs group-hover:text-white text-[#EE0035]">
+                                                        1.200
+                                                    </span>
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>13</span>
+
+                                                    <span class="text-xs group-hover:text-white text-[#81756F]">
+                                                        900
+                                                    </span>
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>14</span>
+
+                                                    <span class="text-xs group-hover:text-white text-[#2AB930]">
+                                                        800
+                                                    </span>
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>15</span>
+
+                                                    <span class="text-xs group-hover:text-white text-[#81756F]">
+                                                        950
+                                                    </span>
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>16</span>
+
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>17</span>
+
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>18</span>
+
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>19</span>
+
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>20</span>
+
+                                                    <span class="text-xs group-hover:text-white text-[#81756F]">
+                                                        890
+                                                    </span>
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>21</span>
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>22</span>
+
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>23</span>
+
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>24</span>
+
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>25</span>
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>26</span>
+
+                                                    <span class="text-xs group-hover:text-white text-[#2AB930]">
+                                                        770
+                                                    </span>
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>27</span>
+
+
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>28</span>
+
+                                                    <span class="text-xs group-hover:text-white text-[#EE0035]">
+                                                        1.200
+                                                    </span>
+                                                </div>
+                                                <div
+                                                    class="hover:bg-crs-first  flex-col w-12 h-12 
+															group mobile:hover:bg-transparent hover:text-white mobile:hover:text-[#5B4A42] text-[#5B4A42] cursor-pointer rounded-[0.25rem] flex items-center justify-center text-base pt-0.5">
+                                                    <span>29</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr class="border-0 h-[0.125rem] mx-4 mt-3 bg-[#F0F1F2]">
+                                    <div
+                                        class="flex justify-between items-center mt-3 px-4 pb-4 mobile:flex-col mobile:gap-y-6 mobile:mt-6">
+                                        <div
+                                            class="flex p-1 h-[2.5rem] bg-[#F7F7F9] rounded-[0.5rem] min-w-[13.25rem] text-xs text-[#514037]">
+                                            <div
+                                                class="w-1/2 cursor-pointer flex items-center justify-center rounded-[0.5rem] text-crs-first bg-white">
+                                                شمسی</div>
+                                            <div
+                                                class="w-1/2 gregorian-btn cursor-pointer flex items-center justify-center rounded-[0.5rem] ">
+                                                میلادی</div>
+                                        </div>
+                                        <div class="flex gap-2 leading-[1.5rem] text-sm mobile:hidden">
+                                            <div id="calendar_popup_cancel_btn_ja"
+                                                class="flex px-8 h-10 items-center text-[#307FF8] border-[0.125rem] border-[#307FF8] rounded-[0.625rem] pt-1 cursor-pointer">
+                                                Cancel</div>
+                                            <div id="calendar_popup_confirm_btn_ja"
+                                                class="flex px-8 h-10 items-center text-white bg-[#307FF8] rounded-[0.625rem] pt-1 cursor-pointer">
+                                                Confirm</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div tabindex="0" id="passengers_input"
+                                class="rounded-[16px] relative border w-14 flex-grow border-[#DCDFE4] px-6 py-[11px] cursor-pointer">
+                                <div class="flex items-center overflow-auto h-full">
+                                    <div id="passengers_summary"
+                                        class="text-[#101D3B] whitespace-nowrap overflow-auto h-full w-full  pt-[1.5rem] flex items-center text-lg leading-[1.875rem]">
+                                        1 Adult
+                                    </div>
+                                    <div class="top-[0.7rem] text-xs leading-[1.25rem] block h-fit text-[#80889E] absolute rtl:right-12 ltr:left-5 transition-all"
+                                        for="origin">
+                                        Passengers
+                                    </div>
+                                </div>
+                                <div
+                                    class="absolute bottom-0 left-0 top-5 z-50 h-max w-full bg-white shadow-xl rounded-lg px-4">
+                                    <div id="passengers_popup"
+                                        class="bg-white hidden z-50 rounded-[1rem] border-[0.125rem] border-[#E1E2E4] p-4 mobile:p-6 absolute top-[4.25rem] ltr:left-0 rtl:right-0 w-[27.375rem] cursor-auto mobile:w-[100vw] mobile:h-[100vh] mobile:fixed mobile:top-0"
+                                        style="box-shadow: rgba(0, 27, 78, 0.09) 0px 2rem 2.5rem -0.675rem">
+                                        <img id="passengers_popup_close_btn"
+                                            class="w-8 cursor-pointer hidden mb-8 mobile:block"
+                                            src="/icons/search/exit.svg" alt="exit" tabindex="0" />
+
+                                        <div class="flex justify-between items-center">
+                                            <div class="text-lg leading-[1.875rem] text-[#2C160B]">
+                                                Adult <span class="text-[#81756F]">(12 years and above)</span>
+                                            </div>
+                                            <div dir="ltr"
+                                                class="flex gap-10 justify-between items-center font-bold text-2xl relative">
+                                                <div data-count="-1" data-type="adult"
+                                                    class="js-passenger-count-btn w-10 h-10 flex items-center justify-center rounded-[0.5rem] cursor-pointer bg-crs-first">
+                                                    <div class="w-4 h-[0.125rem] bg-white rounded-full"></div>
+                                                </div>
+                                                <span id="passengers_adult_count"
+                                                    class="absolute top-0 left-0 right-0 bottom-0 m-auto w-fit h-fit pt-1 font-bold text-lg text-[#2C160B]">1</span>
+                                                <div data-count="1" data-type="adult"
+                                                    class="js-passenger-count-btn w-10 h-10 flex items-center justify-center rounded-[0.5rem] relative cursor-pointer bg-crs-first">
+                                                    <div class="w-4 h-[0.125rem] bg-white rounded-full"></div>
+                                                    <div
+                                                        class="w-4 h-[0.125rem] bg-white rounded-full absolute rotate-90">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="flex justify-between items-center mt-4">
+                                            <div class="text-lg leading-[1.875rem] text-[#2C160B]">
+                                                Child <span class="text-[#81756F]">(2 to 12 years old)</span>
+                                            </div>
+                                            <div dir="ltr"
+                                                class="flex gap-10 justify-between items-center font-bold text-2xl relative">
+                                                <div data-count="-1" data-type="child"
+                                                    class="js-passenger-count-btn w-10 h-10 flex items-center justify-center rounded-[0.5rem] cursor-pointer bg-crs-first opacity-30">
+                                                    <div class="w-4 h-[0.125rem] bg-white rounded-full"></div>
+                                                </div>
+                                                <span id="passengers_child_count"
+                                                    class="absolute top-0 left-0 right-0 bottom-0 m-auto w-fit h-fit pt-1 font-bold text-lg text-[#2C160B]">0</span>
+                                                <div data-count="1" data-type="child"
+                                                    class="js-passenger-count-btn w-10 h-10 flex items-center justify-center rounded-[0.5rem] relative cursor-pointer bg-crs-first">
+                                                    <div class="w-4 h-[0.125rem] bg-white rounded-full"></div>
+                                                    <div
+                                                        class="w-4 h-[0.125rem] bg-white rounded-full absolute rotate-90">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="flex justify-between items-center mt-4">
+                                            <div class="text-lg leading-[1.875rem] text-[#2C160B]">
+                                                Infant <span class="text-[#81756F]">(10 days to 2 years)</span>
+                                            </div>
+                                            <div dir="ltr"
+                                                class="flex gap-10 justify-between items-center font-bold text-2xl relative">
+                                                <div data-count="-1" data-type="infant"
+                                                    class="js-passenger-count-btn w-10 h-10 flex items-center justify-center rounded-[0.5rem] cursor-pointer bg-crs-first opacity-30">
+                                                    <div class="w-4 h-[0.125rem] bg-white rounded-full"></div>
+                                                </div>
+                                                <span id="passengers_infant_count"
+                                                    class="absolute top-0 left-0 right-0 bottom-0 m-auto w-fit h-fit pt-1 font-bold text-lg text-[#2C160B]">0</span>
+                                                <div data-count="1" data-type="infant"
+                                                    class="js-passenger-count-btn w-10 h-10 flex items-center justify-center rounded-[0.5rem] relative cursor-pointer bg-crs-first">
+                                                    <div class="w-4 h-[0.125rem] bg-white rounded-full"></div>
+                                                    <div
+                                                        class="w-4 h-[0.125rem] bg-white rounded-full absolute rotate-90">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <hr class="mt-6 border-0 h-[0.125rem] bg-[#F0F1F2] mobile:hidden" />
+                                        <div class="flex justify-end gap-2 mt-4 mobile:hidden">
+                                            <div id="passengers_popup_cancel_btn"
+                                                class="h-10 pt-0.5 flex items-center px-8 text-sm leading-[1.5rem] text-[#307FF8] border-[0.125rem] border-[#307FF8] rounded-[0.625rem] cursor-pointer">
+                                                Cancel
+                                            </div>
+                                            <div id="passengers_popup_confirm_btn"
+                                                class="h-10 pt-0.5 flex items-center px-8 text-sm leading-[1.5rem] text-white bg-[#307FF8] rounded-[0.625rem] cursor-pointer">
+                                                Confirm
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="bg-crs-first text-white rounded-xl px-10 py-4">Search</button>
+                        </div>
+                    </div>
+                </section>
+            </header>
+        </div>
+
+        <div class="flex flex-col gap-3 mx-20 mt-5">
+            <div class="w-full relative swiper !flex !items-center !gap-2 bg-white rounded-xl !px-5 !py-2.5">
+                <!-- arrow right -->
+                <div class="bg-[#F7F7F9] absolute left-0 z-50 cursor-pointer swiper-button-prev w-10 h-10 flex items-center justify-center rounded-full">
+                    <img src="/icons/UpdateMain/left.svg" alt="" />
+                </div>
+                <!-- content -->
+                <div class="swiper-wrapper h-full">
+                    <label
+                        class="select swiper-slide group flex-col bg-white rounded-lg text-center border transition-all hover:bg-[#FF9029]/15 hover:border-crs-first hover:text-crs-first w-[7.625rem] py-2 cursor-pointer text-sm text-[#101D3B] !flex items-center justify-center"><input
+                            type="radio" class="hidden" value="[object Object]"><span class="text">FRI-12/6</span><span
+                            class="text-[#2AB930] group-hover:text-crs-first">1.200$</span></label>
+                    <label
+                        class="select swiper-slide group flex-col bg-white rounded-lg text-center border transition-all hover:bg-[#FF9029]/15 hover:border-crs-first hover:text-crs-first w-[7.625rem] py-2 cursor-pointer text-sm text-[#101D3B] !flex items-center justify-center"><input
+                            type="radio" class="hidden" value="[object Object]"><span class="text">FRI-12/6</span><span
+                            class="text-[#2AB930] group-hover:text-crs-first">1.200$</span></label>
+                    <label
+                        class="select swiper-slide group flex-col bg-white rounded-lg text-center border transition-all hover:bg-[#FF9029]/15 hover:border-crs-first hover:text-crs-first w-[7.625rem] py-2 cursor-pointer text-sm text-[#101D3B] !flex items-center justify-center"><input
+                            type="radio" class="hidden" value="[object Object]"><span class="text">FRI-12/6</span><span
+                            class="text-[#2AB930] group-hover:text-crs-first">1.200$</span></label>
+                    <label
+                        class="select swiper-slide group flex-col bg-white rounded-lg text-center border transition-all hover:bg-[#FF9029]/15 hover:border-crs-first hover:text-crs-first w-[7.625rem] py-2 cursor-pointer text-sm text-[#101D3B] !flex items-center justify-center"><input
+                            type="radio" class="hidden" value="[object Object]"><span class="text">FRI-12/6</span><span
+                            class="text-[#2AB930] group-hover:text-crs-first">1.200$</span></label>
+                    <label
+                        class="select swiper-slide group flex-col bg-white rounded-lg text-center border transition-all hover:bg-[#FF9029]/15 hover:border-crs-first hover:text-crs-first w-[7.625rem] py-2 cursor-pointer text-sm text-[#101D3B] !flex items-center justify-center"><input
+                            type="radio" class="hidden" value="[object Object]"><span class="text">FRI-12/6</span><span
+                            class="text-[#2AB930] group-hover:text-crs-first">1.200$</span></label>
+                    <label
+                        class="select swiper-slide group flex-col bg-white rounded-lg text-center border transition-all hover:bg-[#FF9029]/15 hover:border-crs-first hover:text-crs-first w-[7.625rem] py-2 cursor-pointer text-sm text-[#101D3B] !flex items-center justify-center"><input
+                            type="radio" class="hidden" value="[object Object]"><span class="text">FRI-12/6</span><span
+                            class="text-[#2AB930] group-hover:text-crs-first">1.200$</span></label>
+                    <label
+                        class="select swiper-slide group flex-col bg-white rounded-lg text-center border transition-all hover:bg-[#FF9029]/15 hover:border-crs-first hover:text-crs-first w-[7.625rem] py-2 cursor-pointer text-sm text-[#101D3B] !flex items-center justify-center"><input
+                            type="radio" class="hidden" value="[object Object]"><span class="text">FRI-12/6</span><span
+                            class="text-[#2AB930] group-hover:text-crs-first">1.200$</span></label>
+                    <label
+                        class="select swiper-slide group flex-col bg-white rounded-lg text-center border transition-all hover:bg-[#FF9029]/15 hover:border-crs-first hover:text-crs-first w-[7.625rem] py-2 cursor-pointer text-sm text-[#101D3B] !flex items-center justify-center"><input
+                            type="radio" class="hidden" value="[object Object]"><span class="text">FRI-12/6</span><span
+                            class="text-[#2AB930] group-hover:text-crs-first">1.200$</span></label>
+                    <label
+                        class="select swiper-slide group flex-col bg-white rounded-lg text-center border transition-all hover:bg-[#FF9029]/15 hover:border-crs-first hover:text-crs-first w-[7.625rem] py-2 cursor-pointer text-sm text-[#101D3B] !flex items-center justify-center"><input
+                            type="radio" class="hidden" value="[object Object]"><span class="text">FRI-12/6</span><span
+                            class="text-[#2AB930] group-hover:text-crs-first">1.200$</span></label>
+                    <label
+                        class="select swiper-slide group flex-col bg-white rounded-lg text-center border transition-all hover:bg-[#FF9029]/15 hover:border-crs-first hover:text-crs-first w-[7.625rem] py-2 cursor-pointer text-sm text-[#101D3B] !flex items-center justify-center"><input
+                            type="radio" class="hidden" value="[object Object]"><span class="text">FRI-12/6</span><span
+                            class="text-[#2AB930] group-hover:text-crs-first">1.200$</span></label>
+                    <label
+                        class="select swiper-slide group flex-col bg-white rounded-lg text-center border transition-all hover:bg-[#FF9029]/15 hover:border-crs-first hover:text-crs-first w-[7.625rem] py-2 cursor-pointer text-sm text-[#101D3B] !flex items-center justify-center"><input
+                            type="radio" class="hidden" value="[object Object]"><span class="text">FRI-12/6</span><span
+                            class="text-[#2AB930] group-hover:text-crs-first">1.200$</span></label>
+                    <label
+                        class="select swiper-slide group flex-col bg-white rounded-lg text-center border transition-all hover:bg-[#FF9029]/15 hover:border-crs-first hover:text-crs-first w-[7.625rem] py-2 cursor-pointer text-sm text-[#101D3B] !flex items-center justify-center"><input
+                            type="radio" class="hidden" value="[object Object]"><span class="text">FRI-12/6</span><span
+                            class="text-[#2AB930] group-hover:text-crs-first">1.200$</span></label>
+                    <label
+                        class="select swiper-slide group flex-col bg-white rounded-lg text-center border transition-all hover:bg-[#FF9029]/15 hover:border-crs-first hover:text-crs-first w-[7.625rem] py-2 cursor-pointer text-sm text-[#101D3B] !flex items-center justify-center"><input
+                            type="radio" class="hidden" value="[object Object]"><span class="text">FRI-12/6</span><span
+                            class="text-[#2AB930] group-hover:text-crs-first">1.200$</span></label>
+                </div>
+
+                <!-- arrow left -->
+                <div class="bg-[#F7F7F9] absolute right-0 z-50 cursor-pointer swiper-button-next w-10 h-10 flex items-center justify-center rounded-full">
+                    <img src="/icons/UpdateMain/left.svg" class="rotate-180 " alt="" />
+                </div>
+            </div>
+
+            <div class="flex gap-5">
+                <div id="fast_search" class="basis-3/12 text-[#1C0E07]">
+                    <div class="bg-white gap-5 px-5 py-3 rounded-2xl flex flex-col">
+                        <div class="flex items-center justify-between">
+                            <h4 class="font-bold text-2xl">
+                                Fast Search
+                            </h4>
+
+                            <button id="edit_btn"
+                                class="border text-sm flex items-center gap-2 py-2.5 px-4 rounded-full">
+                                <img src="/icons/UpdateMain/edit.svg" alt="">
+                                <span>
+                                    Edit
+                                </span>
+                            </button>
+                        </div>
+                        <div id="inner_fast_search" class="grid grid-cols-1 w-full justify-between gap-3 items-center">
+                            <div class="flex rounded p-2 justify-between w-full items-center">
+                                <span>Mashhad to Najaf</span>
+                                <span>
+                                    1.500.00 تومان
+                                </span>
+                            </div>
+
+                            <div class="flex rounded p-2 justify-between w-full items-center">
+                                <span>Mashhad to Tehran</span>
+                                <span>
+                                    1.500.00 تومان
+                                </span>
+                            </div>
+
+                            <div class="flex rounded p-2 justify-between w-full items-center">
+                                <span>Tehran to Shiraz</span>
+                                <span>
+                                    1.500.00 تومان
+                                </span>
+                            </div>
+
+
+
+                            <div
+                                class="border w-full h-10 flex cursor-pointer justify-center items-center border-dashed bg-[#F6FAFF] rounded border-[#8CB8FB]">
+                                <img src="/icons/UpdateMain/plus.svg" alt="">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="flex flex-col basis-3/4 gap-3">
+                    <div class="flex gap-5 mb-4 items-center rounded-xl overflow-hidden bg-white">
+                        <div
+                            class="grid grid-cols-5 w-full divide-x rtl:divide-x-reverse whitespace-nowrap items-center text-sm">
+                            <div class="border-b-2 border-[#0A77FF] flex items-center cursor-pointer p-5 w-full">
+                                <div>
+                                    <div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg"
+                                            width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                            <path
+                                                d="M9.15327 2.33977L10.3266 4.68643C10.4866 5.0131 10.9133 5.32643 11.2733 5.38643L13.3999 5.73977C14.7599 5.96643 15.0799 6.9531 14.0999 7.92643L12.4466 9.57977C12.1666 9.85977 12.0133 10.3998 12.0999 10.7864L12.5733 12.8331C12.9466 14.4531 12.0866 15.0798 10.6533 14.2331L8.65994 13.0531C8.29994 12.8398 7.70661 12.8398 7.33994 13.0531L5.34661 14.2331C3.91994 15.0798 3.05327 14.4464 3.42661 12.8331L3.89994 10.7864C3.98661 10.3998 3.83327 9.85977 3.55327 9.57977L1.89994 7.92643C0.926606 6.9531 1.23994 5.96643 2.59994 5.73977L4.72661 5.38643C5.07994 5.32643 5.50661 5.0131 5.66661 4.68643L6.83994 2.33977C7.47994 1.06643 8.51994 1.06643 9.15327 2.33977Z"
+                                                stroke="#1D1B20" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round"></path>
+                                        </svg>
+                                        <p class="font-bold">Sugested</p>
+                                    </div>
+                                    <p class="mt-1">6،500،000 Rial</p>
+                                </div>
+                            </div>
+                            <div class="lg:flex hidden items-center cursor-pointer p-5 w-full">
+                                <div>
+                                    <div class="flex items-center gap-2"><svg width="17" height="16" viewBox="0 0 17 16"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M6.11475 9.55307C6.11475 10.4131 6.77475 11.1064 7.59475 11.1064H9.26808C9.98141 11.1064 10.5614 10.4997 10.5614 9.75307C10.5614 8.93973 10.2081 8.65307 9.68141 8.4664L6.99475 7.53307C6.46808 7.3464 6.11475 7.05973 6.11475 6.2464C6.11475 5.49973 6.69475 4.89307 7.40808 4.89307H9.08141C9.90141 4.89307 10.5614 5.5864 10.5614 6.4464"
+                                                stroke="#1D1B20" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round"></path>
+                                            <path d="M8.3335 4V12" stroke="#1D1B20" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path
+                                                d="M8.33366 14.6668C12.0156 14.6668 15.0003 11.6821 15.0003 8.00016C15.0003 4.31826 12.0156 1.3335 8.33366 1.3335C4.65176 1.3335 1.66699 4.31826 1.66699 8.00016C1.66699 11.6821 4.65176 14.6668 8.33366 14.6668Z"
+                                                stroke="#1D1B20" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round"></path>
+                                        </svg>
+                                        <p class="font-bold">Cheepest</p>
+                                    </div>
+                                    <p class="mt-1">Cheepest</p>
+                                </div>
+                            </div>
+                            <div class="lg:flex hidden items-center cursor-pointer p-5 w-full">
+                                <div>
+                                    <div class="flex items-center gap-2"><svg width="17" height="16" viewBox="0 0 17 16"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M6.11475 9.55307C6.11475 10.4131 6.77475 11.1064 7.59475 11.1064H9.26808C9.98141 11.1064 10.5614 10.4997 10.5614 9.75307C10.5614 8.93973 10.2081 8.65307 9.68141 8.4664L6.99475 7.53307C6.46808 7.3464 6.11475 7.05973 6.11475 6.2464C6.11475 5.49973 6.69475 4.89307 7.40808 4.89307H9.08141C9.90141 4.89307 10.5614 5.5864 10.5614 6.4464"
+                                                stroke="#1D1B20" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round"></path>
+                                            <path d="M8.3335 4V12" stroke="#1D1B20" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path
+                                                d="M8.33366 14.6668C12.0156 14.6668 15.0003 11.6821 15.0003 8.00016C15.0003 4.31826 12.0156 1.3335 8.33366 1.3335C4.65176 1.3335 1.66699 4.31826 1.66699 8.00016C1.66699 11.6821 4.65176 14.6668 8.33366 14.6668Z"
+                                                stroke="#1D1B20" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round"></path>
+                                        </svg>
+                                        <p class="font-bold">Most expensive</p>
+                                    </div>
+                                    <p class="mt-1">12،000،000 Rial</p>
+                                </div>
+                            </div>
+                            <div class="lg:flex hidden items-center cursor-pointer p-5 w-full">
+                                <div>
+                                    <div class="flex items-center gap-2"><svg width="17" height="16" viewBox="0 0 17 16"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M6.87996 8.85331H8.93995V13.6533C8.93995 14.36 9.81995 14.6933 10.2866 14.16L15.3333 8.42665C15.7733 7.92665 15.42 7.14665 14.7533 7.14665H12.6933V2.34665C12.6933 1.63998 11.8133 1.30665 11.3466 1.83998L6.29996 7.57331C5.86663 8.07331 6.21996 8.85331 6.87996 8.85331Z"
+                                                stroke="#1D1B20" stroke-width="1.5" stroke-miterlimit="10"
+                                                stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M6.33317 2.6665H1.6665" stroke="#1D1B20" stroke-width="1.5"
+                                                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round">
+                                            </path>
+                                            <path d="M5.6665 13.3335H1.6665" stroke="#1D1B20" stroke-width="1.5"
+                                                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round">
+                                            </path>
+                                            <path d="M3.6665 8H1.6665" stroke="#1D1B20" stroke-width="1.5"
+                                                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round">
+                                            </path>
+                                        </svg>
+                                        <p class="font-bold">Fastest</p>
+                                    </div>
+                                    <p class="mt-1">12:25 PM</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center cursor-pointer p-5 w-full">
+                                <div>
+                                    <div class="flex items-center gap-2">
+                                        <select name="filters" id="filters">
+                                            <option value="" hidden selected>filters</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex w-full flex-col gap-3">
+                        <div class="bg-white px-6 c rounded-xl py-4 flex flex-col gap-6">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-2">
+                                    <span
+                                        class="px-5 bg-[#42526E] text-white py-2 text-xs rounded-2xl flex items-center justify-center">
+                                        G9202
+                                    </span>
+                                    <span
+                                        class="px-5 py-2 bg-[#F1F2F4] text-xs rounded-2xl flex items-center justify-center">
+                                        Charter
+                                    </span>
+                                    <span
+                                        class="px-5 py-2 bg-[#F1F2F4] text-xs rounded-2xl flex items-center justify-center">
+                                        Economy
+                                    </span>
+                                </div>
+
+                                <span class="text-sm text-crs-first">
+                                    5 sites remine
+                                </span>
+                            </div>
+
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-6">
+                                    <div class="flex flex-col">
+                                        <span class="text-2xl font-bold">
+                                            08:15 PM
+                                        </span>
+                                        <span class="flex text-[#605D64] gap-2 items-center">
+                                            <p>20/Aug/2023</p>
+                                            <p>IMK</p>
+                                        </span>
+                                    </div>
+                                    <div class="flex text-[#3A4354] text-xs flex-col items-center justify-center gap-1">
+                                        <img src="/icons/UpdateMain/airplane.svg" class="w-6 h-6" alt="..." />
+                                        <p>
+                                            non stop
+                                        </p>
+                                    </div>
+                                    <div class="flex flex-col">
+                                        <span class="text-2xl font-bold">
+                                            10:30 PM
+                                        </span>
+                                        <span class="flex text-[#605D64] gap-2 items-center">
+                                            <p>21/Aug/2023</p>
+                                            <p>YYZ</p>
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-col gap-2 justify-center items-center">
+                                    <div class="flex items-center">
+                                        <div class="bg-[#D9D9D9] h-10 w-10 rounded-full"></div>
+                                        <div class="bg-[#D9D9D9] h-10 w-10 rounded-full -ml-5 border border-white ">
+                                        </div>
+                                    </div>
+                                    <p class="text-xs text-[#1D1B20]">
+                                        Mahan , baghdad
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center justify-between">
+                                <div class="flex gap-4">
+                                    <div class="flex items-center text-[#605D64] gap-1">
+                                        <img src="/icons/UpdateMain/Baggage.svg" alt="" />
+                                        <span>
+                                            20Kg
+                                        </span>
+                                    </div>
+                                    <div class="flex items-center text-[#307FF8] gap-1">
+                                        <span>
+                                            Flight ruls
+                                        </span>
+                                        <img src="/icons/UpdateMain/arrow-down-b.svg" alt="" />
+                                    </div>
+                                    <div class="flex items-center text-[#307FF8] gap-1">
+                                        <span>
+                                            Flight details
+                                        </span>
+                                        <img src="/icons/UpdateMain/arrow-down-b.svg" alt="" />
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center gap-4">
+                                    <div class="flex text-lg items-center">
+                                        <span class="font-bold text-[#307FF8]">640.45</span>
+                                        <span>USD</span>
+                                    </div>
+
+                                    <button class="border hover:bg-[#307FF8] hover:text-white transition-all border-[#307FF8] text-[#307FF8] px-6 py-2.5 rounded-lg">
+                                        Choose Flight
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white px-6 c rounded-xl py-4 flex flex-col gap-6">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-2">
+                                    <span
+                                        class="px-5 bg-[#42526E] text-white py-2 text-xs rounded-2xl flex items-center justify-center">
+                                        G9202
+                                    </span>
+                                    <span
+                                        class="px-5 py-2 bg-[#F1F2F4] text-xs rounded-2xl flex items-center justify-center">
+                                        Charter
+                                    </span>
+                                    <span
+                                        class="px-5 py-2 bg-[#F1F2F4] text-xs rounded-2xl flex items-center justify-center">
+                                        Economy
+                                    </span>
+                                </div>
+
+                                <span class="text-sm text-crs-first">
+                                    5 sites remine
+                                </span>
+                            </div>
+
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-6">
+                                    <div class="flex flex-col">
+                                        <span class="text-2xl font-bold">
+                                            08:15 PM
+                                        </span>
+                                        <span class="flex text-[#605D64] gap-2 items-center">
+                                            <p>20/Aug/2023</p>
+                                            <p>IMK</p>
+                                        </span>
+                                    </div>
+                                    <div class="flex text-[#3A4354] text-xs flex-col items-center justify-center gap-1">
+                                        <img src="/icons/UpdateMain/airplane.svg" class="w-6 h-6" alt="..." />
+                                        <p>
+                                            non stop
+                                        </p>
+                                    </div>
+                                    <div class="flex flex-col">
+                                        <span class="text-2xl font-bold">
+                                            10:30 PM
+                                        </span>
+                                        <span class="flex text-[#605D64] gap-2 items-center">
+                                            <p>21/Aug/2023</p>
+                                            <p>YYZ</p>
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-col gap-2 justify-center items-center">
+                                    <div class="flex items-center">
+                                        <div class="bg-[#D9D9D9] h-10 w-10 rounded-full"></div>
+                                        <div class="bg-[#D9D9D9] h-10 w-10 rounded-full -ml-5 border border-white ">
+                                        </div>
+                                    </div>
+                                    <p class="text-xs text-[#1D1B20]">
+                                        Mahan , baghdad
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center justify-between">
+                                <div class="flex gap-4">
+                                    <div class="flex items-center text-[#605D64] gap-1">
+                                        <img src="/icons/UpdateMain/Baggage.svg" alt="" />
+                                        <span>
+                                            20Kg
+                                        </span>
+                                    </div>
+                                    <div class="flex items-center text-[#307FF8] gap-1">
+                                        <span>
+                                            Flight ruls
+                                        </span>
+                                        <img src="/icons/UpdateMain/arrow-down-b.svg" alt="" />
+                                    </div>
+                                    <div class="flex items-center text-[#307FF8] gap-1">
+                                        <span>
+                                            Flight details
+                                        </span>
+                                        <img src="/icons/UpdateMain/arrow-down-b.svg" alt="" />
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center gap-4">
+                                    <div class="flex text-lg items-center">
+                                        <span class="font-bold text-[#307FF8]">640.45</span>
+                                        <span>USD</span>
+                                    </div>
+
+                                    <button class="border hover:bg-[#307FF8] hover:text-white transition-all border-[#307FF8] text-[#307FF8] px-6 py-2.5 rounded-lg">
+                                        Choose Flight
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white px-6 c rounded-xl py-4 flex flex-col gap-6">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-2">
+                                    <span
+                                        class="px-5 bg-[#42526E] text-white py-2 text-xs rounded-2xl flex items-center justify-center">
+                                        G9202
+                                    </span>
+                                    <span
+                                        class="px-5 py-2 bg-[#F1F2F4] text-xs rounded-2xl flex items-center justify-center">
+                                        Charter
+                                    </span>
+                                    <span
+                                        class="px-5 py-2 bg-[#F1F2F4] text-xs rounded-2xl flex items-center justify-center">
+                                        Economy
+                                    </span>
+                                </div>
+
+                                <span class="text-sm text-crs-first">
+                                    5 sites remine
+                                </span>
+                            </div>
+
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-6">
+                                    <div class="flex flex-col">
+                                        <span class="text-2xl font-bold">
+                                            08:15 PM
+                                        </span>
+                                        <span class="flex text-[#605D64] gap-2 items-center">
+                                            <p>20/Aug/2023</p>
+                                            <p>IMK</p>
+                                        </span>
+                                    </div>
+                                    <div class="flex text-[#3A4354] text-xs flex-col items-center justify-center gap-1">
+                                        <img src="/icons/UpdateMain/airplane.svg" class="w-6 h-6" alt="..." />
+                                        <p>
+                                            non stop
+                                        </p>
+                                    </div>
+                                    <div class="flex flex-col">
+                                        <span class="text-2xl font-bold">
+                                            10:30 PM
+                                        </span>
+                                        <span class="flex text-[#605D64] gap-2 items-center">
+                                            <p>21/Aug/2023</p>
+                                            <p>YYZ</p>
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-col gap-2 justify-center items-center">
+                                    <div class="flex items-center">
+                                        <div class="bg-[#D9D9D9] h-10 w-10 rounded-full"></div>
+                                        <div class="bg-[#D9D9D9] h-10 w-10 rounded-full -ml-5 border border-white ">
+                                        </div>
+                                    </div>
+                                    <p class="text-xs text-[#1D1B20]">
+                                        Mahan , baghdad
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center justify-between">
+                                <div class="flex gap-4">
+                                    <div class="flex items-center text-[#605D64] gap-1">
+                                        <img src="/icons/UpdateMain/Baggage.svg" alt="" />
+                                        <span>
+                                            20Kg
+                                        </span>
+                                    </div>
+                                    <div class="flex items-center text-[#307FF8] gap-1">
+                                        <span>
+                                            Flight ruls
+                                        </span>
+                                        <img src="/icons/UpdateMain/arrow-down-b.svg" alt="" />
+                                    </div>
+                                    <div class="flex items-center text-[#307FF8] gap-1">
+                                        <span>
+                                            Flight details
+                                        </span>
+                                        <img src="/icons/UpdateMain/arrow-down-b.svg" alt="" />
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center gap-4">
+                                    <div class="flex text-lg items-center">
+                                        <span class="font-bold text-[#307FF8]">640.45</span>
+                                        <span>USD</span>
+                                    </div>
+
+                                    <button class="border hover:bg-[#307FF8] hover:text-white transition-all border-[#307FF8] text-[#307FF8] px-6 py-2.5 rounded-lg">
+                                        Choose Flight
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="text-[#101D3B] flex justify-center items-center text-center mt-5 mb-10">
+                            You reached end of the list!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="w-full">
+
+		<div class=" bg-crs-footer px-20 py-10 mobile:px-7">
+			<div class="flex px-[4.5rem] mobile:px-0 justify-between mobile:flex-col  lg:max-w-[105rem] lg:mx-auto">
+				<div>
+					<img src="/images/UpdateMain/logo.svg" alt="search">
+					<p class="text-lg leading-[1.875rem] mt-2 text-Black/2">
+						Where the Journey Begins and Memories are Made.
+					</p>
+					<div class="mt-10 mx-2 flex gap-2">
+						<div class="bg-white rounded-[0.5rem] p-1 cursor-pointer">
+							<img class="w-12 h-12" src="/icons/search/Instagram.svg" alt="Instagram" />
+						</div>
+						<div class="bg-white rounded-[0.5rem] p-1 cursor-pointer">
+							<img class="w-12 h-12" src="/icons/search/Telegram.svg" alt="Telegram" />
+						</div>
+						<div class="bg-white rounded-[0.5rem] p-1 cursor-pointer">
+							<img class="w-12 h-12" src="/icons/search/Whatsapp.svg" alt="Whatsapp" />
+						</div>
+					</div>
+					<h2 class="font-bold text-crs-first mt-6 px-2">CRSTRIP<span class="text-[#2C160B]">.COM</span></h2>
+				</div>
+				<div class="flex gap-[5.5rem] pt-4 mobile:my-6 mobile:justify-start justify-center">
+					<div>
+						<h4 class="text-2xl leading-[2.5rem] font-bold text-[#2C160B]">Menu</h4>
+						<ul class="mt-6 space-y-4 text-[#5B4A42] text-xl leading-[1.875rem]">
+							<li>Services</li>
+							<li>Support</li>
+							<li>About us</li>
+							<li>Contact us</li>
+						</ul>
+					</div>
+					<div>
+						<h4 class="text-2xl leading-[2.5rem] font-bold text-[#2C160B]">Contact Info</h4>
+						<ul class="mt-6 space-y-4 text-[#5B4A42] text-xl leading-[1.875rem]">
+
+							<li class="flex items-center mobile:justify-center gap-2">
+								<img class="w-6 h-6" src="/icons/UpdateMain/sms.svg" alt="call" /><span
+									dir="ltr">crstrip.com@gmail.com</span>
+							</li>
+							<li class="flex items-center mobile:justify-center gap-2">
+								<img class="w-6 h-6" src="/icons/UpdateMain/call.svg" alt="call" /><span
+									dir="ltr">+9647815639914</span>
+							</li>
+							<li class="flex items-center mobile:justify-center gap-2">
+								<img class="w-6 h-6" src="/icons/UpdateMain/location.svg" alt="location" /><span
+									dir="ltr">Najaf - Iraq</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div dir="ltr" class="px-6 bg-white h-[4.5rem] flex items-center justify-center gap-2 text-sm text-[#2C160B]">
+			<img class="w-6 h-6" src="/icons/search/rights.svg" alt="rights" /><span class="pt-1.5">
+				All rights to these services (website and mobile application) are reserved and owned by CRS Trip</span>
+		</div>
+	</footer>
+</body>
+
+</html>

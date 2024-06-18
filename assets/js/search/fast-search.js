@@ -1,3 +1,4 @@
+// Element selectors
 const confirmBtn = document.getElementById("confirm_edit");
 const cancelBtn = document.getElementById("cancel_edit");
 const fastSearchEdit = document.getElementById("edit_fast");
@@ -9,74 +10,55 @@ const modal = document.getElementById("modal");
 const closeModalBtn = document.getElementById("close_modal");
 const addDataBtn = document.getElementById("add_data_Modal");
 const swapBtn = document.getElementById("swap_search_btn_modal");
-let originValue = document.getElementById("origin_input_modal");
-let destinationValue = document.getElementById("destination_input_modal");
-const originAriportsList = document.getElementById(
+const originInput = document.getElementById("origin_input_modal");
+const destinationInput = document.getElementById("destination_input_modal");
+const originAirportsList = document.getElementById(
   "origin_airports_list_modal"
 );
-const destinationAriportsList = document.getElementById(
+const destinationAirportsList = document.getElementById(
   "destination_airports_list_modal"
 );
+const modalPrice = document.getElementById("modal_price");
 
-const existItem = JSON.parse(localStorage.getItem("fast_search"));
-
+// Initialize and load data
 const dataForFastSearch = [
-  {
-    origin: "Mashhad",
-    destination: "Najaf",
-    detail: "1.500.00 تومان",
-  },
-  {
-    origin: "Mashhad",
-    destination: "Tehran",
-    detail: "1.500.00 تومان",
-  },
-  {
-    origin: "Tehran",
-    destination: "Shiraz",
-    detail: "1.500.00 تومان",
-  },
-  {
-    origin: "Tehran",
-    destination: "Shiraz",
-    detail: "1.500.00 تومان",
-  },
-  {
-    origin: "Tehran",
-    destination: "Shiraz",
-    detail: "1.500.00 تومان",
-  },
-  {
-    origin: "Tehran",
-    destination: "Shiraz",
-    detail: "1.500.00 تومان",
-  },
-  {
-    origin: "Tehran",
-    destination: "Shiraz",
-    detail: "1.500.00 تومان",
-  },
-  {
-    origin: "Tehran",
-    destination: "Shiraz",
-    detail: "1.500.00 تومان",
-  },
-  {
-    origin: "Tehran",
-    destination: "Shiraz",
-    detail: "1.500.00 تومان",
-  },
-  {
-    origin: "Tehran",
-    destination: "Shiraz",
-    detail: "1.500.00 تومان",
-  },
+  { origin: "Mashhad", destination: "Najaf", detail: "1.500.00 تومان" },
+  { origin: "Mashhad", destination: "Tehran", detail: "1.500.00 تومان" },
+  { origin: "Tehran", destination: "Shiraz", detail: "1.500.00 تومان" },
+  { origin: "Tehran", destination: "Ahwaz", detail: "1.500.00 تومان" },
+  { origin: "Shiraz", destination: "Mashhad", detail: "1.500.00 تومان" },
+  // Repeated data omitted for brevity
 ];
 
-if (!existItem || !existItem.length) {
+const existingData = JSON.parse(localStorage.getItem("fast_search")) || [];
+if (!existingData.length) {
   localStorage.setItem("fast_search", JSON.stringify(dataForFastSearch));
 }
 
+// Utility functions
+const hideElement = (element) => element && element.classList.add("hidden");
+const showElement = (element) => element && element.classList.remove("hidden");
+
+const filterAirportList = (query, list) => {
+  const normalizedQuery = query.toLowerCase().trim();
+  list.querySelectorAll(".js-airport").forEach((item) => {
+    const airportName = item
+      .querySelector(".airport-name")
+      .textContent.toLowerCase()
+      .trim();
+    const airportCode = item
+      .querySelector(".airport-code")
+      .textContent.toLowerCase()
+      .trim();
+    item.classList.toggle(
+      "hidden",
+      !airportName.includes(normalizedQuery) &&
+        !airportCode.includes(normalizedQuery)
+    );
+  });
+};
+
+// Event listeners
 const showAndHideFastSearch = () => {
   fastSearchEdit.classList.toggle("hidden");
   fastSearch.classList.toggle("hidden");
@@ -86,20 +68,17 @@ editBtn.addEventListener("click", showAndHideFastSearch);
 cancelBtn.addEventListener("click", showAndHideFastSearch);
 confirmBtn.addEventListener("click", showAndHideFastSearch);
 
-// search start
-const searchInputs = [originValue, destinationValue];
-const ariportLists = [originAriportsList, destinationAriportsList];
+originInput.addEventListener("focus", () => (originInput.value = ""));
+destinationInput.addEventListener("focus", () => (destinationInput.value = ""));
 
-/* Swap search input values */
 swapBtn.addEventListener("click", () => {
-  [originValue.value, destinationValue.value] = [
-    destinationValue.value,
-    originValue.value,
+  [originInput.value, destinationInput.value] = [
+    destinationInput.value,
+    originInput.value,
   ];
 });
 
-/* Handle input dropdowns */
-ariportLists.forEach((list) => {
+[originAirportsList, destinationAirportsList].forEach((list) => {
   list.addEventListener("click", ({ target }) => {
     const airport = target.closest(".js-airport");
     if (!airport) return;
@@ -107,206 +86,143 @@ ariportLists.forEach((list) => {
     const airportName = airport
       .querySelector(".airport-name")
       .textContent.trim();
-    const airportCode = airport
-      .querySelector(".airport-code")
-      .textContent.trim();
     const relatedInput =
-      list.id === "origin_airports_list_modal" ? originValue : destinationValue;
-
-    relatedInput.value = `${airportName}`;
-
+      list === originAirportsList ? originInput : destinationInput;
+    relatedInput.value = airportName;
     hideElement(list);
   });
 });
 
-searchInputs.forEach((input) => {
+[originInput, destinationInput].forEach((input) => {
   input.addEventListener("input", () => {
     const list =
-      input.id === "origin_input_modal"
-        ? originAriportsList
-        : destinationAriportsList;
+      input === originInput ? originAirportsList : destinationAirportsList;
     filterAirportList(input.value, list);
   });
 
   input.addEventListener("click", () => {
-    if (input.id === "origin_input_modal") {
-      showElement(originAriportsList);
-      hideElement(destinationAriportsList);
-    } else {
-      showElement(destinationAriportsList);
-      hideElement(originAriportsList);
-    }
+    showElement(
+      input === originInput ? originAirportsList : destinationAirportsList
+    );
+    hideElement(
+      input === originInput ? destinationAirportsList : originAirportsList
+    );
   });
 });
 
 document.body.addEventListener("click", ({ target }) => {
-  const targetIsInput = searchInputs.includes(target);
-  const targetIsList =
-    target.closest("#origin_airports_list_modal") ||
-    target.closest("#destination_airports_list_modal");
-  if (targetIsInput || targetIsList) return;
-
-  ariportLists.forEach((list) => hideElement(list));
+  if (
+    ![originInput, destinationInput].includes(target) &&
+    !target.closest("#origin_airports_list_modal") &&
+    !target.closest("#destination_airports_list_modal")
+  ) {
+    hideElement(originAirportsList);
+    hideElement(destinationAirportsList);
+  }
 });
 
-/* Utilities */
-function hideElement(element) {
-  if (element) element.classList.add("hidden");
-}
-
-function showElement(element) {
-  if (element) element.classList.remove("hidden");
-}
-
-function filterAirportList(query, list) {
-  const items = list.querySelectorAll(".js-airport");
-  const normalizedQuery = query.toLowerCase().trim();
-
-  items.forEach((item) => {
-    const airportName = item
-      .querySelector(".airport-name")
-      .textContent.toLowerCase()
-      .trim();
-    const airportCode = item
-      .querySelector(".airport-code")
-      .textContent.toLowerCase()
-      .trim();
-
-    if (
-      airportName.includes(normalizedQuery) ||
-      airportCode.includes(normalizedQuery)
-    ) {
-      item.classList.remove("hidden");
-    } else {
-      item.classList.add("hidden");
-    }
-  });
-}
-// search end
-
-let dataOfStorage = JSON.parse(localStorage.getItem("fast_search"));
-
-const deleteFastSearchData = (index) => {
-  dataOfStorage = dataOfStorage.filter((_, i) => i !== parseInt(index));
-  localStorage.setItem("fast_search", JSON.stringify(dataOfStorage));
-  render();
-};
-
-// Function to open modal
-function openModal() {
-  // originValue.value = "";
-  // destinationValue.value = "";
+// Modal functions
+const openModal = () => {
   modal.classList.remove("hidden");
   modal.classList.add("flex");
-}
+};
+const openModalPrice = () => {
+  modalPrice.classList.remove("hidden");
+  modalPrice.classList.add("flex");
+};
 
-// Function to close modal
-function closeModal() {
-  // originValue.value = "";
-  // destinationValue.value = "";
+const closeModalPrice = (event) => {
+  if (event.target.closest("#inner_modal_price")) return;
+  modalPrice.classList.add("hidden");
+  modalPrice.classList.remove("flex");
+};
+
+modalPrice.addEventListener("click", closeModalPrice);
+
+const closeModal = () => {
   modal.classList.add("hidden");
   modal.classList.remove("flex");
-}
+};
+
+const closeModalOut = (event) => {
+  if (event.target.closest("#inner_modal")) return;
+  closeModal();
+};
+
 closeModalBtn.addEventListener("click", closeModal);
+modal.addEventListener("click", closeModalOut);
 
 const addData = () => {
-  // Check if the input values are null or empty
-  if (!originValue.value.trim() || !destinationValue.value.trim()) {
+  if (!originInput.value.trim() || !destinationInput.value.trim()) {
     alert("Both origin and destination fields are required.");
     return;
   }
+
+  const dataOfStorage = JSON.parse(localStorage.getItem("fast_search")) || [];
   dataOfStorage.push({
-    origin: originValue.value,
-    destination: destinationValue.value,
+    origin: originInput.value,
+    destination: destinationInput.value,
     detail: "1.500.00 تومان",
   });
   localStorage.setItem("fast_search", JSON.stringify(dataOfStorage));
   render();
   closeModal();
-
-  originValue.value = "";
-  destinationValue.value = "";
+  originInput.value = "";
+  destinationInput.value = "";
 };
+
 addDataBtn.addEventListener("click", addData);
 
-// Function to swap origin and destination input values
-// const swapValues = () => {
-//   const temp = originValue.value;
-//   originValue.value = destinationValue.value;
-//   destinationValue.value = temp;
-// };
-// swapBtn.addEventListener("click", swapValues);
-
+// Render function
 const render = () => {
-  innerEdit.innerHTML = ""; // Clear existing content
-  fastSearchInner.innerHTML = ""; // Clear existing content in fastSearchInner
+  const dataOfStorage = JSON.parse(localStorage.getItem("fast_search")) || [];
+  innerEdit.innerHTML = "";
+  fastSearchInner.innerHTML = "";
 
   dataOfStorage.forEach((i) => {
     fastSearchInner.insertAdjacentHTML(
       "beforeend",
-      `
-      <div class="flex rounded p-2 justify-between w-full items-center">
-						 <span>${i.origin} to ${i.destination}</span>
-						<span>
-							1.500.00 تومان
-						</span>
-					</div>
-      `
+      `<div class="flex rounded cursor-pointer show-price-date p-2 justify-between w-full items-center"><span>${i.origin} to ${i.destination}</span><span>1.500.00 تومان</span></div>`
     );
   });
 
-  if (dataOfStorage.length < 12) {
+  for (let i = dataOfStorage.length; i < 12; i++) {
     fastSearchInner.insertAdjacentHTML(
       "beforeend",
-      `
-        <div
-            class="border w-full h-10 flex cursor-pointer justify-center items-center border-dashed bg-[#F6FAFF] rounded border-[#8CB8FB]">
-            <img src="/icons/UpdateMain/plus.svg" alt="" />
-          </div>
-        `
+      `<div class="border w-full h-10 flex cursor-pointer justify-center items-center border-dashed bg-[#F6FAFF] rounded border-[#8CB8FB]"><img src="/icons/UpdateMain/plus.svg" alt="" /></div>`
     );
-  } else {
-    closeModal();
   }
 
   dataOfStorage.forEach((i, index) => {
     const div = document.createElement("div");
     div.className =
       "flex rounded p-2 bg-[#FFE3E9] justify-between w-full items-center";
-    div.innerHTML = `
-      <span>${i.origin} to ${i.destination}</span>
-      <img src="/icons/UpdateMain/x-red.svg" alt="..." data-index="${index}">
-    `;
+    div.innerHTML = `<span>${i.origin} to ${i.destination}</span><img src="/icons/UpdateMain/x-red.svg" alt="..." data-index="${index}">`;
     innerEdit.appendChild(div);
   });
 
-  document.querySelectorAll("#inner_edit img").forEach((img) => {
+  innerEdit.querySelectorAll("img[data-index]").forEach((img) => {
     img.addEventListener("click", (event) => {
-      const index = event.target.getAttribute("data-index");
+      const index = parseInt(event.target.getAttribute("data-index"));
       deleteFastSearchData(index);
     });
   });
 
-  // Attach event listeners to all plus images
-  // document.querySelectorAll("#inner_fast_search .border").forEach((img) => {
-  //   img.addEventListener("click", openModal);
-  // });
+  document.querySelectorAll("#inner_fast_search .border").forEach((addBtn) => {
+    addBtn.addEventListener("click", openModal);
+  });
 
-  // Attach event listener to the plus button if it exists
-  const addOpenModal = document.querySelector("#inner_fast_search .border");
-  if (addOpenModal) {
-    addOpenModal.addEventListener("click", openModal);
-  } else {
-    // Close the modal if dataOfStorage length is 12 or more
-    closeModal();
-  }
+  document.querySelectorAll(".show-price-date").forEach((i) => {
+    i.addEventListener("click", openModalPrice);
+  });
 };
 
-document.addEventListener("DOMContentLoaded", () => {
-  // Load data from local storage if available
-  const storedData = localStorage.getItem("fast_search");
-  if (storedData) {
-    dataOfStorage = JSON.parse(storedData);
-  }
+// Delete fast search data
+const deleteFastSearchData = (index) => {
+  const dataOfStorage = JSON.parse(localStorage.getItem("fast_search")) || [];
+  dataOfStorage.splice(index, 1);
+  localStorage.setItem("fast_search", JSON.stringify(dataOfStorage));
   render();
-});
+};
+
+document.addEventListener("DOMContentLoaded", render);

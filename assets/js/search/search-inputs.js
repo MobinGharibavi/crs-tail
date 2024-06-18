@@ -9,6 +9,9 @@ const destinationAriportsList = document.getElementById(
 const searchInputs = [originInput, destinationInput];
 const ariportLists = [originAriportsList, destinationAriportsList];
 
+originInput.addEventListener("focus", () => (originInput.value = ""));
+destinationInput.addEventListener("focus", () => (destinationInput.value = ""));
+
 /* Swap search input values */
 swapSearchBtn.addEventListener("click", () => {
   [originInput.value, destinationInput.value] = [

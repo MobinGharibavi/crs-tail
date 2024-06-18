@@ -160,7 +160,7 @@
 					<button class="bg-white flex items-center py-2 text-crs-first rounded-full gap-2 px-4">
 						<img src="/icons/UpdateMain/airplane-orange.svg" alt="..." />
 						<span>
-							fligh
+							Flight
 						</span>
 					</button>
 					<button
@@ -1476,10 +1476,10 @@
 				</section>
 			</header>
 		</div>
-		<div id="fast_search" class="mt-10 mobile:hidden text-[#1C0E07] mx-20 mobile:mx-8">
+		<div id="fast_search" class="mt-10 text-[#1C0E07] mx-20 mobile:mx-8">
 			<div class="bg-white gap-5 px-5 py-3 rounded-2xl flex flex-col">
 				<div class="flex items-center justify-between">
-					<h4 class="font-bold text-[28px]">
+					<h4 class="font-bold text-2xl lg:text-[28px]">
 						Fast Search
 					</h4>
 
@@ -1490,7 +1490,8 @@
 						</span>
 					</button>
 				</div>
-				<div id="inner_fast_search" class="grid grid-cols-3 justify-between gap-3 items-center">
+				<div id="inner_fast_search"
+					class="grid w-full grid-cols-1 lg:w-auto lg:grid-cols-3 justify-between gap-3 items-center">
 					<div class="flex rounded p-2 justify-between w-full items-center">
 						<span>Mashhad to Najaf</span>
 						<span>
@@ -1510,7 +1511,7 @@
 		<div id="edit_fast" class="mt-10 hidden text-[#1C0E07] mx-20 mobile:mx-8">
 			<div class="bg-white gap-5 px-5 py-3 rounded-2xl flex flex-col">
 				<div class="flex items-center justify-between">
-					<h4 class="font-bold text-[28px]">
+					<h4 class="font-bold text-2xl lg:text-[28px]">
 						Fast Search
 					</h4>
 
@@ -1531,72 +1532,12 @@
 
 				</div>
 
-				<div id="inner_edit" class="grid grid-cols-3 justify-between gap-3 items-center">
+				<div id="inner_edit"
+					class="grid w-full grid-cols-1 lg:w-auto lg:grid-cols-3 justify-between gap-3 items-center">
 					<!-- inner edit -->
 				</div>
 			</div>
 
-		</div>
-		<div class="mt-10 lg:hidden text-[#1C0E07] mx-20 mobile:mx-8">
-			<div class="bg-white gap-5 px-5 py-3 rounded-2xl flex flex-col">
-				<div class="flex items-center justify-between">
-					<h4 class="font-bold text-[28px]">
-						Fast Search
-					</h4>
-
-					<button class="border text-sm flex items-center gap-2 py-2.5 px-4 rounded-full">
-						<img src="/icons/UpdateMain/edit.svg" alt="">
-						<span>
-							Edit
-						</span>
-					</button>
-				</div>
-
-				<div class="flex justify-between w-full items-center">
-					<span>
-						Mashhad to Najaf
-					</span>
-					<span>
-						1.500.00 تومان
-					</span>
-				</div>
-				<div class="flex justify-between w-full items-center">
-					<span>
-						Mashhad to Najaf
-					</span>
-					<span>
-						1.500.00 تومان
-					</span>
-				</div>
-				<div class="flex justify-between w-full items-center">
-					<span>
-						Mashhad to Najaf
-					</span>
-					<span>
-						1.500.00 تومان
-					</span>
-				</div>
-				<div class="flex justify-between w-full items-center">
-					<span>
-						Mashhad to Najaf
-					</span>
-					<span>
-						1.500.00 تومان
-					</span>
-				</div>
-				<div
-					class="border w-full h-10 flex justify-center items-center border-dashed bg-[#F6FAFF] rounded border-[#8CB8FB]">
-					<img src="/icons/UpdateMain/plus.svg" alt="" />
-				</div>
-				<div
-					class="border w-full h-10 flex justify-center items-center border-dashed bg-[#F6FAFF] rounded border-[#8CB8FB]">
-					<img src="/icons/UpdateMain/plus.svg" alt="" />
-				</div>
-				<div
-					class="border w-full h-10 flex justify-center items-center border-dashed bg-[#F6FAFF] rounded border-[#8CB8FB]">
-					<img src="/icons/UpdateMain/plus.svg" alt="" />
-				</div>
-			</div>
 		</div>
 		<div class="flex mobile:flex-col mobile:gap-11 px-16 my-16 items-center justify-center">
 			<img src="/images/UpdateMain/travelpng.png" alt="">
@@ -1638,9 +1579,10 @@
 			</div>
 		</div>
 
-		<!-- modal -->
+		<!-- modal search -->
 		<div id="modal" class="fixed hidden bg-black/50 top-0 z-40 justify-center items-center left-0 w-full h-full">
-			<div class="w-[39.25rem] mobile:w-[30.75rem] flex flex-col z-50 bg-white rounded-xl p-4 gap-3">
+			<div id="inner_modal"
+				class="w-[39.25rem] mobile:w-[30.75rem] flex flex-col z-50 bg-white rounded-xl p-4 gap-3">
 				<div class="flex items-center gap-3">
 					<button id="close_modal">
 						<img src="/icons/close.svg" alt="">
@@ -1658,7 +1600,7 @@
 						<label for="origin_input_modal"
 							class="absolute text-sm translate-x-2 text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-1 scale-105 top-4 z-10 origin-[0] start-2.5  peer-placeholder-shown:scale-125 peer-placeholder-shown:translate-x-2 peer-placeholder-shown:translate-y-2 peer-focus:scale-105 peer-focus:-translate-y-1">Origin</label>
 
-							<div id="origin_airports_list_modal"
+						<div id="origin_airports_list_modal"
 							class="hidden w-full rounded-[0.5rem] mobile:rounded-none border-[0.125rem] border-[#E1E2E4] bg-white max-h-[24rem] overflow-auto FirefoxScroll shadow-lg mobile:border-0 mobile:shadow-none select absolute top-[5rem] rtl:right-0 ltr:left-0 z-50 mobile:top-[4.5rem] mobile:max-h-[calc(100vh-20rem)]"
 							tabindex="0">
 							<div
@@ -1701,42 +1643,197 @@
 							<label for="destination_input_modal"
 								class="absolute text-sm translate-x-6 text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-1 scale-105 top-4 z-10 origin-[0] start-2.5  peer-placeholder-shown:scale-125 peer-placeholder-shown:translate-x-6 peer-placeholder-shown:translate-y-4 peer-focus:scale-105 peer-focus:-translate-y-1">Destinations</label>
 
-								<div id="destination_airports_list_modal"
-									class="hidden w-full rounded-[0.5rem] mobile:rounded-none border-[0.125rem] border-[#E1E2E4] bg-white max-h-[24rem] overflow-auto FirefoxScroll shadow-lg mobile:border-0 mobile:shadow-none select absolute select top-[5rem] rtl:right-0 ltr:right-0 z-50 mobile:top-[10.5rem] mobile:max-h-[calc(100vh-20rem)]"
-									tabindex="0">
-									<!--v-if-->
-									<div
-										class="js-airport flex justify-between items-center px-4 py-[0.62rem] mobile:py-4 mobile:text-lg text-[#514037] hover:bg-[#F0F1F2] active:bg-crs-active cursor-pointer bg-[#F0F1F2]">
-										<span class="airport-code pt-1">NJF</span>
-										<span class="airport-name">Al Najaf Airport</span>
-									</div>
-									<hr
-										class="mx-1 border-t-[0.125rem] border-transparent border-l-[0.25rem] border-r-[0.25rem] border-t-[#F0F1F2] h-0" />
-									<div
-										class="js-airport flex justify-between items-center px-4 py-[0.62rem] mobile:py-4 mobile:text-lg text-[#514037] hover:bg-[#F0F1F2] active:bg-crs-active cursor-pointer">
-										<span class="airport-code pt-1">MHD</span>
-										<span class="airport-name">Mashhad Airport</span>
-									</div>
-									<hr
-										class="mx-1 border-t-[0.125rem] border-transparent border-l-[0.25rem] border-r-[0.25rem] border-t-[#F0F1F2] h-0" />
-									<div
-										class="js-airport flex justify-between items-center px-4 py-[0.62rem] mobile:py-4 mobile:text-lg text-[#514037] hover:bg-[#F0F1F2] active:bg-crs-active cursor-pointer">
-										<span class="airport-code pt-1">BGW</span>
-										<span class="airport-name">Baghdad Airport</span>
-									</div>
-									<hr
-										class="mx-1 border-t-[0.125rem] border-transparent border-l-[0.25rem] border-r-[0.25rem] border-t-[#F0F1F2] h-0" />
-									<div
-										class="js-airport flex justify-between items-center px-4 py-[0.62rem] mobile:py-4 mobile:text-lg text-[#514037] hover:bg-[#F0F1F2] active:bg-crs-active cursor-pointer">
-										<span class="airport-code pt-1">IKA</span>
-										<span class="airport-name">Imam Khomeini Airport</span>
-									</div>
+							<div id="destination_airports_list_modal"
+								class="hidden w-full rounded-[0.5rem] mobile:rounded-none border-[0.125rem] border-[#E1E2E4] bg-white max-h-[24rem] overflow-auto FirefoxScroll shadow-lg mobile:border-0 mobile:shadow-none select absolute select top-[5rem] rtl:right-0 ltr:right-0 z-50 mobile:top-[10.5rem] mobile:max-h-[calc(100vh-20rem)]"
+								tabindex="0">
+								<!--v-if-->
+								<div
+									class="js-airport flex justify-between items-center px-4 py-[0.62rem] mobile:py-4 mobile:text-lg text-[#514037] hover:bg-[#F0F1F2] active:bg-crs-active cursor-pointer bg-[#F0F1F2]">
+									<span class="airport-code pt-1">NJF</span>
+									<span class="airport-name">Al Najaf Airport</span>
 								</div>
+								<hr
+									class="mx-1 border-t-[0.125rem] border-transparent border-l-[0.25rem] border-r-[0.25rem] border-t-[#F0F1F2] h-0" />
+								<div
+									class="js-airport flex justify-between items-center px-4 py-[0.62rem] mobile:py-4 mobile:text-lg text-[#514037] hover:bg-[#F0F1F2] active:bg-crs-active cursor-pointer">
+									<span class="airport-code pt-1">MHD</span>
+									<span class="airport-name">Mashhad Airport</span>
+								</div>
+								<hr
+									class="mx-1 border-t-[0.125rem] border-transparent border-l-[0.25rem] border-r-[0.25rem] border-t-[#F0F1F2] h-0" />
+								<div
+									class="js-airport flex justify-between items-center px-4 py-[0.62rem] mobile:py-4 mobile:text-lg text-[#514037] hover:bg-[#F0F1F2] active:bg-crs-active cursor-pointer">
+									<span class="airport-code pt-1">BGW</span>
+									<span class="airport-name">Baghdad Airport</span>
+								</div>
+								<hr
+									class="mx-1 border-t-[0.125rem] border-transparent border-l-[0.25rem] border-r-[0.25rem] border-t-[#F0F1F2] h-0" />
+								<div
+									class="js-airport flex justify-between items-center px-4 py-[0.62rem] mobile:py-4 mobile:text-lg text-[#514037] hover:bg-[#F0F1F2] active:bg-crs-active cursor-pointer">
+									<span class="airport-code pt-1">IKA</span>
+									<span class="airport-name">Imam Khomeini Airport</span>
+								</div>
+							</div>
 						</div>
 					</button>
 				</div>
 
 				<button id="add_data_Modal" class="bg-crs-first text-white rounded-xl py-4">Add</button>
+			</div>
+		</div>
+
+		<!-- modal price -->
+		<div id="modal_price" class="fixed hidden bg-black/50 top-0 z-40 justify-center items-center left-0 w-full h-full">
+			<div id="inner_modal_price"
+				class="w-[39.25rem] mobile:w-[30.75rem] flex flex-col z-50 bg-white rounded-xl p-4 gap-3">
+				<div class="flex items-center gap-3">
+					<button id="close_modal">
+						<img src="/icons/close.svg" alt="">
+					</button>
+					<span class="text-2xl font-bold">
+						Price Calendar
+					</span>
+				</div>
+
+				<ul
+					class="grid gap-2 grid-cols-[repeat(5,7.4rem)] mobile:grid-cols-[repeat(3,7.4rem)] mobile:flex mobile:flex-wrap justify-center">
+					<li
+						class="group shrink-0 w-[7.4rem] h-[3.5rem] border-[0.125rem] border-[#E1E2E4] rounded-[0.5rem] flex flex-col items-center justify-center cursor-pointer hover:bg-crs-hover hover:border-crs-first">
+						<div class="text-sm text-[#1C0E07] pt-2 group-hover:text-crs-first">SAT - 15/6</div>
+						<div class="text-sm group-hover:text-crs-first text-[#A69F9B]">-----</div>
+					</li>
+					<li
+						class="group shrink-0 w-[7.4rem] h-[3.5rem] border-[0.125rem] border-[#E1E2E4] rounded-[0.5rem] flex flex-col items-center justify-center cursor-pointer hover:bg-crs-hover hover:border-crs-first">
+						<div class="text-sm text-[#1C0E07] pt-2 group-hover:text-crs-first">SUN - 16/6</div>
+						<div class="text-sm group-hover:text-crs-first text-[#A69F9B]">-----</div>
+					</li>
+					<li
+						class="group shrink-0 w-[7.4rem] h-[3.5rem] border-[0.125rem] border-[#E1E2E4] rounded-[0.5rem] flex flex-col items-center justify-center cursor-pointer hover:bg-crs-hover hover:border-crs-first">
+						<div class="text-sm text-[#1C0E07] pt-2 group-hover:text-crs-first">MON - 17/6</div>
+						<div class="text-sm group-hover:text-crs-first text-[#A69F9B]">-----</div>
+					</li>
+					<li
+						class="group shrink-0 w-[7.4rem] h-[3.5rem] border-[0.125rem] border-[#E1E2E4] rounded-[0.5rem] flex flex-col items-center justify-center cursor-pointer hover:bg-crs-hover hover:border-crs-first">
+						<div class="text-sm text-[#1C0E07] pt-2 group-hover:text-crs-first">TUE - 18/6</div>
+						<div class="text-sm group-hover:text-crs-first text-[#A69F9B]">-----</div>
+					</li>
+					<li
+						class="group shrink-0 w-[7.4rem] h-[3.5rem] border-[0.125rem] border-[#E1E2E4] rounded-[0.5rem] flex flex-col items-center justify-center cursor-pointer hover:bg-crs-hover hover:border-crs-first">
+						<div class="text-sm text-[#1C0E07] pt-2 group-hover:text-crs-first">WED - 19/6</div>
+						<div class="text-sm group-hover:text-crs-first text-[#A69F9B]">-----</div>
+					</li>
+					<li
+						class="group shrink-0 w-[7.4rem] h-[3.5rem] border-[0.125rem] border-[#E1E2E4] rounded-[0.5rem] flex flex-col items-center justify-center cursor-pointer hover:bg-crs-hover hover:border-crs-first">
+						<div class="text-sm text-[#1C0E07] pt-2 group-hover:text-crs-first">THU - 20/6</div>
+						<div class="text-sm group-hover:text-crs-first text-[#A69F9B]">-----</div>
+					</li>
+					<li
+						class="group shrink-0 w-[7.4rem] h-[3.5rem] border-[0.125rem] border-[#E1E2E4] rounded-[0.5rem] flex flex-col items-center justify-center cursor-pointer hover:bg-crs-hover hover:border-crs-first">
+						<div class="text-sm text-[#1C0E07] pt-2 group-hover:text-crs-first">FRI - 21/6</div>
+						<div class="text-sm group-hover:text-crs-first text-[#A69F9B]">-----</div>
+					</li>
+					<li
+						class="group shrink-0 w-[7.4rem] h-[3.5rem] border-[0.125rem] border-[#E1E2E4] rounded-[0.5rem] flex flex-col items-center justify-center cursor-pointer hover:bg-crs-hover hover:border-crs-first">
+						<div class="text-sm text-[#1C0E07] pt-2 group-hover:text-crs-first">SAT - 22/6</div>
+						<div class="text-sm group-hover:text-crs-first text-[#A69F9B]">-----</div>
+					</li>
+					<li
+						class="group shrink-0 w-[7.4rem] h-[3.5rem] border-[0.125rem] border-[#E1E2E4] rounded-[0.5rem] flex flex-col items-center justify-center cursor-pointer hover:bg-crs-hover hover:border-crs-first">
+						<div class="text-sm text-[#1C0E07] pt-2 group-hover:text-crs-first">SUN - 23/6</div>
+						<div class="text-sm group-hover:text-crs-first text-[#A69F9B]">-----</div>
+					</li>
+					<li
+						class="group shrink-0 w-[7.4rem] h-[3.5rem] border-[0.125rem] border-[#E1E2E4] rounded-[0.5rem] flex flex-col items-center justify-center cursor-pointer hover:bg-crs-hover hover:border-crs-first">
+						<div class="text-sm text-[#1C0E07] pt-2 group-hover:text-crs-first">MON - 24/6</div>
+						<div class="text-sm group-hover:text-crs-first text-[#A69F9B]">-----</div>
+					</li>
+					<li
+						class="group shrink-0 w-[7.4rem] h-[3.5rem] border-[0.125rem] border-[#E1E2E4] rounded-[0.5rem] flex flex-col items-center justify-center cursor-pointer hover:bg-crs-hover hover:border-crs-first">
+						<div class="text-sm text-[#1C0E07] pt-2 group-hover:text-crs-first">TUE - 25/6</div>
+						<div class="text-sm group-hover:text-crs-first text-[#A69F9B]">-----</div>
+					</li>
+					<li
+						class="group shrink-0 w-[7.4rem] h-[3.5rem] border-[0.125rem] border-[#E1E2E4] rounded-[0.5rem] flex flex-col items-center justify-center cursor-pointer hover:bg-crs-hover hover:border-crs-first">
+						<div class="text-sm text-[#1C0E07] pt-2 group-hover:text-crs-first">WED - 26/6</div>
+						<div class="text-sm group-hover:text-crs-first text-[#A69F9B]">-----</div>
+					</li>
+					<li
+						class="group shrink-0 w-[7.4rem] h-[3.5rem] border-[0.125rem] border-[#E1E2E4] rounded-[0.5rem] flex flex-col items-center justify-center cursor-pointer hover:bg-crs-hover hover:border-crs-first">
+						<div class="text-sm text-[#1C0E07] pt-2 group-hover:text-crs-first">THU - 27/6</div>
+						<div class="text-sm group-hover:text-crs-first text-[#A69F9B]">-----</div>
+					</li>
+					<li
+						class="group shrink-0 w-[7.4rem] h-[3.5rem] border-[0.125rem] border-[#E1E2E4] rounded-[0.5rem] flex flex-col items-center justify-center cursor-pointer hover:bg-crs-hover hover:border-crs-first">
+						<div class="text-sm text-[#1C0E07] pt-2 group-hover:text-crs-first">FRI - 28/6</div>
+						<div class="text-sm group-hover:text-crs-first text-[#A69F9B]">-----</div>
+					</li>
+					<li
+						class="group shrink-0 w-[7.4rem] h-[3.5rem] border-[0.125rem] border-[#E1E2E4] rounded-[0.5rem] flex flex-col items-center justify-center cursor-pointer hover:bg-crs-hover hover:border-crs-first">
+						<div class="text-sm text-[#1C0E07] pt-2 group-hover:text-crs-first">SAT - 29/6</div>
+						<div class="text-sm group-hover:text-crs-first text-[#A69F9B]">-----</div>
+					</li>
+					<li
+						class="group shrink-0 w-[7.4rem] h-[3.5rem] border-[0.125rem] border-[#E1E2E4] rounded-[0.5rem] flex flex-col items-center justify-center cursor-pointer hover:bg-crs-hover hover:border-crs-first">
+						<div class="text-sm text-[#1C0E07] pt-2 group-hover:text-crs-first">SUN - 30/6</div>
+						<div class="text-sm group-hover:text-crs-first text-[#A69F9B]">-----</div>
+					</li>
+					<li
+						class="group shrink-0 w-[7.4rem] h-[3.5rem] border-[0.125rem] border-[#E1E2E4] rounded-[0.5rem] flex flex-col items-center justify-center cursor-pointer hover:bg-crs-hover hover:border-crs-first">
+						<div class="text-sm text-[#1C0E07] pt-2 group-hover:text-crs-first">MON - 1/7</div>
+						<div class="text-sm group-hover:text-crs-first text-[#A69F9B]">-----</div>
+					</li>
+					<li
+						class="group shrink-0 w-[7.4rem] h-[3.5rem] border-[0.125rem] border-[#E1E2E4] rounded-[0.5rem] flex flex-col items-center justify-center cursor-pointer hover:bg-crs-hover hover:border-crs-first">
+						<div class="text-sm text-[#1C0E07] pt-2 group-hover:text-crs-first">TUE - 2/7</div>
+						<div class="text-sm group-hover:text-crs-first text-[#A69F9B]">-----</div>
+					</li>
+					<li
+						class="group shrink-0 w-[7.4rem] h-[3.5rem] border-[0.125rem] border-[#E1E2E4] rounded-[0.5rem] flex flex-col items-center justify-center cursor-pointer hover:bg-crs-hover hover:border-crs-first">
+						<div class="text-sm text-[#1C0E07] pt-2 group-hover:text-crs-first">WED - 3/7</div>
+						<div class="text-sm group-hover:text-crs-first text-[#A69F9B]">-----</div>
+					</li>
+					<li
+						class="group shrink-0 w-[7.4rem] h-[3.5rem] border-[0.125rem] border-[#E1E2E4] rounded-[0.5rem] flex flex-col items-center justify-center cursor-pointer hover:bg-crs-hover hover:border-crs-first">
+						<div class="text-sm text-[#1C0E07] pt-2 group-hover:text-crs-first">THU - 4/7</div>
+						<div class="text-sm group-hover:text-crs-first text-[#A69F9B]">-----</div>
+					</li>
+					<li
+						class="group shrink-0 w-[7.4rem] h-[3.5rem] border-[0.125rem] border-[#E1E2E4] rounded-[0.5rem] flex flex-col items-center justify-center cursor-pointer hover:bg-crs-hover hover:border-crs-first">
+						<div class="text-sm text-[#1C0E07] pt-2 group-hover:text-crs-first">FRI - 5/7</div>
+						<div class="text-sm group-hover:text-crs-first text-[#A69F9B]">-----</div>
+					</li>
+					<li
+						class="group shrink-0 w-[7.4rem] h-[3.5rem] border-[0.125rem] border-[#E1E2E4] rounded-[0.5rem] flex flex-col items-center justify-center cursor-pointer hover:bg-crs-hover hover:border-crs-first">
+						<div class="text-sm text-[#1C0E07] pt-2 group-hover:text-crs-first">SAT - 6/7</div>
+						<div class="text-sm group-hover:text-crs-first text-[#A69F9B]">-----</div>
+					</li>
+					<li
+						class="group shrink-0 w-[7.4rem] h-[3.5rem] border-[0.125rem] border-[#E1E2E4] rounded-[0.5rem] flex flex-col items-center justify-center cursor-pointer hover:bg-crs-hover hover:border-crs-first">
+						<div class="text-sm text-[#1C0E07] pt-2 group-hover:text-crs-first">SUN - 7/7</div>
+						<div class="text-sm group-hover:text-crs-first text-[#A69F9B]">-----</div>
+					</li>
+					<li
+						class="group shrink-0 w-[7.4rem] h-[3.5rem] border-[0.125rem] border-[#E1E2E4] rounded-[0.5rem] flex flex-col items-center justify-center cursor-pointer hover:bg-crs-hover hover:border-crs-first">
+						<div class="text-sm text-[#1C0E07] pt-2 group-hover:text-crs-first">MON - 8/7</div>
+						<div class="text-sm group-hover:text-crs-first text-[#A69F9B]">-----</div>
+					</li>
+					<li
+						class="group shrink-0 w-[7.4rem] h-[3.5rem] border-[0.125rem] border-[#E1E2E4] rounded-[0.5rem] flex flex-col items-center justify-center cursor-pointer hover:bg-crs-hover hover:border-crs-first">
+						<div class="text-sm text-[#1C0E07] pt-2 group-hover:text-crs-first">TUE - 9/7</div>
+						<div class="text-sm group-hover:text-crs-first text-[#A69F9B]">-----</div>
+					</li>
+				</ul>
+
+				<div class="flex items-center justify-center gap-2">
+					<button class="bg-[#307FF8] text-white rounded-xl py-3 px-3 gap-2 flex items-center">
+						<img src="/icons/UpdateMain/arrow-down.svg" class="rotate-90" alt="..." />
+						<span>25 Next days</span>
+					</button>
+					<button class="bg-[#307FF8] text-white rounded-xl py-3 px-3 gap-2 flex items-center">
+						<span>25 Pre days</span>
+						<img src="/icons/UpdateMain/arrow-down.svg" class="-rotate-90" alt="..." />
+					</button>
+				</div>
 			</div>
 		</div>
 	</div>
