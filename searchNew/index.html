@@ -214,7 +214,7 @@
 							</div>
 						</div>
 						<div class="flex flex-col lg:flex-row gap-2">
-							<div class="justify-center flex flex-col gap-5 lg:gap-0 lg:flex-row relative">
+							<div class="justify-center flex flex-col gap-3 lg:gap-0 lg:flex-row relative">
 								<div class="relative h-full">
 									<input type="text" autocomplete="off" id="origin_input"
 										class="block border h-full border-[#DCDFE4] w-96 mobile:w-full px-5 lg:placeholder:px-3 py-[11px] mobile:pt-8 outline-none rounded-2xl text-gray-900 bg-gray-50  appearance-none focus:outline-none focus:ring-0 peer"
@@ -235,68 +235,153 @@
 											class="absolute text-sm translate-x-6 text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-1 scale-105 top-4 z-10 origin-[0] start-2.5  peer-placeholder-shown:scale-125 peer-placeholder-shown:translate-x-6 peer-placeholder-shown:translate-y-4 peer-focus:scale-105 peer-focus:-translate-y-1">Destinations</label>
 									</div>
 								</button>
+
 								<div id="destination_airports_list"
 									class="hidden min-w-[24.0625rem] rounded-[0.5rem] mobile:rounded-none border-[0.125rem] border-[#E1E2E4] bg-white max-h-[24rem] overflow-auto FirefoxScroll shadow-lg mobile:border-0 mobile:shadow-none select absolute select top-[5rem] rtl:right-0 ltr:right-0 z-50 mobile:top-[10.5rem] mobile:w-full mobile:max-h-[calc(100vh-20rem)]"
 									tabindex="0">
-									<!--v-if-->
-									<div
-										class="js-airport flex justify-between items-center px-4 py-[0.62rem] mobile:py-4 mobile:text-lg text-[#514037] hover:bg-[#F0F1F2] active:bg-crs-active cursor-pointer bg-[#F0F1F2]">
-										<span class="airport-code pt-1">NJF</span>
-										<span class="airport-name">Al Najaf Airport</span>
+									<div class="flex flex-col js-airport">
+
+										<div
+											class=" flex justify-between items-center px-2.5 py-[0.62rem] mobile:py-4 mobile:text-lg text-[#1D1B20] hover:bg-[#F0F1F2] cursor-pointer">
+											<span class="flex gap-2 items-center pt-1">
+												<img src="/icons/UpdateMain/location-2.svg" alt=".." />
+												<span class="city">Tehran (All airports)</span>
+											</span>
+											<span class="uppercase city-code">THR</span>
+										</div>
+										<hr
+											class="mx-1 border-t-[0.125rem] border-transparent border-l-[0.25rem] border-r-[0.25rem] border-t-[#F0F1F2] h-0" />
+										<div class="px-5 flex gap-3 py-3 flex-col">
+											<div
+												class="airport-item flex cursor-pointer justify-between items-center w-full">
+												<span class="flex gap-2 items-center pt-1">
+													<img src="/icons/UpdateMain/air.svg" alt=".." />
+													<span class="airport-name">Mehrabad International Airport</span>
+												</span>
+												<span class="uppercase airport-code">MIA</span>
+											</div>
+											<hr
+												class="mx-1 border-t-[0.125rem] border-transparent border-l-[0.25rem] border-r-[0.25rem] border-t-[#F0F1F2] h-0" />
+											<div
+												class="airport-item flex cursor-pointer justify-between items-center w-full">
+												<span class="flex gap-2 items-center pt-1">
+													<img src="/icons/UpdateMain/air.svg" alt=".." />
+													<span class="airport-name">Imam Khomeini International
+														Airport</span>
+												</span>
+												<span class="uppercase airport-code">IMK</span>
+											</div>
+										</div>
 									</div>
 									<hr
 										class="mx-1 border-t-[0.125rem] border-transparent border-l-[0.25rem] border-r-[0.25rem] border-t-[#F0F1F2] h-0" />
-									<div
-										class="js-airport flex justify-between items-center px-4 py-[0.62rem] mobile:py-4 mobile:text-lg text-[#514037] hover:bg-[#F0F1F2] active:bg-crs-active cursor-pointer">
-										<span class="airport-code pt-1">MHD</span>
-										<span class="airport-name">Mashhad Airport</span>
-									</div>
-									<hr
-										class="mx-1 border-t-[0.125rem] border-transparent border-l-[0.25rem] border-r-[0.25rem] border-t-[#F0F1F2] h-0" />
-									<div
-										class="js-airport flex justify-between items-center px-4 py-[0.62rem] mobile:py-4 mobile:text-lg text-[#514037] hover:bg-[#F0F1F2] active:bg-crs-active cursor-pointer">
-										<span class="airport-code pt-1">BGW</span>
-										<span class="airport-name">Baghdad Airport</span>
-									</div>
-									<hr
-										class="mx-1 border-t-[0.125rem] border-transparent border-l-[0.25rem] border-r-[0.25rem] border-t-[#F0F1F2] h-0" />
-									<div
-										class="js-airport flex justify-between items-center px-4 py-[0.62rem] mobile:py-4 mobile:text-lg text-[#514037] hover:bg-[#F0F1F2] active:bg-crs-active cursor-pointer">
-										<span class="airport-code pt-1">IKA</span>
-										<span class="airport-name">Imam Khomeini Airport</span>
+									<div class="flex flex-col js-airport">
+										<div
+											class=" flex justify-between items-center px-2.5 py-[0.62rem] mobile:py-4 mobile:text-lg text-[#1D1B20] hover:bg-[#F0F1F2] cursor-pointer">
+											<span class="flex gap-2 items-center pt-1">
+												<img src="/icons/UpdateMain/location-2.svg" alt=".." />
+												<span class="city">Dubai (All airports)</span>
+											</span>
+											<span class="uppercase city-code">DXB</span>
+										</div>
+										<hr
+											class="mx-1 border-t-[0.125rem] border-transparent border-l-[0.25rem] border-r-[0.25rem] border-t-[#F0F1F2] h-0" />
+										<div class="px-5 flex gap-3 py-3 flex-col">
+											<div
+												class="airport-item flex cursor-pointer justify-between items-center w-full">
+												<span class="flex gap-2 items-center pt-1">
+													<img src="/icons/UpdateMain/air.svg" alt=".." />
+													<span class="airport-name">Dubai International Airport</span>
+												</span>
+												<span class="uppercase airport-code">DXB</span>
+											</div>
+											<hr
+												class="mx-1 border-t-[0.125rem] border-transparent border-l-[0.25rem] border-r-[0.25rem] border-t-[#F0F1F2] h-0" />
+											<div
+												class="airport-item flex cursor-pointer justify-between items-center w-full">
+												<span class="flex gap-2 items-center pt-1">
+													<img src="/icons/UpdateMain/air.svg" alt=".." />
+													<span class="airport-name">Al Maktoum International Airport</span>
+												</span>
+												<span class="uppercase airport-code">DWC</span>
+											</div>
+										</div>
 									</div>
 								</div>
+
 
 
 
 								<div id="origin_airports_list"
 									class="hidden min-w-[24.0625rem] rounded-[0.5rem] mobile:rounded-none border-[0.125rem] border-[#E1E2E4] bg-white max-h-[24rem] overflow-auto FirefoxScroll shadow-lg mobile:border-0 mobile:shadow-none select absolute top-[5rem] rtl:right-0 ltr:left-0 z-50 mobile:top-[4.5rem] mobile:w-full mobile:max-h-[calc(100vh-20rem)]"
 									tabindex="0">
-									<div
-										class="js-airport flex justify-between items-center px-4 py-[0.62rem] mobile:py-4 mobile:text-lg text-[#514037] hover:bg-[#F0F1F2] active:bg-crs-active cursor-pointer bg-[#F0F1F2]">
-										<span class="airport-code pt-1">NJF</span>
-										<span class="airport-name">Al Najaf Airport</span>
+									<div class="flex flex-col js-airport">
+
+										<div
+											class=" flex justify-between items-center px-2.5 py-[0.62rem] mobile:py-4 mobile:text-lg text-[#1D1B20] hover:bg-[#F0F1F2] cursor-pointer">
+											<span class="flex gap-2 items-center pt-1">
+												<img src="/icons/UpdateMain/location-2.svg" alt=".." />
+												<span class="city">Tehran (All airports)</span>
+											</span>
+											<span class="uppercase city-code">THR</span>
+										</div>
+										<hr
+											class="mx-1 border-t-[0.125rem] border-transparent border-l-[0.25rem] border-r-[0.25rem] border-t-[#F0F1F2] h-0" />
+										<div class="px-5 flex gap-3 py-3 flex-col">
+											<div
+												class="airport-item flex cursor-pointer justify-between items-center w-full">
+												<span class="flex gap-2 items-center pt-1">
+													<img src="/icons/UpdateMain/air.svg" alt=".." />
+													<span class="airport-name">Mehrabad International Airport</span>
+												</span>
+												<span class="uppercase airport-code">MIA</span>
+											</div>
+											<hr
+												class="mx-1 border-t-[0.125rem] border-transparent border-l-[0.25rem] border-r-[0.25rem] border-t-[#F0F1F2] h-0" />
+											<div
+												class="airport-item flex cursor-pointer justify-between items-center w-full">
+												<span class="flex gap-2 items-center pt-1">
+													<img src="/icons/UpdateMain/air.svg" alt=".." />
+													<span class="airport-name">Imam Khomeini International
+														Airport</span>
+												</span>
+												<span class="uppercase airport-code">IMK</span>
+											</div>
+										</div>
 									</div>
 									<hr
 										class="mx-1 border-t-[0.125rem] border-transparent border-l-[0.25rem] border-r-[0.25rem] border-t-[#F0F1F2] h-0" />
-									<div
-										class="js-airport flex justify-between items-center px-4 py-[0.62rem] mobile:py-4 mobile:text-lg text-[#514037] hover:bg-[#F0F1F2] active:bg-crs-active cursor-pointer">
-										<span class="airport-code pt-1">MHD</span>
-										<span class="airport-name">Mashhad Airport</span>
-									</div>
-									<hr
-										class="mx-1 border-t-[0.125rem] border-transparent border-l-[0.25rem] border-r-[0.25rem] border-t-[#F0F1F2] h-0" />
-									<div
-										class="js-airport flex justify-between items-center px-4 py-[0.62rem] mobile:py-4 mobile:text-lg text-[#514037] hover:bg-[#F0F1F2] active:bg-crs-active cursor-pointer">
-										<span class="airport-code pt-1">BGW</span>
-										<span class="airport-name">Baghdad Airport</span>
-									</div>
-									<hr
-										class="mx-1 border-t-[0.125rem] border-transparent border-l-[0.25rem] border-r-[0.25rem] border-t-[#F0F1F2] h-0" />
-									<div
-										class="js-airport flex justify-between items-center px-4 py-[0.62rem] mobile:py-4 mobile:text-lg text-[#514037] hover:bg-[#F0F1F2] active:bg-crs-active cursor-pointer">
-										<span class="airport-code pt-1">IKA</span>
-										<span class="airport-name">Imam Khomeini Airport</span>
+									<div class="flex flex-col js-airport">
+										<div
+											class=" flex justify-between items-center px-2.5 py-[0.62rem] mobile:py-4 mobile:text-lg text-[#1D1B20] hover:bg-[#F0F1F2] cursor-pointer">
+											<span class="flex gap-2 items-center pt-1">
+												<img src="/icons/UpdateMain/location-2.svg" alt=".." />
+												<span class="city">Dubai (All airports)</span>
+											</span>
+											<span class="uppercase city-code">DXB</span>
+										</div>
+										<hr
+											class="mx-1 border-t-[0.125rem] border-transparent border-l-[0.25rem] border-r-[0.25rem] border-t-[#F0F1F2] h-0" />
+										<div class="px-5 flex gap-3 py-3 flex-col">
+											<div
+												class="airport-item flex cursor-pointer justify-between items-center w-full">
+												<span class="flex gap-2 items-center pt-1">
+													<img src="/icons/UpdateMain/air.svg" alt=".." />
+													<span class="airport-name">Dubai International Airport</span>
+												</span>
+												<span class="uppercase airport-code">DXB</span>
+											</div>
+											<hr
+												class="mx-1 border-t-[0.125rem] border-transparent border-l-[0.25rem] border-r-[0.25rem] border-t-[#F0F1F2] h-0" />
+											<div
+												class="airport-item flex cursor-pointer justify-between items-center w-full">
+												<span class="flex gap-2 items-center pt-1">
+													<img src="/icons/UpdateMain/air.svg" alt=".." />
+													<span class="airport-name">Al Maktoum International Airport</span>
+												</span>
+												<span class="uppercase airport-code">DWC</span>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -1370,7 +1455,7 @@
 								</div>
 							</div>
 							<div tabindex="0" id="passengers_input"
-								class="rounded-[16px] relative border w-14 flex-grow border-[#DCDFE4] px-6 py-[11px] cursor-pointer">
+								class="rounded-[16px] relative border lg:w-14 flex-grow border-[#DCDFE4] px-6 py-[11px] cursor-pointer">
 								<div class="flex items-center overflow-auto h-full">
 									<div id="passengers_summary"
 										class="text-[#101D3B] whitespace-nowrap overflow-auto h-full w-full  pt-[1.5rem] flex items-center text-lg leading-[1.875rem]">
@@ -1683,7 +1768,8 @@
 		</div>
 
 		<!-- modal price -->
-		<div id="modal_price" class="fixed hidden bg-black/50 top-0 z-40 justify-center items-center left-0 w-full h-full">
+		<div id="modal_price"
+			class="fixed hidden bg-black/50 top-0 z-40 justify-center items-center left-0 w-full h-full">
 			<div id="inner_modal_price"
 				class="w-[39.25rem] mobile:w-[30.75rem] flex flex-col z-50 bg-white rounded-xl p-4 gap-3">
 				<div class="flex items-center gap-3">
@@ -1875,15 +1961,15 @@
 						<h4 class="text-2xl leading-[2.5rem] font-bold text-[#2C160B]">Contact Info</h4>
 						<ul class="mt-6 space-y-4 text-[#5B4A42] text-xl leading-[1.875rem]">
 
-							<li class="flex items-center mobile:justify-center gap-2">
+							<li class="flex items-center gap-2">
 								<img class="w-6 h-6" src="/icons/UpdateMain/sms.svg" alt="call" /><span
 									dir="ltr">crstrip.com@gmail.com</span>
 							</li>
-							<li class="flex items-center mobile:justify-center gap-2">
+							<li class="flex items-center gap-2">
 								<img class="w-6 h-6" src="/icons/UpdateMain/call.svg" alt="call" /><span
 									dir="ltr">+9647815639914</span>
 							</li>
-							<li class="flex items-center mobile:justify-center gap-2">
+							<li class="flex items-center gap-2">
 								<img class="w-6 h-6" src="/icons/UpdateMain/location.svg" alt="location" /><span
 									dir="ltr">Najaf - Iraq</span>
 							</li>
@@ -1898,6 +1984,5 @@
 		</div>
 	</footer>
 </body>
-
 
 </html>

@@ -1,5 +1,4 @@
 const originInput = document.getElementById("origin_input");
-const swapSearchBtn = document.getElementById("swap_search_btn");
 const destinationInput = document.getElementById("destination_input");
 const originAriportsList = document.getElementById("origin_airports_list");
 const destinationAriportsList = document.getElementById(
@@ -7,12 +6,13 @@ const destinationAriportsList = document.getElementById(
 );
 
 const searchInputs = [originInput, destinationInput];
-const ariportLists = [originAriportsList, destinationAriportsList];
+const airportLists = [originAriportsList, destinationAriportsList];
 
 originInput.addEventListener("focus", () => (originInput.value = ""));
 destinationInput.addEventListener("focus", () => (destinationInput.value = ""));
 
 /* Swap search input values */
+const swapSearchBtn = document.getElementById("swap_search_btn");
 swapSearchBtn.addEventListener("click", () => {
   [originInput.value, destinationInput.value] = [
     destinationInput.value,
@@ -21,21 +21,26 @@ swapSearchBtn.addEventListener("click", () => {
 });
 
 /* Handle input dropdowns */
-ariportLists.forEach((list) => {
+airportLists.forEach((list) => {
   list.addEventListener("click", ({ target }) => {
     const airport = target.closest(".js-airport");
+    const airportItem = event.target.closest(".airport-item");
     if (!airport) return;
+    if (!airportItem) return;
 
-    const airportName = airport
+    const airportName = airportItem
       .querySelector(".airport-name")
-      .textContent.trim();
-    const airportCode = airport
-      .querySelector(".airport-code")
-      .textContent.trim();
+      .textContent.trim()
+      .replace(/\s+/g, " ");
+    const cityCode = airport
+      .querySelector(".city-code")
+      .textContent.trim()
+      .replace(/\s+/g, " ");
+
     const relatedInput =
       list.id === "origin_airports_list" ? originInput : destinationInput;
 
-    relatedInput.value = `${airportName} (${airportCode})`;
+    relatedInput.value = `${airportName} (${cityCode})`;
 
     hideElement(list);
   });
@@ -44,14 +49,12 @@ ariportLists.forEach((list) => {
 searchInputs.forEach((input) => {
   input.addEventListener("input", () => {
     const list =
-      input.id === "origin_input"
-        ? originAriportsList
-        : destinationAriportsList;
-    filterAirportList(input.value, list);
+      input === originInput ? originAriportsList : destinationAriportsList;
+    filterAirportList(input.value.toLowerCase().trim(), list);
   });
 
   input.addEventListener("click", () => {
-    if (input.id === "origin_input") {
+    if (input === originInput) {
       showElement(originAriportsList);
       hideElement(destinationAriportsList);
     } else {
@@ -68,7 +71,7 @@ document.body.addEventListener("click", ({ target }) => {
     target.closest("#destination_airports_list");
   if (targetIsInput || targetIsList) return;
 
-  ariportLists.forEach((list) => hideElement(list));
+  airportLists.forEach((list) => hideElement(list));
 });
 
 /* Utilities */
@@ -82,25 +85,21 @@ function showElement(element) {
 
 function filterAirportList(query, list) {
   const items = list.querySelectorAll(".js-airport");
-  const normalizedQuery = query.toLowerCase().trim();
 
   items.forEach((item) => {
-    const airportName = item
-      .querySelector(".airport-name")
-      .textContent.toLowerCase()
-      .trim();
-    const airportCode = item
-      .querySelector(".airport-code")
-      .textContent.toLowerCase()
-      .trim();
+    const cityNameElement = item.querySelector(".city");
+    const cityCodeElement = item.querySelector(".city-code");
 
-    if (
-      airportName.includes(normalizedQuery) ||
-      airportCode.includes(normalizedQuery)
-    ) {
-      item.classList.remove("hidden");
-    } else {
-      item.classList.add("hidden");
+    if (cityNameElement && cityCodeElement) {
+      const cityName = cityNameElement.textContent.toLowerCase().trim();
+      const cityCode = cityCodeElement.textContent.toLowerCase().trim();
+
+      const isIncluded =
+        cityName.includes(query.toLowerCase().trim()) ||
+        cityCode.includes(query.toLowerCase().trim());
+      item.classList.toggle("hidden", !isIncluded);
     }
   });
+
+  showElement(list);
 }

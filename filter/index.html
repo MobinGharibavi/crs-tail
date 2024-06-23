@@ -11,8 +11,8 @@
 
 <body class="bg-[#FCEAE1]">
     <div class="font-Kalameh">
-        <div class="bg-crs-first mobile:px-8">
-            <nav class="bg-white px-20 py-4 flex justify-between">
+        <div class="bg-crs-first">
+            <nav class="bg-white mobile:px-10 lg:px-20 py-4 flex justify-between">
                 <div class="flex items-center gap-10">
                     <img src="/logo/crstrip.svg" class="w-[6.188rem] h-7" alt="logo" />
 
@@ -98,7 +98,7 @@
                 </div>
 
                 <div id="sidebar_menu_icon" class="hidden mobile:block">
-                    <img class="h-8 cursor-pointer" src="/icons/main/menu-w.svg" alt="menu" />
+                    <img class="h-8 cursor-pointer" src="/icons/main/menu.svg" alt="menu" />
 
                     <div id="sidebar_menu"
                         class="fixed mobile:hidden left-0 top-0 w-[100vw] h-[100vh] bg-[#0000004D] backdrop-blur-[0.125rem] z-[100]">
@@ -146,8 +146,8 @@
                 </div>
             </nav>
 
-            <header class="flex gap-4 px-20 py-10 flex-col">
-                <div class="flex items-center justify-between">
+            <header class="flex gap-4 mobile:px-10 lg:px-20 py-10 flex-col">
+                <div class="flex mobile:flex-col mobile:gap-4 lg:items-center lg:justify-between">
                     <div class="flex text-white items-center gap-1">
                         <img src="/icons/UpdateMain/warn.svg" alt="logo" />
                         <p>
@@ -168,7 +168,7 @@
                     </div>
                 </div>
 
-                <section class="bg-white text-black gap-5 shadow py-5 px-6 rounded-xl flex flex-col">
+                <section class="bg-white mobile:mt-4 text-black gap-5 shadow py-5 px-6 rounded-xl flex flex-col">
 
                     <div class="flex flex-col gap-5">
                         <div class="flex gap-6">
@@ -212,7 +212,7 @@
                             </div>
                         </div>
                         <div class="flex flex-col lg:flex-row gap-2">
-                            <div class="justify-center flex flex-col gap-5 lg:gap-0 lg:flex-row relative">
+                            <div class="justify-center flex flex-col gap-2 lg:gap-0 lg:flex-row relative">
                                 <div class="relative h-full">
                                     <input type="text" autocomplete="off" id="origin_input"
                                         class="block border h-full border-[#DCDFE4] w-96 mobile:w-full px-5 lg:placeholder:px-3 py-[11px] mobile:pt-8 outline-none rounded-2xl text-gray-900 bg-gray-50  appearance-none focus:outline-none focus:ring-0 peer"
@@ -222,7 +222,7 @@
                                 </div>
                                 <button type="button" class="h-full">
                                     <img id="swap_search_btn"
-                                        class=" w-[50px] rotate-90 lg:rotate-0 h-[50px] rounded-[50%] absolute bg-white border-2 z-10 lg:-translate-x-1/2 lg:left-1/2 -translate-y-1/2 top-1/2 p-3 flex justify-center ltr:right-5 items-center "
+                                        class=" w-[50px] rotate-90 lg:rotate-0 mobile:right-5 h-[50px] rounded-[50%] absolute bg-white border-2 z-10 lg:-translate-x-1/2 lg:left-1/2 -translate-y-1/2 top-1/2 p-3 flex justify-center ltr:right-5 items-center "
                                         src="/icons/UpdateMain/change.svg" alt="..." />
 
                                     <div class="relative h-full">
@@ -1368,14 +1368,14 @@
                                 </div>
                             </div>
                             <div tabindex="0" id="passengers_input"
-                                class="rounded-[16px] relative border w-14 flex-grow border-[#DCDFE4] px-6 py-[11px] cursor-pointer">
+                                class="rounded-[16px] relative border lg:w-14 flex-grow border-[#DCDFE4] px-6 py-[11px] cursor-pointer">
                                 <div class="flex items-center overflow-auto h-full">
                                     <div id="passengers_summary"
                                         class="text-[#101D3B] whitespace-nowrap overflow-auto h-full w-full  pt-[1.5rem] flex items-center text-lg leading-[1.875rem]">
                                         1 Adult
                                     </div>
-                                    <div class="top-[0.7rem] text-xs leading-[1.25rem] block h-fit text-[#80889E] absolute rtl:right-12 ltr:left-5 transition-all"
-                                        for="origin">
+                                    <div
+                                        class="top-[0.7rem] text-xs leading-[1.25rem] block h-fit text-[#80889E] absolute rtl:right-12 ltr:left-5 transition-all">
                                         Passengers
                                     </div>
                                 </div>
@@ -1475,76 +1475,168 @@
             </header>
         </div>
 
-        <div class="flex flex-col gap-3 mx-20 mt-5">
+        <div class="flex flex-col gap-3 lg:mx-20 mt-5">
+            <div class="flex gap-5 lg:hidden items-center rounded-xl w-full overflow-auto bg-white">
+                <div
+                    class="lg:grid flex lg:grid-cols-5 w-full divide-x  rtl:divide-x-reverse whitespace-nowrap items-center text-sm">
+                    <div class="border-b-2 border-[#0A77FF] flex items-center cursor-pointer p-5 w-full">
+                        <div>
+                            <div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                    height="16" viewBox="0 0 16 16" fill="none">
+                                    <path
+                                        d="M9.15327 2.33977L10.3266 4.68643C10.4866 5.0131 10.9133 5.32643 11.2733 5.38643L13.3999 5.73977C14.7599 5.96643 15.0799 6.9531 14.0999 7.92643L12.4466 9.57977C12.1666 9.85977 12.0133 10.3998 12.0999 10.7864L12.5733 12.8331C12.9466 14.4531 12.0866 15.0798 10.6533 14.2331L8.65994 13.0531C8.29994 12.8398 7.70661 12.8398 7.33994 13.0531L5.34661 14.2331C3.91994 15.0798 3.05327 14.4464 3.42661 12.8331L3.89994 10.7864C3.98661 10.3998 3.83327 9.85977 3.55327 9.57977L1.89994 7.92643C0.926606 6.9531 1.23994 5.96643 2.59994 5.73977L4.72661 5.38643C5.07994 5.32643 5.50661 5.0131 5.66661 4.68643L6.83994 2.33977C7.47994 1.06643 8.51994 1.06643 9.15327 2.33977Z"
+                                        stroke="#1D1B20" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                </svg>
+                                <p class="font-bold">Sugested</p>
+                            </div>
+                            <p class="mt-1">6،500،000 Rial</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center hover:border-b-2 hover:border-b-[#8CB8FB] cursor-pointer p-5 w-full">
+                        <div>
+                            <div class="flex items-center gap-2"><svg width="17" height="16" viewBox="0 0 17 16"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M6.11475 9.55307C6.11475 10.4131 6.77475 11.1064 7.59475 11.1064H9.26808C9.98141 11.1064 10.5614 10.4997 10.5614 9.75307C10.5614 8.93973 10.2081 8.65307 9.68141 8.4664L6.99475 7.53307C6.46808 7.3464 6.11475 7.05973 6.11475 6.2464C6.11475 5.49973 6.69475 4.89307 7.40808 4.89307H9.08141C9.90141 4.89307 10.5614 5.5864 10.5614 6.4464"
+                                        stroke="#1D1B20" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                    <path d="M8.3335 4V12" stroke="#1D1B20" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                    <path
+                                        d="M8.33366 14.6668C12.0156 14.6668 15.0003 11.6821 15.0003 8.00016C15.0003 4.31826 12.0156 1.3335 8.33366 1.3335C4.65176 1.3335 1.66699 4.31826 1.66699 8.00016C1.66699 11.6821 4.65176 14.6668 8.33366 14.6668Z"
+                                        stroke="#1D1B20" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                </svg>
+                                <p class="font-bold">Cheepest</p>
+                            </div>
+                            <p class="mt-1">Cheepest</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center hover:border-b-2 hover:border-b-[#8CB8FB] cursor-pointer p-5 w-full">
+                        <div>
+                            <div class="flex items-center gap-2"><svg width="17" height="16" viewBox="0 0 17 16"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M6.11475 9.55307C6.11475 10.4131 6.77475 11.1064 7.59475 11.1064H9.26808C9.98141 11.1064 10.5614 10.4997 10.5614 9.75307C10.5614 8.93973 10.2081 8.65307 9.68141 8.4664L6.99475 7.53307C6.46808 7.3464 6.11475 7.05973 6.11475 6.2464C6.11475 5.49973 6.69475 4.89307 7.40808 4.89307H9.08141C9.90141 4.89307 10.5614 5.5864 10.5614 6.4464"
+                                        stroke="#1D1B20" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                    <path d="M8.3335 4V12" stroke="#1D1B20" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                    <path
+                                        d="M8.33366 14.6668C12.0156 14.6668 15.0003 11.6821 15.0003 8.00016C15.0003 4.31826 12.0156 1.3335 8.33366 1.3335C4.65176 1.3335 1.66699 4.31826 1.66699 8.00016C1.66699 11.6821 4.65176 14.6668 8.33366 14.6668Z"
+                                        stroke="#1D1B20" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                </svg>
+                                <p class="font-bold">Most expensive</p>
+                            </div>
+                            <p class="mt-1">12،000،000 Rial</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center hover:border-b-2 hover:border-b-[#8CB8FB] cursor-pointer p-5 w-full">
+                        <div>
+                            <div class="flex items-center gap-2"><svg width="17" height="16" viewBox="0 0 17 16"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M6.87996 8.85331H8.93995V13.6533C8.93995 14.36 9.81995 14.6933 10.2866 14.16L15.3333 8.42665C15.7733 7.92665 15.42 7.14665 14.7533 7.14665H12.6933V2.34665C12.6933 1.63998 11.8133 1.30665 11.3466 1.83998L6.29996 7.57331C5.86663 8.07331 6.21996 8.85331 6.87996 8.85331Z"
+                                        stroke="#1D1B20" stroke-width="1.5" stroke-miterlimit="10"
+                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M6.33317 2.6665H1.6665" stroke="#1D1B20" stroke-width="1.5"
+                                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round">
+                                    </path>
+                                    <path d="M5.6665 13.3335H1.6665" stroke="#1D1B20" stroke-width="1.5"
+                                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round">
+                                    </path>
+                                    <path d="M3.6665 8H1.6665" stroke="#1D1B20" stroke-width="1.5"
+                                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round">
+                                    </path>
+                                </svg>
+                                <p class="font-bold">Fastest</p>
+                            </div>
+                            <p class="mt-1">12:25 PM</p>
+                        </div>
+                    </div>
+                    <div class="flex hover:border-b-2 hover:border-b-[#8CB8FB] items-center cursor-pointer p-5 w-full">
+                        <div id="show-dialog-filter-mobile">
+                            <div class="flex items-center gap-2">
+                                <select name="filters" id="filters">
+                                    <option value="" hidden selected>filters</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="w-full relative swiper !flex !items-center !gap-2 bg-white rounded-xl !px-5 !py-2.5">
                 <!-- arrow right -->
-                <div class="bg-[#F7F7F9] absolute left-0 z-50 cursor-pointer swiper-button-prev w-10 h-10 flex items-center justify-center rounded-full">
+                <div
+                    class="bg-[#F7F7F9] mobile:hidden absolute left-0 z-50 cursor-pointer swiper-button-prev w-10 h-10 flex items-center justify-center rounded-full">
                     <img src="/icons/UpdateMain/left.svg" alt="" />
                 </div>
                 <!-- content -->
                 <div class="swiper-wrapper h-full">
                     <label
-                        class="select swiper-slide group flex-col bg-white rounded-lg text-center border transition-all hover:bg-[#FF9029]/15 hover:border-crs-first hover:text-crs-first w-[7.625rem] py-2 cursor-pointer text-sm text-[#101D3B] !flex items-center justify-center"><input
-                            type="radio" class="hidden" value="[object Object]"><span class="text">FRI-12/6</span><span
-                            class="text-[#2AB930] group-hover:text-crs-first">1.200$</span></label>
+                        class="select swiper-slide group flex-col bg-white rounded-lg text-center border transition-all border-crs-first text-crs-first bg-crs-first/15 w-[7.625rem] py-2 cursor-pointer text-sm  !flex items-center justify-center"><input
+                            type="radio" class="hidden"><span class="text">FRI-12/6</span><span
+                            class=" text-crs-first">1.200$</span></label>
                     <label
-                        class="select swiper-slide group flex-col bg-white rounded-lg text-center border transition-all hover:bg-[#FF9029]/15 hover:border-crs-first hover:text-crs-first w-[7.625rem] py-2 cursor-pointer text-sm text-[#101D3B] !flex items-center justify-center"><input
-                            type="radio" class="hidden" value="[object Object]"><span class="text">FRI-12/6</span><span
-                            class="text-[#2AB930] group-hover:text-crs-first">1.200$</span></label>
+                        class="select swiper-slide group flex-col bg-white rounded-lg text-center border transition-all hover:border-crs-first w-[7.625rem] py-2 cursor-pointer text-sm text-[#101D3B] !flex items-center justify-center"><input
+                            type="radio" class="hidden"><span class="text">FRI-12/6</span><span
+                            class="text-[#2AB930]">1.200$</span></label>
                     <label
-                        class="select swiper-slide group flex-col bg-white rounded-lg text-center border transition-all hover:bg-[#FF9029]/15 hover:border-crs-first hover:text-crs-first w-[7.625rem] py-2 cursor-pointer text-sm text-[#101D3B] !flex items-center justify-center"><input
-                            type="radio" class="hidden" value="[object Object]"><span class="text">FRI-12/6</span><span
-                            class="text-[#2AB930] group-hover:text-crs-first">1.200$</span></label>
+                        class="select swiper-slide group flex-col bg-white rounded-lg text-center border transition-all !h-auto w-[7.625rem] py-2 cursor-pointer text-sm text-[#A69F9B] !flex  justify-center"><input
+                            type="radio" class="hidden"><span>FRI-12/6</span></label>
                     <label
-                        class="select swiper-slide group flex-col bg-white rounded-lg text-center border transition-all hover:bg-[#FF9029]/15 hover:border-crs-first hover:text-crs-first w-[7.625rem] py-2 cursor-pointer text-sm text-[#101D3B] !flex items-center justify-center"><input
-                            type="radio" class="hidden" value="[object Object]"><span class="text">FRI-12/6</span><span
-                            class="text-[#2AB930] group-hover:text-crs-first">1.200$</span></label>
+                        class="select swiper-slide group flex-col bg-white rounded-lg text-center border transition-all hover:border-crs-first w-[7.625rem] py-2 cursor-pointer text-sm text-[#101D3B] !flex items-center justify-center"><input
+                            type="radio" class="hidden"><span class="text">FRI-12/6</span><span
+                            class="text-[#2AB930]">1.200$</span></label>
                     <label
-                        class="select swiper-slide group flex-col bg-white rounded-lg text-center border transition-all hover:bg-[#FF9029]/15 hover:border-crs-first hover:text-crs-first w-[7.625rem] py-2 cursor-pointer text-sm text-[#101D3B] !flex items-center justify-center"><input
-                            type="radio" class="hidden" value="[object Object]"><span class="text">FRI-12/6</span><span
-                            class="text-[#2AB930] group-hover:text-crs-first">1.200$</span></label>
+                        class="select swiper-slide group flex-col bg-white rounded-lg text-center border transition-all hover:border-crs-first w-[7.625rem] py-2 cursor-pointer text-sm text-[#101D3B] !flex items-center justify-center"><input
+                            type="radio" class="hidden"><span class="text">FRI-12/6</span><span
+                            class="text-[#2AB930]">1.200$</span></label>
                     <label
-                        class="select swiper-slide group flex-col bg-white rounded-lg text-center border transition-all hover:bg-[#FF9029]/15 hover:border-crs-first hover:text-crs-first w-[7.625rem] py-2 cursor-pointer text-sm text-[#101D3B] !flex items-center justify-center"><input
-                            type="radio" class="hidden" value="[object Object]"><span class="text">FRI-12/6</span><span
-                            class="text-[#2AB930] group-hover:text-crs-first">1.200$</span></label>
+                        class="select swiper-slide group flex-col bg-white rounded-lg text-center border transition-all hover:border-crs-first w-[7.625rem] py-2 cursor-pointer text-sm text-[#101D3B] !flex items-center justify-center"><input
+                            type="radio" class="hidden"><span class="text">FRI-12/6</span><span
+                            class="text-[#2AB930]">1.200$</span></label>
                     <label
-                        class="select swiper-slide group flex-col bg-white rounded-lg text-center border transition-all hover:bg-[#FF9029]/15 hover:border-crs-first hover:text-crs-first w-[7.625rem] py-2 cursor-pointer text-sm text-[#101D3B] !flex items-center justify-center"><input
-                            type="radio" class="hidden" value="[object Object]"><span class="text">FRI-12/6</span><span
-                            class="text-[#2AB930] group-hover:text-crs-first">1.200$</span></label>
+                        class="select swiper-slide group flex-col bg-white rounded-lg text-center border transition-all hover:border-crs-first w-[7.625rem] py-2 cursor-pointer text-sm text-[#101D3B] !flex items-center justify-center"><input
+                            type="radio" class="hidden"><span class="text">FRI-12/6</span><span
+                            class="text-[#2AB930]">1.200$</span></label>
                     <label
-                        class="select swiper-slide group flex-col bg-white rounded-lg text-center border transition-all hover:bg-[#FF9029]/15 hover:border-crs-first hover:text-crs-first w-[7.625rem] py-2 cursor-pointer text-sm text-[#101D3B] !flex items-center justify-center"><input
-                            type="radio" class="hidden" value="[object Object]"><span class="text">FRI-12/6</span><span
-                            class="text-[#2AB930] group-hover:text-crs-first">1.200$</span></label>
+                        class="select swiper-slide group flex-col bg-white rounded-lg text-center border transition-all hover:border-crs-first w-[7.625rem] py-2 cursor-pointer text-sm text-[#101D3B] !flex items-center justify-center"><input
+                            type="radio" class="hidden"><span class="text">FRI-12/6</span><span
+                            class="text-[#2AB930]">1.200$</span></label>
                     <label
-                        class="select swiper-slide group flex-col bg-white rounded-lg text-center border transition-all hover:bg-[#FF9029]/15 hover:border-crs-first hover:text-crs-first w-[7.625rem] py-2 cursor-pointer text-sm text-[#101D3B] !flex items-center justify-center"><input
-                            type="radio" class="hidden" value="[object Object]"><span class="text">FRI-12/6</span><span
-                            class="text-[#2AB930] group-hover:text-crs-first">1.200$</span></label>
+                        class="select swiper-slide group flex-col bg-white rounded-lg text-center border transition-all hover:border-crs-first w-[7.625rem] py-2 cursor-pointer text-sm text-[#101D3B] !flex items-center justify-center"><input
+                            type="radio" class="hidden"><span class="text">FRI-12/6</span><span
+                            class="text-[#2AB930]">1.200$</span></label>
                     <label
-                        class="select swiper-slide group flex-col bg-white rounded-lg text-center border transition-all hover:bg-[#FF9029]/15 hover:border-crs-first hover:text-crs-first w-[7.625rem] py-2 cursor-pointer text-sm text-[#101D3B] !flex items-center justify-center"><input
-                            type="radio" class="hidden" value="[object Object]"><span class="text">FRI-12/6</span><span
-                            class="text-[#2AB930] group-hover:text-crs-first">1.200$</span></label>
+                        class="select swiper-slide group flex-col bg-white rounded-lg text-center border transition-all hover:border-crs-first w-[7.625rem] py-2 cursor-pointer text-sm text-[#101D3B] !flex items-center justify-center"><input
+                            type="radio" class="hidden"><span class="text">FRI-12/6</span><span
+                            class="text-[#2AB930]">1.200$</span></label>
                     <label
-                        class="select swiper-slide group flex-col bg-white rounded-lg text-center border transition-all hover:bg-[#FF9029]/15 hover:border-crs-first hover:text-crs-first w-[7.625rem] py-2 cursor-pointer text-sm text-[#101D3B] !flex items-center justify-center"><input
-                            type="radio" class="hidden" value="[object Object]"><span class="text">FRI-12/6</span><span
-                            class="text-[#2AB930] group-hover:text-crs-first">1.200$</span></label>
+                        class="select swiper-slide group flex-col bg-white rounded-lg text-center border transition-all hover:border-crs-first w-[7.625rem] py-2 cursor-pointer text-sm text-[#101D3B] !flex items-center justify-center"><input
+                            type="radio" class="hidden"><span class="text">FRI-12/6</span><span
+                            class="text-[#2AB930]">1.200$</span></label>
                     <label
-                        class="select swiper-slide group flex-col bg-white rounded-lg text-center border transition-all hover:bg-[#FF9029]/15 hover:border-crs-first hover:text-crs-first w-[7.625rem] py-2 cursor-pointer text-sm text-[#101D3B] !flex items-center justify-center"><input
-                            type="radio" class="hidden" value="[object Object]"><span class="text">FRI-12/6</span><span
-                            class="text-[#2AB930] group-hover:text-crs-first">1.200$</span></label>
+                        class="select swiper-slide group flex-col bg-white rounded-lg text-center border transition-all hover:border-crs-first w-[7.625rem] py-2 cursor-pointer text-sm text-[#101D3B] !flex items-center justify-center"><input
+                            type="radio" class="hidden"><span class="text">FRI-12/6</span><span
+                            class="text-[#2AB930]">1.200$</span></label>
                     <label
-                        class="select swiper-slide group flex-col bg-white rounded-lg text-center border transition-all hover:bg-[#FF9029]/15 hover:border-crs-first hover:text-crs-first w-[7.625rem] py-2 cursor-pointer text-sm text-[#101D3B] !flex items-center justify-center"><input
-                            type="radio" class="hidden" value="[object Object]"><span class="text">FRI-12/6</span><span
-                            class="text-[#2AB930] group-hover:text-crs-first">1.200$</span></label>
+                        class="select swiper-slide group flex-col bg-white rounded-lg text-center border transition-all hover:border-crs-first w-[7.625rem] py-2 cursor-pointer text-sm text-[#101D3B] !flex items-center justify-center"><input
+                            type="radio" class="hidden"><span class="text">FRI-12/6</span><span
+                            class="text-[#2AB930]">1.200$</span></label>
                 </div>
 
                 <!-- arrow left -->
-                <div class="bg-[#F7F7F9] absolute right-0 z-50 cursor-pointer swiper-button-next w-10 h-10 flex items-center justify-center rounded-full">
+                <div
+                    class="bg-[#F7F7F9] mobile:hidden absolute right-0 z-50 cursor-pointer swiper-button-next w-10 h-10 flex items-center justify-center rounded-full">
                     <img src="/icons/UpdateMain/left.svg" class="rotate-180 " alt="" />
                 </div>
             </div>
 
             <div class="flex gap-5">
-                <div id="fast_search" class="basis-3/12 text-[#1C0E07]">
+                <div id="fast_search" class="lg:basis-3/12 mobile:hidden text-[#1C0E07]">
                     <div class="bg-white gap-5 px-5 py-3 rounded-2xl flex flex-col">
                         <div class="flex items-center justify-between">
                             <h4 class="font-bold text-2xl">
@@ -1592,10 +1684,10 @@
                     </div>
                 </div>
 
-                <div class="flex flex-col basis-3/4 gap-3">
-                    <div class="flex gap-5 mb-4 items-center rounded-xl overflow-hidden bg-white">
+                <div class="flex flex-col mobile:w-full lg:basis-3/4 gap-3">
+                    <div class="flex mobile:hidden gap-5 mb-4 items-center rounded-xl w-full overflow-auto bg-white">
                         <div
-                            class="grid grid-cols-5 w-full divide-x rtl:divide-x-reverse whitespace-nowrap items-center text-sm">
+                            class="lg:grid flex lg:grid-cols-5 w-full divide-x rtl:divide-x-reverse whitespace-nowrap items-center text-sm">
                             <div class="border-b-2 border-[#0A77FF] flex items-center cursor-pointer p-5 w-full">
                                 <div>
                                     <div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg"
@@ -1610,7 +1702,8 @@
                                     <p class="mt-1">6،500،000 Rial</p>
                                 </div>
                             </div>
-                            <div class="lg:flex hidden items-center cursor-pointer p-5 w-full">
+                            <div
+                                class="flex items-center hover:border-b-2 hover:border-b-[#8CB8FB] cursor-pointer p-5 w-full">
                                 <div>
                                     <div class="flex items-center gap-2"><svg width="17" height="16" viewBox="0 0 17 16"
                                             fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1630,7 +1723,8 @@
                                     <p class="mt-1">Cheepest</p>
                                 </div>
                             </div>
-                            <div class="lg:flex hidden items-center cursor-pointer p-5 w-full">
+                            <div
+                                class="flex items-center hover:border-b-2 hover:border-b-[#8CB8FB] cursor-pointer p-5 w-full">
                                 <div>
                                     <div class="flex items-center gap-2"><svg width="17" height="16" viewBox="0 0 17 16"
                                             fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1650,7 +1744,8 @@
                                     <p class="mt-1">12،000،000 Rial</p>
                                 </div>
                             </div>
-                            <div class="lg:flex hidden items-center cursor-pointer p-5 w-full">
+                            <div
+                                class="flex items-center hover:border-b-2 hover:border-b-[#8CB8FB] cursor-pointer p-5 w-full">
                                 <div>
                                     <div class="flex items-center gap-2"><svg width="17" height="16" viewBox="0 0 17 16"
                                             fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1673,8 +1768,9 @@
                                     <p class="mt-1">12:25 PM</p>
                                 </div>
                             </div>
-                            <div class="flex items-center cursor-pointer p-5 w-full">
-                                <div>
+                            <div
+                                class="flex items-center hover:border-b-2 hover:border-b-[#8CB8FB] cursor-pointer p-5 w-full">
+                                <div id="show-dialog-filter">
                                     <div class="flex items-center gap-2">
                                         <select name="filters" id="filters">
                                             <option value="" hidden selected>filters</option>
@@ -1686,7 +1782,7 @@
                     </div>
 
                     <div class="flex w-full flex-col gap-3">
-                        <div class="bg-white px-6 c rounded-xl py-4 flex flex-col gap-6">
+                        <div class="bg-white px-6 mobile:w-full rounded-xl py-4 flex flex-col gap-6">
                             <div class="flex items-center justify-between">
                                 <div class="flex items-center gap-2">
                                     <span
@@ -1703,31 +1799,34 @@
                                     </span>
                                 </div>
 
-                                <span class="text-sm text-crs-first">
+                                <span class="text-sm mobile:hidden text-crs-first">
                                     5 sites remine
                                 </span>
                             </div>
 
                             <div class="flex items-center justify-between">
-                                <div class="flex items-center gap-6">
+                                <div class="flex mobile:justify-between mobile:w-full items-center gap-6">
                                     <div class="flex flex-col">
                                         <span class="text-2xl font-bold">
-                                            08:15 PM
+                                            08:15 <span class="text-[#938F96]">PM</span>
                                         </span>
                                         <span class="flex text-[#605D64] gap-2 items-center">
                                             <p>20/Aug/2023</p>
                                             <p>IMK</p>
                                         </span>
                                     </div>
-                                    <div class="flex text-[#3A4354] text-xs flex-col items-center justify-center gap-1">
+                                    <div class="flex text-[#605D64] text-xs flex-col items-center justify-center gap-1">
                                         <img src="/icons/UpdateMain/airplane.svg" class="w-6 h-6" alt="..." />
                                         <p>
                                             non stop
                                         </p>
+                                        <p>
+                                            YYZ
+                                        </p>
                                     </div>
                                     <div class="flex flex-col">
                                         <span class="text-2xl font-bold">
-                                            10:30 PM
+                                            10:30 <span class="text-[#938F96]">PM</span>
                                         </span>
                                         <span class="flex text-[#605D64] gap-2 items-center">
                                             <p>21/Aug/2023</p>
@@ -1736,7 +1835,7 @@
                                     </div>
                                 </div>
 
-                                <div class="flex flex-col gap-2 justify-center items-center">
+                                <div class="flex mobile:hidden flex-col gap-2 justify-center items-center">
                                     <div class="flex items-center">
                                         <div class="bg-[#D9D9D9] h-10 w-10 rounded-full"></div>
                                         <div class="bg-[#D9D9D9] h-10 w-10 rounded-full -ml-5 border border-white ">
@@ -1748,7 +1847,7 @@
                                 </div>
                             </div>
 
-                            <div class="flex items-center justify-between">
+                            <div class="flex items-center mobile:hidden justify-between">
                                 <div class="flex gap-4">
                                     <div class="flex items-center text-[#605D64] gap-1">
                                         <img src="/icons/UpdateMain/Baggage.svg" alt="" />
@@ -1776,63 +1875,20 @@
                                         <span>USD</span>
                                     </div>
 
-                                    <button class="border hover:bg-[#307FF8] hover:text-white transition-all border-[#307FF8] text-[#307FF8] px-6 py-2.5 rounded-lg">
+                                    <button
+                                        class="border hover:bg-[#307FF8] hover:text-white transition-all border-[#307FF8] text-[#307FF8] px-6 py-2.5 rounded-lg">
                                         Choose Flight
                                     </button>
                                 </div>
                             </div>
-                        </div>
-                        <div class="bg-white px-6 c rounded-xl py-4 flex flex-col gap-6">
-                            <div class="flex items-center justify-between">
-                                <div class="flex items-center gap-2">
-                                    <span
-                                        class="px-5 bg-[#42526E] text-white py-2 text-xs rounded-2xl flex items-center justify-center">
-                                        G9202
-                                    </span>
-                                    <span
-                                        class="px-5 py-2 bg-[#F1F2F4] text-xs rounded-2xl flex items-center justify-center">
-                                        Charter
-                                    </span>
-                                    <span
-                                        class="px-5 py-2 bg-[#F1F2F4] text-xs rounded-2xl flex items-center justify-center">
-                                        Economy
-                                    </span>
+
+                            <div class="flex items-center justify-between lg:hidden">
+                                <div class="flex text-lg gap-4 items-center">
+                                    <span class="font-bold text-[#307FF8]">540.45</span>
+                                    <span>USD</span>
                                 </div>
 
-                                <span class="text-sm text-crs-first">
-                                    5 sites remine
-                                </span>
-                            </div>
-
-                            <div class="flex items-center justify-between">
-                                <div class="flex items-center gap-6">
-                                    <div class="flex flex-col">
-                                        <span class="text-2xl font-bold">
-                                            08:15 PM
-                                        </span>
-                                        <span class="flex text-[#605D64] gap-2 items-center">
-                                            <p>20/Aug/2023</p>
-                                            <p>IMK</p>
-                                        </span>
-                                    </div>
-                                    <div class="flex text-[#3A4354] text-xs flex-col items-center justify-center gap-1">
-                                        <img src="/icons/UpdateMain/airplane.svg" class="w-6 h-6" alt="..." />
-                                        <p>
-                                            non stop
-                                        </p>
-                                    </div>
-                                    <div class="flex flex-col">
-                                        <span class="text-2xl font-bold">
-                                            10:30 PM
-                                        </span>
-                                        <span class="flex text-[#605D64] gap-2 items-center">
-                                            <p>21/Aug/2023</p>
-                                            <p>YYZ</p>
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div class="flex flex-col gap-2 justify-center items-center">
+                                <div class="flex lg::hidden gap-2 justify-center items-center">
                                     <div class="flex items-center">
                                         <div class="bg-[#D9D9D9] h-10 w-10 rounded-full"></div>
                                         <div class="bg-[#D9D9D9] h-10 w-10 rounded-full -ml-5 border border-white ">
@@ -1841,136 +1897,6 @@
                                     <p class="text-xs text-[#1D1B20]">
                                         Mahan , baghdad
                                     </p>
-                                </div>
-                            </div>
-
-                            <div class="flex items-center justify-between">
-                                <div class="flex gap-4">
-                                    <div class="flex items-center text-[#605D64] gap-1">
-                                        <img src="/icons/UpdateMain/Baggage.svg" alt="" />
-                                        <span>
-                                            20Kg
-                                        </span>
-                                    </div>
-                                    <div class="flex items-center text-[#307FF8] gap-1">
-                                        <span>
-                                            Flight ruls
-                                        </span>
-                                        <img src="/icons/UpdateMain/arrow-down-b.svg" alt="" />
-                                    </div>
-                                    <div class="flex items-center text-[#307FF8] gap-1">
-                                        <span>
-                                            Flight details
-                                        </span>
-                                        <img src="/icons/UpdateMain/arrow-down-b.svg" alt="" />
-                                    </div>
-                                </div>
-
-                                <div class="flex items-center gap-4">
-                                    <div class="flex text-lg items-center">
-                                        <span class="font-bold text-[#307FF8]">640.45</span>
-                                        <span>USD</span>
-                                    </div>
-
-                                    <button class="border hover:bg-[#307FF8] hover:text-white transition-all border-[#307FF8] text-[#307FF8] px-6 py-2.5 rounded-lg">
-                                        Choose Flight
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bg-white px-6 c rounded-xl py-4 flex flex-col gap-6">
-                            <div class="flex items-center justify-between">
-                                <div class="flex items-center gap-2">
-                                    <span
-                                        class="px-5 bg-[#42526E] text-white py-2 text-xs rounded-2xl flex items-center justify-center">
-                                        G9202
-                                    </span>
-                                    <span
-                                        class="px-5 py-2 bg-[#F1F2F4] text-xs rounded-2xl flex items-center justify-center">
-                                        Charter
-                                    </span>
-                                    <span
-                                        class="px-5 py-2 bg-[#F1F2F4] text-xs rounded-2xl flex items-center justify-center">
-                                        Economy
-                                    </span>
-                                </div>
-
-                                <span class="text-sm text-crs-first">
-                                    5 sites remine
-                                </span>
-                            </div>
-
-                            <div class="flex items-center justify-between">
-                                <div class="flex items-center gap-6">
-                                    <div class="flex flex-col">
-                                        <span class="text-2xl font-bold">
-                                            08:15 PM
-                                        </span>
-                                        <span class="flex text-[#605D64] gap-2 items-center">
-                                            <p>20/Aug/2023</p>
-                                            <p>IMK</p>
-                                        </span>
-                                    </div>
-                                    <div class="flex text-[#3A4354] text-xs flex-col items-center justify-center gap-1">
-                                        <img src="/icons/UpdateMain/airplane.svg" class="w-6 h-6" alt="..." />
-                                        <p>
-                                            non stop
-                                        </p>
-                                    </div>
-                                    <div class="flex flex-col">
-                                        <span class="text-2xl font-bold">
-                                            10:30 PM
-                                        </span>
-                                        <span class="flex text-[#605D64] gap-2 items-center">
-                                            <p>21/Aug/2023</p>
-                                            <p>YYZ</p>
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div class="flex flex-col gap-2 justify-center items-center">
-                                    <div class="flex items-center">
-                                        <div class="bg-[#D9D9D9] h-10 w-10 rounded-full"></div>
-                                        <div class="bg-[#D9D9D9] h-10 w-10 rounded-full -ml-5 border border-white ">
-                                        </div>
-                                    </div>
-                                    <p class="text-xs text-[#1D1B20]">
-                                        Mahan , baghdad
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="flex items-center justify-between">
-                                <div class="flex gap-4">
-                                    <div class="flex items-center text-[#605D64] gap-1">
-                                        <img src="/icons/UpdateMain/Baggage.svg" alt="" />
-                                        <span>
-                                            20Kg
-                                        </span>
-                                    </div>
-                                    <div class="flex items-center text-[#307FF8] gap-1">
-                                        <span>
-                                            Flight ruls
-                                        </span>
-                                        <img src="/icons/UpdateMain/arrow-down-b.svg" alt="" />
-                                    </div>
-                                    <div class="flex items-center text-[#307FF8] gap-1">
-                                        <span>
-                                            Flight details
-                                        </span>
-                                        <img src="/icons/UpdateMain/arrow-down-b.svg" alt="" />
-                                    </div>
-                                </div>
-
-                                <div class="flex items-center gap-4">
-                                    <div class="flex text-lg items-center">
-                                        <span class="font-bold text-[#307FF8]">640.45</span>
-                                        <span>USD</span>
-                                    </div>
-
-                                    <button class="border hover:bg-[#307FF8] hover:text-white transition-all border-[#307FF8] text-[#307FF8] px-6 py-2.5 rounded-lg">
-                                        Choose Flight
-                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -1984,64 +1910,503 @@
         </div>
     </div>
 
+    <!-- dilaog start -->
+    <div id="dialog_filter" class="fixed hidden bg-black/50 top-0 z-40 left-0 w-full h-full">
+        <main id="inner_dialog_filter"
+            class="flex overflow-y-auto flex-col relative lg:max-w-sm w-full bg-white h-full">
+            <div class="flex border-b py-3 px-5 justify-between items-center">
+                <div class="flex items-center gap-1">
+                    <img id="close-filter" class="cursor-pointer" src="/icons/close.svg" alt="...">
+                    <span>Filters</span>
+                </div>
+                <span class="text-blue-600 underline">Clear</span>
+            </div>
+            <ul class="space-y-7 mt-2 text-[#1D1B20] px-5">
+                <li>
+                    <div
+                        class="flex cursor-pointer rounded-md transition-all hover:transition-all items-center justify-between">
+                        <div class="flex gap-2 items-center"><button type="button"><span
+                                    class="font-bold text-lg">Stop</span></button></div>
+                        <div class="transition-all duration-500 rotate-180">
+                            <img src="/icons/UpdateMain/arrow.svg" alt="..." />
+                        </div>
+                    </div>
+                    <div class="flex mt-5 flex-col">
+                        <div class="flex items-center gap-2"><input type="checkbox"
+                                class="relative peer shrink-0 w-5 h-5 border-2 border-blue-500 rounded-lg bg-white checked:bg-blue-800 checked:border-0 focus:outline-none focus:ring-offset-0 focus:ring-2 focus:ring-blue-100 disabled:border-steel-400 disabled:bg-steel-400"><span>Non
+                                stop</span></div>
+                        <div class="flex gap-10">
+                            <div class="flex items-center gap-2"><input type="checkbox"
+                                    class="relative peer shrink-0 w-5 h-5 border-2 border-blue-500 rounded-lg bg-white checked:bg-blue-800 checked:border-0 focus:outline-none focus:ring-offset-0 focus:ring-2 focus:ring-blue-100 disabled:border-steel-400 disabled:bg-steel-400"><span>1
+                                    stops</span></div>
+                            <div class="flex items-center gap-2"><input type="checkbox"
+                                    class="relative peer shrink-0 w-5 h-5 border-2 border-blue-500 rounded-lg bg-white checked:bg-blue-800 checked:border-0 focus:outline-none focus:ring-offset-0 focus:ring-2 focus:ring-blue-100 disabled:border-steel-400 disabled:bg-steel-400"><span>2
+                                    stops</span></div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div
+                        class="flex cursor-pointer rounded-md transition-all hover:transition-all items-center justify-between">
+                        <div class="flex gap-2 items-center"><button type="button"><span
+                                    class="font-bold text-lg">Flight Type</span></button></div>
+                        <div class="transition-all duration-500 rotate-180">
+                            <img src="/icons/UpdateMain/arrow.svg" alt="..." />
+                        </div>
+                    </div>
+                    <div class="flex mt-5 flex-col">
+                        <div class="flex items-center gap-2"><input type="checkbox"
+                                class="relative peer shrink-0 w-5 h-5 border-2 border-blue-500 rounded-lg bg-white checked:bg-blue-800 checked:border-0 focus:outline-none focus:ring-offset-0 focus:ring-2 focus:ring-blue-100 disabled:border-steel-400 disabled:bg-steel-400"><span>Economy</span>
+                        </div>
+                        <div class="flex gap-10">
+                            <div class="flex items-center gap-2"><input type="checkbox"
+                                    class="relative peer shrink-0 w-5 h-5 border-2 border-blue-500 rounded-lg bg-white checked:bg-blue-800 checked:border-0 focus:outline-none focus:ring-offset-0 focus:ring-2 focus:ring-blue-100 disabled:border-steel-400 disabled:bg-steel-400"><span>Business
+                                    class</span></div>
+                            <div class="flex items-center gap-2"><input type="checkbox"
+                                    class="relative peer shrink-0 w-5 h-5 border-2 border-blue-500 rounded-lg bg-white checked:bg-blue-800 checked:border-0 focus:outline-none focus:ring-offset-0 focus:ring-2 focus:ring-blue-100 disabled:border-steel-400 disabled:bg-steel-400"><span>First
+                                    class</span></div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div
+                        class="flex cursor-pointer rounded-md transition-all hover:transition-all items-center justify-between">
+                        <div class="flex gap-2 items-center"><button type="button"><span
+                                    class="font-bold text-lg">Ticket Type</span></button></div>
+                        <div class="transition-all duration-500 rotate-180">
+                            <img src="/icons/UpdateMain/arrow.svg" alt="..." />
+                        </div>
+                    </div>
+                    <div class="flex mt-5 flex-col">
+                        <div class="flex gap-10">
+                            <div class="flex items-center gap-2"><input type="checkbox"
+                                    class="relative peer shrink-0 w-5 h-5 border-2 border-blue-500 rounded-lg bg-white checked:bg-blue-800 checked:border-0 focus:outline-none focus:ring-offset-0 focus:ring-2 focus:ring-blue-100 disabled:border-steel-400 disabled:bg-steel-400"><span>System</span>
+                            </div>
+                            <div class="flex items-center gap-2"><input type="checkbox"
+                                    class="relative peer shrink-0 w-5 h-5 border-2 border-blue-500 rounded-lg bg-white checked:bg-blue-800 checked:border-0 focus:outline-none focus:ring-offset-0 focus:ring-2 focus:ring-blue-100 disabled:border-steel-400 disabled:bg-steel-400"><span>Charter</span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div
+                        class="flex cursor-pointer rounded-md transition-all hover:transition-all items-center justify-between">
+                        <div class="flex gap-2 items-center"><button type="button"><span
+                                    class="font-bold text-lg">Period</span></button></div>
+                        <div class="transition-all duration-500 rotate-180">
+                            <img src="/icons/UpdateMain/arrow.svg" alt="..." />
+                        </div>
+                    </div>
+                    <div class="flex mt-5 flex-col">
+                        <div class="flex justify-between items-center gap-2">
+                            <div class="flex items-center gap-2"><input type="checkbox"
+                                    class="relative peer shrink-0 w-5 h-5 border-2 border-blue-500 rounded-lg bg-white checked:bg-blue-800 checked:border-0 focus:outline-none focus:ring-offset-0 focus:ring-2 focus:ring-blue-100 disabled:border-steel-400 disabled:bg-steel-400"><span>Morning</span>
+                            </div><span>0-6</span>
+                        </div>
+                        <div class="flex justify-between items-center gap-2">
+                            <div class="flex items-center gap-2"><input type="checkbox"
+                                    class="relative peer shrink-0 w-5 h-5 border-2 border-blue-500 rounded-lg bg-white checked:bg-blue-800 checked:border-0 focus:outline-none focus:ring-offset-0 focus:ring-2 focus:ring-blue-100 disabled:border-steel-400 disabled:bg-steel-400"><span>Noon</span>
+                            </div><span>6-12</span>
+                        </div>
+                        <div class="flex justify-between items-center gap-2">
+                            <div class="flex items-center gap-2"><input type="checkbox"
+                                    class="relative peer shrink-0 w-5 h-5 border-2 border-blue-500 rounded-lg bg-white checked:bg-blue-800 checked:border-0 focus:outline-none focus:ring-offset-0 focus:ring-2 focus:ring-blue-100 disabled:border-steel-400 disabled:bg-steel-400"><span>Afternoon</span>
+                            </div><span>12-18</span>
+                        </div>
+                        <div class="flex justify-between items-center gap-2">
+                            <div class="flex items-center gap-2"><input type="checkbox"
+                                    class="relative peer shrink-0 w-5 h-5 border-2 border-blue-500 rounded-lg bg-white checked:bg-blue-800 checked:border-0 focus:outline-none focus:ring-offset-0 focus:ring-2 focus:ring-blue-100 disabled:border-steel-400 disabled:bg-steel-400"><span>Night</span>
+                            </div><span>18-24</span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div
+                        class="flex cursor-pointer rounded-md transition-all hover:transition-all items-center justify-between">
+                        <div class="flex gap-2 items-center"><button type="button"><span
+                                    class="font-bold text-lg">Airline</span></button></div>
+                        <div class="transition-all duration-500 rotate-180">
+                            <img src="/icons/UpdateMain/arrow.svg" alt="..." />
+                        </div>
+                    </div>
+                    <div class="flex mt-5 flex-col gap-2.5">
+                        <div class="flex justify-between items-center gap-2">
+                            <div class="flex items-center gap-2"><input type="checkbox"
+                                    class="relative peer shrink-0 w-5 h-5 border-2 border-blue-500 rounded-lg bg-white checked:bg-blue-800 checked:border-0 focus:outline-none focus:ring-offset-0 focus:ring-2 focus:ring-blue-100 disabled:border-steel-400 disabled:bg-steel-400"><span>Airline
+                                    name</span></div>
+                            <main class="bg-orange-100 rounded-full p-2"><svg xmlns="http://www.w3.org/2000/svg"
+                                    width="1em" height="1em" viewBox="0 0 128 128">
+                                    <path fill="#006ca8"
+                                        d="M37.08 80.79S9.61 74.92 9.14 75.01c-.47.09-5.97 5.59-5.78 6.44C3.55 82.31 27.61 95 27.61 95l6.91-7.29zm-3.79 19.42s13.35 23.11 13.92 23.11s6.72-4.74 6.72-5.21c0-.47-5.68-28.03-5.68-28.03l-9.76 1.14z">
+                                    </path>
+                                    <path fill="#9a9a9a"
+                                        d="M22.79 25.78s-1.92 2.17-2.33 2.94s-.48 2.09.4 2.56c.88.47 1.95.15 2.48-.44s3.14-3.8 3.14-3.8s-3.46-1.44-3.69-1.26m14.02 7.85s-1.55 1.84-2.18 2.68c-.61.81-.6 2.08.25 2.68c1.22.86 2.43-.1 3.09-.81c.61-.66 2.33-2.68 2.33-2.68zm13.27 7.14s-2.03 2.03-2.63 2.84c-.67.89-.82 2.19.1 2.89c1.01.76 2.13.41 3.04-.41c.91-.81 2.94-3.04 2.94-3.04zm35.03 34.28s-2.38 1.65-2.97 2.29c-.58.64-.97 1.92-.22 2.59c.74.67 1.86.61 2.52.17c.66-.44 3.96-2.93 3.96-2.93s-3.02-2.23-3.29-2.12m8.02 12.56s-1.97 1.38-2.79 2.03c-.8.63-1.11 1.86-.44 2.66c.95 1.14 2.38.53 3.19.01c.76-.48 2.94-2 2.94-2zm7.34 12.84s-2.45 1.48-3.24 2.12c-.86.71-1.32 1.93-.59 2.83c.8.98 1.97.9 3.05.34s3.58-2.24 3.58-2.24zm-43.2-76.72s-.35-2.33 1.54-4.96c1.89-2.63 8.16-8.77 9.13-8.82s3.29 1.18 5.62 3.47c2.22 2.17 3.25 4.96 3.29 5.62c.04.66-4.34 5-5.48 6.05c-1.14 1.05-4.21 4.47-4.21 4.47z">
+                                    </path>
+                                    <path fill="#c8c8c8"
+                                        d="M60.13 24.08s7.68-9.39 9.74-7.98c2.08 1.42-6.23 9.48-6.23 9.48z"></path>
+                                    <path fill="#848484"
+                                        d="M58.37 23.48s4.35-4.41 4.83-5.11c.48-.7.04-1.75-.35-2.33c-.39-.57-.99-.79-.99-.79s-3.07 2.75-4.12 5.16c-.82 1.87-.68 2.82-.68 2.82zm7.49 2.27s1.65-1.71 2.48-2.39c.75-.61 1.86-.55 2.52-.16c.85.5 1.05 1.36 1.05 1.36l-3.06 3.25z">
+                                    </path>
+                                    <path fill="#9a9a9a"
+                                        d="M101.96 59.45s2.51-2.92 3.97-4.38c1.51-1.51 3.97-3.56 4.47-3.52c.5.05 2.71 1.39 4.79 3.52c2.37 2.42 3.84 5.43 3.88 5.71c.05.27-4.38 4.7-6.35 6.39c-1.41 1.21-10.18 4.79-10.18 4.34c.02-.46-.58-12.06-.58-12.06">
+                                    </path>
+                                    <path fill="#c8c8c8"
+                                        d="M103.41 65.1s7.26-7.96 8.92-6.47c1.66 1.49-8.31 10.45-8.31 10.45z"></path>
+                                    <path fill="#848484"
+                                        d="m102.87 63.1l2.65-2.92c.94-1.03.88-2.41.6-3.01c-.36-.77-1.29-.95-1.29-.95l-3.45 3.67zm2.51 6.61s4.16-3.75 4.87-4.34c.71-.59 1.86-1.01 2.77-.38c.68.47.98 1.04.98 1.04s-3.2 3.48-5.13 4.71c-1.21.77-4.07 1.21-4.07 1.21z">
+                                    </path>
+                                    <path fill="#006ca8"
+                                        d="M11.65 8.92c-.98.08-7.19 7.42-7.41 7.96s0 1.42 1.53 2.18c1.52.76 44.47 23.44 45.13 23.98c.65.55 9.16 10.03 9.16 10.03s21.04-14.5 20.93-14.93c-.11-.44-.76-9.48-.76-9.48S13.07 8.81 11.65 8.92m61.38 56.91s12.86 11.66 13.95 13.08c1.09 1.42 23.33 41.97 23.66 42.62c.33.65 1.74 1.2 2.51.44s6.54-5.78 6.65-6.98c.11-1.2-21.37-70.42-21.37-70.42l-16.57 6z">
+                                    </path>
+                                    <path fill="#014eac"
+                                        d="M66.81 43.26s-10.14-9.81-10.9-10.36c-.76-.54-48.29-20.16-48.29-20.16l-1.95 2.15s48.18 20.35 48.95 20.89c.77.54 10.2 10.2 10.2 10.2zM82.4 60.45s11.17 13.72 11.84 14.61s20.26 45.65 20.26 45.65l1.95-1.82S96.88 73.22 96.53 72.6c-.35-.62-13.36-16.7-13.36-16.7z">
+                                    </path>
+                                    <path fill="#9a9a9a"
+                                        d="M24.22 98.4s-4.18 5.98-4.18 6.45c0 .48 2.8 3.54 3.12 3.54s6.4-4.34 6.4-4.34l-.85-4.34z">
+                                    </path>
+                                    <path fill="#c8c8c8"
+                                        d="M24.22 98.4s8.28-13.93 17.15-26.38c9.11-12.79 16.5-20.16 27.86-32.52C83.48 24 92.97 15.22 101.75 9.31c7.28-4.9 17.68-8.22 21.39-4.91c4.07 3.64-.42 15.12-4.99 21.66c-10.37 14.84-19.27 21.9-29.48 31.81c-10.07 9.77-18.58 18.25-29.12 26.16c-7.1 5.33-30 20.04-30 20.04z">
+                                    </path>
+                                    <path fill="#3b5361"
+                                        d="m103.92 11.05l2.77 2.92s4.64-4.47 8.11-1.14c3.56 3.41-1.35 8.25-1.35 8.25l2.99 3.34s8.11-9.18 1.49-15.15c-5.76-5.2-14.01 1.78-14.01 1.78">
+                                    </path>
+                                    <path fill="#9a9a9a"
+                                        d="M47.84 74c-1.29 1.24-16.53 19.28-17.38 20.35c-1.09 1.38-1.59 3.04-.36 4.06c1.23 1.01 2.56.01 3.77-.8c1.52-1.01 19.18-16.59 20.35-17.67c1.88-1.74 2.2-4.88.22-6.66c-2.18-1.96-4.64-1.16-6.6.72">
+                                    </path>
+                                    <path fill="#dfdfdf"
+                                        d="M47.29 69.91c-.87-.75-1.95-.25-3.09.98c-.98 1.07-1.43 2.73-.45 3.4c.98.67 2.28-.31 3.09-1.3c.81-.98 1.43-2.23.45-3.08m2.82-5.82c-.9 1.03-2.21 2.73-.98 3.94c1.21 1.19 3.04-.32 3.84-1.22c.79-.9 9.84-11.52 21.29-22.96c11.18-11.18 18.7-18.25 19.86-19.49c.98-1.05.89-2.72.03-3.25c-1.02-.63-2.15-.23-3.55 1.17S79.7 32.37 70.74 41.43S51.23 62.8 50.11 64.09">
+                                    </path>
+                                    <path fill="#3b5361"
+                                        d="M105.47 41.61s-.55-3.72-2.86-2.26c-2.48 1.57-.63 5.83-.63 5.83s.93-.87 1.92-1.91c.82-.85 1.3-1.35 1.57-1.66m-8.87 8.75s-.39-4.77-3.01-2.81c-2.09 1.57-.67 6.26-.67 6.26s1.2-1.09 1.98-1.83c.79-.75 1.7-1.62 1.7-1.62m-8.46 8.02s-.3-3.96-2.65-2.65s-.78 5.99-.78 5.99s1.04-.94 1.74-1.64s1.69-1.7 1.69-1.7m-9.58 9.26s-.18-3.94-2.49-2.89c-2.4 1.09-.96 6.14-.96 6.14s1.17-1.09 1.82-1.7c.66-.6 1.63-1.55 1.63-1.55">
+                                    </path>
+                                </svg></main>
+                        </div>
+                        <div class="flex justify-between items-center gap-2">
+                            <div class="flex items-center gap-2"><input type="checkbox"
+                                    class="relative peer shrink-0 w-5 h-5 border-2 border-blue-500 rounded-lg bg-white checked:bg-blue-800 checked:border-0 focus:outline-none focus:ring-offset-0 focus:ring-2 focus:ring-blue-100 disabled:border-steel-400 disabled:bg-steel-400"><span>Airline
+                                    name</span></div>
+                            <main class="bg-orange-100 rounded-full p-2"><svg xmlns="http://www.w3.org/2000/svg"
+                                    width="1em" height="1em" viewBox="0 0 128 128">
+                                    <path fill="#006ca8"
+                                        d="M37.08 80.79S9.61 74.92 9.14 75.01c-.47.09-5.97 5.59-5.78 6.44C3.55 82.31 27.61 95 27.61 95l6.91-7.29zm-3.79 19.42s13.35 23.11 13.92 23.11s6.72-4.74 6.72-5.21c0-.47-5.68-28.03-5.68-28.03l-9.76 1.14z">
+                                    </path>
+                                    <path fill="#9a9a9a"
+                                        d="M22.79 25.78s-1.92 2.17-2.33 2.94s-.48 2.09.4 2.56c.88.47 1.95.15 2.48-.44s3.14-3.8 3.14-3.8s-3.46-1.44-3.69-1.26m14.02 7.85s-1.55 1.84-2.18 2.68c-.61.81-.6 2.08.25 2.68c1.22.86 2.43-.1 3.09-.81c.61-.66 2.33-2.68 2.33-2.68zm13.27 7.14s-2.03 2.03-2.63 2.84c-.67.89-.82 2.19.1 2.89c1.01.76 2.13.41 3.04-.41c.91-.81 2.94-3.04 2.94-3.04zm35.03 34.28s-2.38 1.65-2.97 2.29c-.58.64-.97 1.92-.22 2.59c.74.67 1.86.61 2.52.17c.66-.44 3.96-2.93 3.96-2.93s-3.02-2.23-3.29-2.12m8.02 12.56s-1.97 1.38-2.79 2.03c-.8.63-1.11 1.86-.44 2.66c.95 1.14 2.38.53 3.19.01c.76-.48 2.94-2 2.94-2zm7.34 12.84s-2.45 1.48-3.24 2.12c-.86.71-1.32 1.93-.59 2.83c.8.98 1.97.9 3.05.34s3.58-2.24 3.58-2.24zm-43.2-76.72s-.35-2.33 1.54-4.96c1.89-2.63 8.16-8.77 9.13-8.82s3.29 1.18 5.62 3.47c2.22 2.17 3.25 4.96 3.29 5.62c.04.66-4.34 5-5.48 6.05c-1.14 1.05-4.21 4.47-4.21 4.47z">
+                                    </path>
+                                    <path fill="#c8c8c8"
+                                        d="M60.13 24.08s7.68-9.39 9.74-7.98c2.08 1.42-6.23 9.48-6.23 9.48z"></path>
+                                    <path fill="#848484"
+                                        d="M58.37 23.48s4.35-4.41 4.83-5.11c.48-.7.04-1.75-.35-2.33c-.39-.57-.99-.79-.99-.79s-3.07 2.75-4.12 5.16c-.82 1.87-.68 2.82-.68 2.82zm7.49 2.27s1.65-1.71 2.48-2.39c.75-.61 1.86-.55 2.52-.16c.85.5 1.05 1.36 1.05 1.36l-3.06 3.25z">
+                                    </path>
+                                    <path fill="#9a9a9a"
+                                        d="M101.96 59.45s2.51-2.92 3.97-4.38c1.51-1.51 3.97-3.56 4.47-3.52c.5.05 2.71 1.39 4.79 3.52c2.37 2.42 3.84 5.43 3.88 5.71c.05.27-4.38 4.7-6.35 6.39c-1.41 1.21-10.18 4.79-10.18 4.34c.02-.46-.58-12.06-.58-12.06">
+                                    </path>
+                                    <path fill="#c8c8c8"
+                                        d="M103.41 65.1s7.26-7.96 8.92-6.47c1.66 1.49-8.31 10.45-8.31 10.45z"></path>
+                                    <path fill="#848484"
+                                        d="m102.87 63.1l2.65-2.92c.94-1.03.88-2.41.6-3.01c-.36-.77-1.29-.95-1.29-.95l-3.45 3.67zm2.51 6.61s4.16-3.75 4.87-4.34c.71-.59 1.86-1.01 2.77-.38c.68.47.98 1.04.98 1.04s-3.2 3.48-5.13 4.71c-1.21.77-4.07 1.21-4.07 1.21z">
+                                    </path>
+                                    <path fill="#006ca8"
+                                        d="M11.65 8.92c-.98.08-7.19 7.42-7.41 7.96s0 1.42 1.53 2.18c1.52.76 44.47 23.44 45.13 23.98c.65.55 9.16 10.03 9.16 10.03s21.04-14.5 20.93-14.93c-.11-.44-.76-9.48-.76-9.48S13.07 8.81 11.65 8.92m61.38 56.91s12.86 11.66 13.95 13.08c1.09 1.42 23.33 41.97 23.66 42.62c.33.65 1.74 1.2 2.51.44s6.54-5.78 6.65-6.98c.11-1.2-21.37-70.42-21.37-70.42l-16.57 6z">
+                                    </path>
+                                    <path fill="#014eac"
+                                        d="M66.81 43.26s-10.14-9.81-10.9-10.36c-.76-.54-48.29-20.16-48.29-20.16l-1.95 2.15s48.18 20.35 48.95 20.89c.77.54 10.2 10.2 10.2 10.2zM82.4 60.45s11.17 13.72 11.84 14.61s20.26 45.65 20.26 45.65l1.95-1.82S96.88 73.22 96.53 72.6c-.35-.62-13.36-16.7-13.36-16.7z">
+                                    </path>
+                                    <path fill="#9a9a9a"
+                                        d="M24.22 98.4s-4.18 5.98-4.18 6.45c0 .48 2.8 3.54 3.12 3.54s6.4-4.34 6.4-4.34l-.85-4.34z">
+                                    </path>
+                                    <path fill="#c8c8c8"
+                                        d="M24.22 98.4s8.28-13.93 17.15-26.38c9.11-12.79 16.5-20.16 27.86-32.52C83.48 24 92.97 15.22 101.75 9.31c7.28-4.9 17.68-8.22 21.39-4.91c4.07 3.64-.42 15.12-4.99 21.66c-10.37 14.84-19.27 21.9-29.48 31.81c-10.07 9.77-18.58 18.25-29.12 26.16c-7.1 5.33-30 20.04-30 20.04z">
+                                    </path>
+                                    <path fill="#3b5361"
+                                        d="m103.92 11.05l2.77 2.92s4.64-4.47 8.11-1.14c3.56 3.41-1.35 8.25-1.35 8.25l2.99 3.34s8.11-9.18 1.49-15.15c-5.76-5.2-14.01 1.78-14.01 1.78">
+                                    </path>
+                                    <path fill="#9a9a9a"
+                                        d="M47.84 74c-1.29 1.24-16.53 19.28-17.38 20.35c-1.09 1.38-1.59 3.04-.36 4.06c1.23 1.01 2.56.01 3.77-.8c1.52-1.01 19.18-16.59 20.35-17.67c1.88-1.74 2.2-4.88.22-6.66c-2.18-1.96-4.64-1.16-6.6.72">
+                                    </path>
+                                    <path fill="#dfdfdf"
+                                        d="M47.29 69.91c-.87-.75-1.95-.25-3.09.98c-.98 1.07-1.43 2.73-.45 3.4c.98.67 2.28-.31 3.09-1.3c.81-.98 1.43-2.23.45-3.08m2.82-5.82c-.9 1.03-2.21 2.73-.98 3.94c1.21 1.19 3.04-.32 3.84-1.22c.79-.9 9.84-11.52 21.29-22.96c11.18-11.18 18.7-18.25 19.86-19.49c.98-1.05.89-2.72.03-3.25c-1.02-.63-2.15-.23-3.55 1.17S79.7 32.37 70.74 41.43S51.23 62.8 50.11 64.09">
+                                    </path>
+                                    <path fill="#3b5361"
+                                        d="M105.47 41.61s-.55-3.72-2.86-2.26c-2.48 1.57-.63 5.83-.63 5.83s.93-.87 1.92-1.91c.82-.85 1.3-1.35 1.57-1.66m-8.87 8.75s-.39-4.77-3.01-2.81c-2.09 1.57-.67 6.26-.67 6.26s1.2-1.09 1.98-1.83c.79-.75 1.7-1.62 1.7-1.62m-8.46 8.02s-.3-3.96-2.65-2.65s-.78 5.99-.78 5.99s1.04-.94 1.74-1.64s1.69-1.7 1.69-1.7m-9.58 9.26s-.18-3.94-2.49-2.89c-2.4 1.09-.96 6.14-.96 6.14s1.17-1.09 1.82-1.7c.66-.6 1.63-1.55 1.63-1.55">
+                                    </path>
+                                </svg></main>
+                        </div>
+                        <div class="flex justify-between items-center gap-2">
+                            <div class="flex items-center gap-2"><input type="checkbox"
+                                    class="relative peer shrink-0 w-5 h-5 border-2 border-blue-500 rounded-lg bg-white checked:bg-blue-800 checked:border-0 focus:outline-none focus:ring-offset-0 focus:ring-2 focus:ring-blue-100 disabled:border-steel-400 disabled:bg-steel-400"><span>Airline
+                                    name</span></div>
+                            <main class="bg-orange-100 rounded-full p-2"><svg xmlns="http://www.w3.org/2000/svg"
+                                    width="1em" height="1em" viewBox="0 0 128 128">
+                                    <path fill="#006ca8"
+                                        d="M37.08 80.79S9.61 74.92 9.14 75.01c-.47.09-5.97 5.59-5.78 6.44C3.55 82.31 27.61 95 27.61 95l6.91-7.29zm-3.79 19.42s13.35 23.11 13.92 23.11s6.72-4.74 6.72-5.21c0-.47-5.68-28.03-5.68-28.03l-9.76 1.14z">
+                                    </path>
+                                    <path fill="#9a9a9a"
+                                        d="M22.79 25.78s-1.92 2.17-2.33 2.94s-.48 2.09.4 2.56c.88.47 1.95.15 2.48-.44s3.14-3.8 3.14-3.8s-3.46-1.44-3.69-1.26m14.02 7.85s-1.55 1.84-2.18 2.68c-.61.81-.6 2.08.25 2.68c1.22.86 2.43-.1 3.09-.81c.61-.66 2.33-2.68 2.33-2.68zm13.27 7.14s-2.03 2.03-2.63 2.84c-.67.89-.82 2.19.1 2.89c1.01.76 2.13.41 3.04-.41c.91-.81 2.94-3.04 2.94-3.04zm35.03 34.28s-2.38 1.65-2.97 2.29c-.58.64-.97 1.92-.22 2.59c.74.67 1.86.61 2.52.17c.66-.44 3.96-2.93 3.96-2.93s-3.02-2.23-3.29-2.12m8.02 12.56s-1.97 1.38-2.79 2.03c-.8.63-1.11 1.86-.44 2.66c.95 1.14 2.38.53 3.19.01c.76-.48 2.94-2 2.94-2zm7.34 12.84s-2.45 1.48-3.24 2.12c-.86.71-1.32 1.93-.59 2.83c.8.98 1.97.9 3.05.34s3.58-2.24 3.58-2.24zm-43.2-76.72s-.35-2.33 1.54-4.96c1.89-2.63 8.16-8.77 9.13-8.82s3.29 1.18 5.62 3.47c2.22 2.17 3.25 4.96 3.29 5.62c.04.66-4.34 5-5.48 6.05c-1.14 1.05-4.21 4.47-4.21 4.47z">
+                                    </path>
+                                    <path fill="#c8c8c8"
+                                        d="M60.13 24.08s7.68-9.39 9.74-7.98c2.08 1.42-6.23 9.48-6.23 9.48z"></path>
+                                    <path fill="#848484"
+                                        d="M58.37 23.48s4.35-4.41 4.83-5.11c.48-.7.04-1.75-.35-2.33c-.39-.57-.99-.79-.99-.79s-3.07 2.75-4.12 5.16c-.82 1.87-.68 2.82-.68 2.82zm7.49 2.27s1.65-1.71 2.48-2.39c.75-.61 1.86-.55 2.52-.16c.85.5 1.05 1.36 1.05 1.36l-3.06 3.25z">
+                                    </path>
+                                    <path fill="#9a9a9a"
+                                        d="M101.96 59.45s2.51-2.92 3.97-4.38c1.51-1.51 3.97-3.56 4.47-3.52c.5.05 2.71 1.39 4.79 3.52c2.37 2.42 3.84 5.43 3.88 5.71c.05.27-4.38 4.7-6.35 6.39c-1.41 1.21-10.18 4.79-10.18 4.34c.02-.46-.58-12.06-.58-12.06">
+                                    </path>
+                                    <path fill="#c8c8c8"
+                                        d="M103.41 65.1s7.26-7.96 8.92-6.47c1.66 1.49-8.31 10.45-8.31 10.45z"></path>
+                                    <path fill="#848484"
+                                        d="m102.87 63.1l2.65-2.92c.94-1.03.88-2.41.6-3.01c-.36-.77-1.29-.95-1.29-.95l-3.45 3.67zm2.51 6.61s4.16-3.75 4.87-4.34c.71-.59 1.86-1.01 2.77-.38c.68.47.98 1.04.98 1.04s-3.2 3.48-5.13 4.71c-1.21.77-4.07 1.21-4.07 1.21z">
+                                    </path>
+                                    <path fill="#006ca8"
+                                        d="M11.65 8.92c-.98.08-7.19 7.42-7.41 7.96s0 1.42 1.53 2.18c1.52.76 44.47 23.44 45.13 23.98c.65.55 9.16 10.03 9.16 10.03s21.04-14.5 20.93-14.93c-.11-.44-.76-9.48-.76-9.48S13.07 8.81 11.65 8.92m61.38 56.91s12.86 11.66 13.95 13.08c1.09 1.42 23.33 41.97 23.66 42.62c.33.65 1.74 1.2 2.51.44s6.54-5.78 6.65-6.98c.11-1.2-21.37-70.42-21.37-70.42l-16.57 6z">
+                                    </path>
+                                    <path fill="#014eac"
+                                        d="M66.81 43.26s-10.14-9.81-10.9-10.36c-.76-.54-48.29-20.16-48.29-20.16l-1.95 2.15s48.18 20.35 48.95 20.89c.77.54 10.2 10.2 10.2 10.2zM82.4 60.45s11.17 13.72 11.84 14.61s20.26 45.65 20.26 45.65l1.95-1.82S96.88 73.22 96.53 72.6c-.35-.62-13.36-16.7-13.36-16.7z">
+                                    </path>
+                                    <path fill="#9a9a9a"
+                                        d="M24.22 98.4s-4.18 5.98-4.18 6.45c0 .48 2.8 3.54 3.12 3.54s6.4-4.34 6.4-4.34l-.85-4.34z">
+                                    </path>
+                                    <path fill="#c8c8c8"
+                                        d="M24.22 98.4s8.28-13.93 17.15-26.38c9.11-12.79 16.5-20.16 27.86-32.52C83.48 24 92.97 15.22 101.75 9.31c7.28-4.9 17.68-8.22 21.39-4.91c4.07 3.64-.42 15.12-4.99 21.66c-10.37 14.84-19.27 21.9-29.48 31.81c-10.07 9.77-18.58 18.25-29.12 26.16c-7.1 5.33-30 20.04-30 20.04z">
+                                    </path>
+                                    <path fill="#3b5361"
+                                        d="m103.92 11.05l2.77 2.92s4.64-4.47 8.11-1.14c3.56 3.41-1.35 8.25-1.35 8.25l2.99 3.34s8.11-9.18 1.49-15.15c-5.76-5.2-14.01 1.78-14.01 1.78">
+                                    </path>
+                                    <path fill="#9a9a9a"
+                                        d="M47.84 74c-1.29 1.24-16.53 19.28-17.38 20.35c-1.09 1.38-1.59 3.04-.36 4.06c1.23 1.01 2.56.01 3.77-.8c1.52-1.01 19.18-16.59 20.35-17.67c1.88-1.74 2.2-4.88.22-6.66c-2.18-1.96-4.64-1.16-6.6.72">
+                                    </path>
+                                    <path fill="#dfdfdf"
+                                        d="M47.29 69.91c-.87-.75-1.95-.25-3.09.98c-.98 1.07-1.43 2.73-.45 3.4c.98.67 2.28-.31 3.09-1.3c.81-.98 1.43-2.23.45-3.08m2.82-5.82c-.9 1.03-2.21 2.73-.98 3.94c1.21 1.19 3.04-.32 3.84-1.22c.79-.9 9.84-11.52 21.29-22.96c11.18-11.18 18.7-18.25 19.86-19.49c.98-1.05.89-2.72.03-3.25c-1.02-.63-2.15-.23-3.55 1.17S79.7 32.37 70.74 41.43S51.23 62.8 50.11 64.09">
+                                    </path>
+                                    <path fill="#3b5361"
+                                        d="M105.47 41.61s-.55-3.72-2.86-2.26c-2.48 1.57-.63 5.83-.63 5.83s.93-.87 1.92-1.91c.82-.85 1.3-1.35 1.57-1.66m-8.87 8.75s-.39-4.77-3.01-2.81c-2.09 1.57-.67 6.26-.67 6.26s1.2-1.09 1.98-1.83c.79-.75 1.7-1.62 1.7-1.62m-8.46 8.02s-.3-3.96-2.65-2.65s-.78 5.99-.78 5.99s1.04-.94 1.74-1.64s1.69-1.7 1.69-1.7m-9.58 9.26s-.18-3.94-2.49-2.89c-2.4 1.09-.96 6.14-.96 6.14s1.17-1.09 1.82-1.7c.66-.6 1.63-1.55 1.63-1.55">
+                                    </path>
+                                </svg></main>
+                        </div>
+                        <div class="flex justify-between items-center gap-2">
+                            <div class="flex items-center gap-2"><input type="checkbox"
+                                    class="relative peer shrink-0 w-5 h-5 border-2 border-blue-500 rounded-lg bg-white checked:bg-blue-800 checked:border-0 focus:outline-none focus:ring-offset-0 focus:ring-2 focus:ring-blue-100 disabled:border-steel-400 disabled:bg-steel-400"><span>Airline
+                                    name</span></div>
+                            <main class="bg-orange-100 rounded-full p-2"><svg xmlns="http://www.w3.org/2000/svg"
+                                    width="1em" height="1em" viewBox="0 0 128 128">
+                                    <path fill="#006ca8"
+                                        d="M37.08 80.79S9.61 74.92 9.14 75.01c-.47.09-5.97 5.59-5.78 6.44C3.55 82.31 27.61 95 27.61 95l6.91-7.29zm-3.79 19.42s13.35 23.11 13.92 23.11s6.72-4.74 6.72-5.21c0-.47-5.68-28.03-5.68-28.03l-9.76 1.14z">
+                                    </path>
+                                    <path fill="#9a9a9a"
+                                        d="M22.79 25.78s-1.92 2.17-2.33 2.94s-.48 2.09.4 2.56c.88.47 1.95.15 2.48-.44s3.14-3.8 3.14-3.8s-3.46-1.44-3.69-1.26m14.02 7.85s-1.55 1.84-2.18 2.68c-.61.81-.6 2.08.25 2.68c1.22.86 2.43-.1 3.09-.81c.61-.66 2.33-2.68 2.33-2.68zm13.27 7.14s-2.03 2.03-2.63 2.84c-.67.89-.82 2.19.1 2.89c1.01.76 2.13.41 3.04-.41c.91-.81 2.94-3.04 2.94-3.04zm35.03 34.28s-2.38 1.65-2.97 2.29c-.58.64-.97 1.92-.22 2.59c.74.67 1.86.61 2.52.17c.66-.44 3.96-2.93 3.96-2.93s-3.02-2.23-3.29-2.12m8.02 12.56s-1.97 1.38-2.79 2.03c-.8.63-1.11 1.86-.44 2.66c.95 1.14 2.38.53 3.19.01c.76-.48 2.94-2 2.94-2zm7.34 12.84s-2.45 1.48-3.24 2.12c-.86.71-1.32 1.93-.59 2.83c.8.98 1.97.9 3.05.34s3.58-2.24 3.58-2.24zm-43.2-76.72s-.35-2.33 1.54-4.96c1.89-2.63 8.16-8.77 9.13-8.82s3.29 1.18 5.62 3.47c2.22 2.17 3.25 4.96 3.29 5.62c.04.66-4.34 5-5.48 6.05c-1.14 1.05-4.21 4.47-4.21 4.47z">
+                                    </path>
+                                    <path fill="#c8c8c8"
+                                        d="M60.13 24.08s7.68-9.39 9.74-7.98c2.08 1.42-6.23 9.48-6.23 9.48z"></path>
+                                    <path fill="#848484"
+                                        d="M58.37 23.48s4.35-4.41 4.83-5.11c.48-.7.04-1.75-.35-2.33c-.39-.57-.99-.79-.99-.79s-3.07 2.75-4.12 5.16c-.82 1.87-.68 2.82-.68 2.82zm7.49 2.27s1.65-1.71 2.48-2.39c.75-.61 1.86-.55 2.52-.16c.85.5 1.05 1.36 1.05 1.36l-3.06 3.25z">
+                                    </path>
+                                    <path fill="#9a9a9a"
+                                        d="M101.96 59.45s2.51-2.92 3.97-4.38c1.51-1.51 3.97-3.56 4.47-3.52c.5.05 2.71 1.39 4.79 3.52c2.37 2.42 3.84 5.43 3.88 5.71c.05.27-4.38 4.7-6.35 6.39c-1.41 1.21-10.18 4.79-10.18 4.34c.02-.46-.58-12.06-.58-12.06">
+                                    </path>
+                                    <path fill="#c8c8c8"
+                                        d="M103.41 65.1s7.26-7.96 8.92-6.47c1.66 1.49-8.31 10.45-8.31 10.45z"></path>
+                                    <path fill="#848484"
+                                        d="m102.87 63.1l2.65-2.92c.94-1.03.88-2.41.6-3.01c-.36-.77-1.29-.95-1.29-.95l-3.45 3.67zm2.51 6.61s4.16-3.75 4.87-4.34c.71-.59 1.86-1.01 2.77-.38c.68.47.98 1.04.98 1.04s-3.2 3.48-5.13 4.71c-1.21.77-4.07 1.21-4.07 1.21z">
+                                    </path>
+                                    <path fill="#006ca8"
+                                        d="M11.65 8.92c-.98.08-7.19 7.42-7.41 7.96s0 1.42 1.53 2.18c1.52.76 44.47 23.44 45.13 23.98c.65.55 9.16 10.03 9.16 10.03s21.04-14.5 20.93-14.93c-.11-.44-.76-9.48-.76-9.48S13.07 8.81 11.65 8.92m61.38 56.91s12.86 11.66 13.95 13.08c1.09 1.42 23.33 41.97 23.66 42.62c.33.65 1.74 1.2 2.51.44s6.54-5.78 6.65-6.98c.11-1.2-21.37-70.42-21.37-70.42l-16.57 6z">
+                                    </path>
+                                    <path fill="#014eac"
+                                        d="M66.81 43.26s-10.14-9.81-10.9-10.36c-.76-.54-48.29-20.16-48.29-20.16l-1.95 2.15s48.18 20.35 48.95 20.89c.77.54 10.2 10.2 10.2 10.2zM82.4 60.45s11.17 13.72 11.84 14.61s20.26 45.65 20.26 45.65l1.95-1.82S96.88 73.22 96.53 72.6c-.35-.62-13.36-16.7-13.36-16.7z">
+                                    </path>
+                                    <path fill="#9a9a9a"
+                                        d="M24.22 98.4s-4.18 5.98-4.18 6.45c0 .48 2.8 3.54 3.12 3.54s6.4-4.34 6.4-4.34l-.85-4.34z">
+                                    </path>
+                                    <path fill="#c8c8c8"
+                                        d="M24.22 98.4s8.28-13.93 17.15-26.38c9.11-12.79 16.5-20.16 27.86-32.52C83.48 24 92.97 15.22 101.75 9.31c7.28-4.9 17.68-8.22 21.39-4.91c4.07 3.64-.42 15.12-4.99 21.66c-10.37 14.84-19.27 21.9-29.48 31.81c-10.07 9.77-18.58 18.25-29.12 26.16c-7.1 5.33-30 20.04-30 20.04z">
+                                    </path>
+                                    <path fill="#3b5361"
+                                        d="m103.92 11.05l2.77 2.92s4.64-4.47 8.11-1.14c3.56 3.41-1.35 8.25-1.35 8.25l2.99 3.34s8.11-9.18 1.49-15.15c-5.76-5.2-14.01 1.78-14.01 1.78">
+                                    </path>
+                                    <path fill="#9a9a9a"
+                                        d="M47.84 74c-1.29 1.24-16.53 19.28-17.38 20.35c-1.09 1.38-1.59 3.04-.36 4.06c1.23 1.01 2.56.01 3.77-.8c1.52-1.01 19.18-16.59 20.35-17.67c1.88-1.74 2.2-4.88.22-6.66c-2.18-1.96-4.64-1.16-6.6.72">
+                                    </path>
+                                    <path fill="#dfdfdf"
+                                        d="M47.29 69.91c-.87-.75-1.95-.25-3.09.98c-.98 1.07-1.43 2.73-.45 3.4c.98.67 2.28-.31 3.09-1.3c.81-.98 1.43-2.23.45-3.08m2.82-5.82c-.9 1.03-2.21 2.73-.98 3.94c1.21 1.19 3.04-.32 3.84-1.22c.79-.9 9.84-11.52 21.29-22.96c11.18-11.18 18.7-18.25 19.86-19.49c.98-1.05.89-2.72.03-3.25c-1.02-.63-2.15-.23-3.55 1.17S79.7 32.37 70.74 41.43S51.23 62.8 50.11 64.09">
+                                    </path>
+                                    <path fill="#3b5361"
+                                        d="M105.47 41.61s-.55-3.72-2.86-2.26c-2.48 1.57-.63 5.83-.63 5.83s.93-.87 1.92-1.91c.82-.85 1.3-1.35 1.57-1.66m-8.87 8.75s-.39-4.77-3.01-2.81c-2.09 1.57-.67 6.26-.67 6.26s1.2-1.09 1.98-1.83c.79-.75 1.7-1.62 1.7-1.62m-8.46 8.02s-.3-3.96-2.65-2.65s-.78 5.99-.78 5.99s1.04-.94 1.74-1.64s1.69-1.7 1.69-1.7m-9.58 9.26s-.18-3.94-2.49-2.89c-2.4 1.09-.96 6.14-.96 6.14s1.17-1.09 1.82-1.7c.66-.6 1.63-1.55 1.63-1.55">
+                                    </path>
+                                </svg></main>
+                        </div>
+                        <div class="flex justify-between items-center gap-2">
+                            <div class="flex items-center gap-2"><input type="checkbox"
+                                    class="relative peer shrink-0 w-5 h-5 border-2 border-blue-500 rounded-lg bg-white checked:bg-blue-800 checked:border-0 focus:outline-none focus:ring-offset-0 focus:ring-2 focus:ring-blue-100 disabled:border-steel-400 disabled:bg-steel-400"><span>Airline
+                                    name</span></div>
+                            <main class="bg-orange-100 rounded-full p-2"><svg xmlns="http://www.w3.org/2000/svg"
+                                    width="1em" height="1em" viewBox="0 0 128 128">
+                                    <path fill="#006ca8"
+                                        d="M37.08 80.79S9.61 74.92 9.14 75.01c-.47.09-5.97 5.59-5.78 6.44C3.55 82.31 27.61 95 27.61 95l6.91-7.29zm-3.79 19.42s13.35 23.11 13.92 23.11s6.72-4.74 6.72-5.21c0-.47-5.68-28.03-5.68-28.03l-9.76 1.14z">
+                                    </path>
+                                    <path fill="#9a9a9a"
+                                        d="M22.79 25.78s-1.92 2.17-2.33 2.94s-.48 2.09.4 2.56c.88.47 1.95.15 2.48-.44s3.14-3.8 3.14-3.8s-3.46-1.44-3.69-1.26m14.02 7.85s-1.55 1.84-2.18 2.68c-.61.81-.6 2.08.25 2.68c1.22.86 2.43-.1 3.09-.81c.61-.66 2.33-2.68 2.33-2.68zm13.27 7.14s-2.03 2.03-2.63 2.84c-.67.89-.82 2.19.1 2.89c1.01.76 2.13.41 3.04-.41c.91-.81 2.94-3.04 2.94-3.04zm35.03 34.28s-2.38 1.65-2.97 2.29c-.58.64-.97 1.92-.22 2.59c.74.67 1.86.61 2.52.17c.66-.44 3.96-2.93 3.96-2.93s-3.02-2.23-3.29-2.12m8.02 12.56s-1.97 1.38-2.79 2.03c-.8.63-1.11 1.86-.44 2.66c.95 1.14 2.38.53 3.19.01c.76-.48 2.94-2 2.94-2zm7.34 12.84s-2.45 1.48-3.24 2.12c-.86.71-1.32 1.93-.59 2.83c.8.98 1.97.9 3.05.34s3.58-2.24 3.58-2.24zm-43.2-76.72s-.35-2.33 1.54-4.96c1.89-2.63 8.16-8.77 9.13-8.82s3.29 1.18 5.62 3.47c2.22 2.17 3.25 4.96 3.29 5.62c.04.66-4.34 5-5.48 6.05c-1.14 1.05-4.21 4.47-4.21 4.47z">
+                                    </path>
+                                    <path fill="#c8c8c8"
+                                        d="M60.13 24.08s7.68-9.39 9.74-7.98c2.08 1.42-6.23 9.48-6.23 9.48z"></path>
+                                    <path fill="#848484"
+                                        d="M58.37 23.48s4.35-4.41 4.83-5.11c.48-.7.04-1.75-.35-2.33c-.39-.57-.99-.79-.99-.79s-3.07 2.75-4.12 5.16c-.82 1.87-.68 2.82-.68 2.82zm7.49 2.27s1.65-1.71 2.48-2.39c.75-.61 1.86-.55 2.52-.16c.85.5 1.05 1.36 1.05 1.36l-3.06 3.25z">
+                                    </path>
+                                    <path fill="#9a9a9a"
+                                        d="M101.96 59.45s2.51-2.92 3.97-4.38c1.51-1.51 3.97-3.56 4.47-3.52c.5.05 2.71 1.39 4.79 3.52c2.37 2.42 3.84 5.43 3.88 5.71c.05.27-4.38 4.7-6.35 6.39c-1.41 1.21-10.18 4.79-10.18 4.34c.02-.46-.58-12.06-.58-12.06">
+                                    </path>
+                                    <path fill="#c8c8c8"
+                                        d="M103.41 65.1s7.26-7.96 8.92-6.47c1.66 1.49-8.31 10.45-8.31 10.45z"></path>
+                                    <path fill="#848484"
+                                        d="m102.87 63.1l2.65-2.92c.94-1.03.88-2.41.6-3.01c-.36-.77-1.29-.95-1.29-.95l-3.45 3.67zm2.51 6.61s4.16-3.75 4.87-4.34c.71-.59 1.86-1.01 2.77-.38c.68.47.98 1.04.98 1.04s-3.2 3.48-5.13 4.71c-1.21.77-4.07 1.21-4.07 1.21z">
+                                    </path>
+                                    <path fill="#006ca8"
+                                        d="M11.65 8.92c-.98.08-7.19 7.42-7.41 7.96s0 1.42 1.53 2.18c1.52.76 44.47 23.44 45.13 23.98c.65.55 9.16 10.03 9.16 10.03s21.04-14.5 20.93-14.93c-.11-.44-.76-9.48-.76-9.48S13.07 8.81 11.65 8.92m61.38 56.91s12.86 11.66 13.95 13.08c1.09 1.42 23.33 41.97 23.66 42.62c.33.65 1.74 1.2 2.51.44s6.54-5.78 6.65-6.98c.11-1.2-21.37-70.42-21.37-70.42l-16.57 6z">
+                                    </path>
+                                    <path fill="#014eac"
+                                        d="M66.81 43.26s-10.14-9.81-10.9-10.36c-.76-.54-48.29-20.16-48.29-20.16l-1.95 2.15s48.18 20.35 48.95 20.89c.77.54 10.2 10.2 10.2 10.2zM82.4 60.45s11.17 13.72 11.84 14.61s20.26 45.65 20.26 45.65l1.95-1.82S96.88 73.22 96.53 72.6c-.35-.62-13.36-16.7-13.36-16.7z">
+                                    </path>
+                                    <path fill="#9a9a9a"
+                                        d="M24.22 98.4s-4.18 5.98-4.18 6.45c0 .48 2.8 3.54 3.12 3.54s6.4-4.34 6.4-4.34l-.85-4.34z">
+                                    </path>
+                                    <path fill="#c8c8c8"
+                                        d="M24.22 98.4s8.28-13.93 17.15-26.38c9.11-12.79 16.5-20.16 27.86-32.52C83.48 24 92.97 15.22 101.75 9.31c7.28-4.9 17.68-8.22 21.39-4.91c4.07 3.64-.42 15.12-4.99 21.66c-10.37 14.84-19.27 21.9-29.48 31.81c-10.07 9.77-18.58 18.25-29.12 26.16c-7.1 5.33-30 20.04-30 20.04z">
+                                    </path>
+                                    <path fill="#3b5361"
+                                        d="m103.92 11.05l2.77 2.92s4.64-4.47 8.11-1.14c3.56 3.41-1.35 8.25-1.35 8.25l2.99 3.34s8.11-9.18 1.49-15.15c-5.76-5.2-14.01 1.78-14.01 1.78">
+                                    </path>
+                                    <path fill="#9a9a9a"
+                                        d="M47.84 74c-1.29 1.24-16.53 19.28-17.38 20.35c-1.09 1.38-1.59 3.04-.36 4.06c1.23 1.01 2.56.01 3.77-.8c1.52-1.01 19.18-16.59 20.35-17.67c1.88-1.74 2.2-4.88.22-6.66c-2.18-1.96-4.64-1.16-6.6.72">
+                                    </path>
+                                    <path fill="#dfdfdf"
+                                        d="M47.29 69.91c-.87-.75-1.95-.25-3.09.98c-.98 1.07-1.43 2.73-.45 3.4c.98.67 2.28-.31 3.09-1.3c.81-.98 1.43-2.23.45-3.08m2.82-5.82c-.9 1.03-2.21 2.73-.98 3.94c1.21 1.19 3.04-.32 3.84-1.22c.79-.9 9.84-11.52 21.29-22.96c11.18-11.18 18.7-18.25 19.86-19.49c.98-1.05.89-2.72.03-3.25c-1.02-.63-2.15-.23-3.55 1.17S79.7 32.37 70.74 41.43S51.23 62.8 50.11 64.09">
+                                    </path>
+                                    <path fill="#3b5361"
+                                        d="M105.47 41.61s-.55-3.72-2.86-2.26c-2.48 1.57-.63 5.83-.63 5.83s.93-.87 1.92-1.91c.82-.85 1.3-1.35 1.57-1.66m-8.87 8.75s-.39-4.77-3.01-2.81c-2.09 1.57-.67 6.26-.67 6.26s1.2-1.09 1.98-1.83c.79-.75 1.7-1.62 1.7-1.62m-8.46 8.02s-.3-3.96-2.65-2.65s-.78 5.99-.78 5.99s1.04-.94 1.74-1.64s1.69-1.7 1.69-1.7m-9.58 9.26s-.18-3.94-2.49-2.89c-2.4 1.09-.96 6.14-.96 6.14s1.17-1.09 1.82-1.7c.66-.6 1.63-1.55 1.63-1.55">
+                                    </path>
+                                </svg></main>
+                        </div>
+                        <div class="flex justify-between items-center gap-2">
+                            <div class="flex items-center gap-2"><input type="checkbox"
+                                    class="relative peer shrink-0 w-5 h-5 border-2 border-blue-500 rounded-lg bg-white checked:bg-blue-800 checked:border-0 focus:outline-none focus:ring-offset-0 focus:ring-2 focus:ring-blue-100 disabled:border-steel-400 disabled:bg-steel-400"><span>Airline
+                                    name</span></div>
+                            <main class="bg-orange-100 rounded-full p-2"><svg xmlns="http://www.w3.org/2000/svg"
+                                    width="1em" height="1em" viewBox="0 0 128 128">
+                                    <path fill="#006ca8"
+                                        d="M37.08 80.79S9.61 74.92 9.14 75.01c-.47.09-5.97 5.59-5.78 6.44C3.55 82.31 27.61 95 27.61 95l6.91-7.29zm-3.79 19.42s13.35 23.11 13.92 23.11s6.72-4.74 6.72-5.21c0-.47-5.68-28.03-5.68-28.03l-9.76 1.14z">
+                                    </path>
+                                    <path fill="#9a9a9a"
+                                        d="M22.79 25.78s-1.92 2.17-2.33 2.94s-.48 2.09.4 2.56c.88.47 1.95.15 2.48-.44s3.14-3.8 3.14-3.8s-3.46-1.44-3.69-1.26m14.02 7.85s-1.55 1.84-2.18 2.68c-.61.81-.6 2.08.25 2.68c1.22.86 2.43-.1 3.09-.81c.61-.66 2.33-2.68 2.33-2.68zm13.27 7.14s-2.03 2.03-2.63 2.84c-.67.89-.82 2.19.1 2.89c1.01.76 2.13.41 3.04-.41c.91-.81 2.94-3.04 2.94-3.04zm35.03 34.28s-2.38 1.65-2.97 2.29c-.58.64-.97 1.92-.22 2.59c.74.67 1.86.61 2.52.17c.66-.44 3.96-2.93 3.96-2.93s-3.02-2.23-3.29-2.12m8.02 12.56s-1.97 1.38-2.79 2.03c-.8.63-1.11 1.86-.44 2.66c.95 1.14 2.38.53 3.19.01c.76-.48 2.94-2 2.94-2zm7.34 12.84s-2.45 1.48-3.24 2.12c-.86.71-1.32 1.93-.59 2.83c.8.98 1.97.9 3.05.34s3.58-2.24 3.58-2.24zm-43.2-76.72s-.35-2.33 1.54-4.96c1.89-2.63 8.16-8.77 9.13-8.82s3.29 1.18 5.62 3.47c2.22 2.17 3.25 4.96 3.29 5.62c.04.66-4.34 5-5.48 6.05c-1.14 1.05-4.21 4.47-4.21 4.47z">
+                                    </path>
+                                    <path fill="#c8c8c8"
+                                        d="M60.13 24.08s7.68-9.39 9.74-7.98c2.08 1.42-6.23 9.48-6.23 9.48z"></path>
+                                    <path fill="#848484"
+                                        d="M58.37 23.48s4.35-4.41 4.83-5.11c.48-.7.04-1.75-.35-2.33c-.39-.57-.99-.79-.99-.79s-3.07 2.75-4.12 5.16c-.82 1.87-.68 2.82-.68 2.82zm7.49 2.27s1.65-1.71 2.48-2.39c.75-.61 1.86-.55 2.52-.16c.85.5 1.05 1.36 1.05 1.36l-3.06 3.25z">
+                                    </path>
+                                    <path fill="#9a9a9a"
+                                        d="M101.96 59.45s2.51-2.92 3.97-4.38c1.51-1.51 3.97-3.56 4.47-3.52c.5.05 2.71 1.39 4.79 3.52c2.37 2.42 3.84 5.43 3.88 5.71c.05.27-4.38 4.7-6.35 6.39c-1.41 1.21-10.18 4.79-10.18 4.34c.02-.46-.58-12.06-.58-12.06">
+                                    </path>
+                                    <path fill="#c8c8c8"
+                                        d="M103.41 65.1s7.26-7.96 8.92-6.47c1.66 1.49-8.31 10.45-8.31 10.45z"></path>
+                                    <path fill="#848484"
+                                        d="m102.87 63.1l2.65-2.92c.94-1.03.88-2.41.6-3.01c-.36-.77-1.29-.95-1.29-.95l-3.45 3.67zm2.51 6.61s4.16-3.75 4.87-4.34c.71-.59 1.86-1.01 2.77-.38c.68.47.98 1.04.98 1.04s-3.2 3.48-5.13 4.71c-1.21.77-4.07 1.21-4.07 1.21z">
+                                    </path>
+                                    <path fill="#006ca8"
+                                        d="M11.65 8.92c-.98.08-7.19 7.42-7.41 7.96s0 1.42 1.53 2.18c1.52.76 44.47 23.44 45.13 23.98c.65.55 9.16 10.03 9.16 10.03s21.04-14.5 20.93-14.93c-.11-.44-.76-9.48-.76-9.48S13.07 8.81 11.65 8.92m61.38 56.91s12.86 11.66 13.95 13.08c1.09 1.42 23.33 41.97 23.66 42.62c.33.65 1.74 1.2 2.51.44s6.54-5.78 6.65-6.98c.11-1.2-21.37-70.42-21.37-70.42l-16.57 6z">
+                                    </path>
+                                    <path fill="#014eac"
+                                        d="M66.81 43.26s-10.14-9.81-10.9-10.36c-.76-.54-48.29-20.16-48.29-20.16l-1.95 2.15s48.18 20.35 48.95 20.89c.77.54 10.2 10.2 10.2 10.2zM82.4 60.45s11.17 13.72 11.84 14.61s20.26 45.65 20.26 45.65l1.95-1.82S96.88 73.22 96.53 72.6c-.35-.62-13.36-16.7-13.36-16.7z">
+                                    </path>
+                                    <path fill="#9a9a9a"
+                                        d="M24.22 98.4s-4.18 5.98-4.18 6.45c0 .48 2.8 3.54 3.12 3.54s6.4-4.34 6.4-4.34l-.85-4.34z">
+                                    </path>
+                                    <path fill="#c8c8c8"
+                                        d="M24.22 98.4s8.28-13.93 17.15-26.38c9.11-12.79 16.5-20.16 27.86-32.52C83.48 24 92.97 15.22 101.75 9.31c7.28-4.9 17.68-8.22 21.39-4.91c4.07 3.64-.42 15.12-4.99 21.66c-10.37 14.84-19.27 21.9-29.48 31.81c-10.07 9.77-18.58 18.25-29.12 26.16c-7.1 5.33-30 20.04-30 20.04z">
+                                    </path>
+                                    <path fill="#3b5361"
+                                        d="m103.92 11.05l2.77 2.92s4.64-4.47 8.11-1.14c3.56 3.41-1.35 8.25-1.35 8.25l2.99 3.34s8.11-9.18 1.49-15.15c-5.76-5.2-14.01 1.78-14.01 1.78">
+                                    </path>
+                                    <path fill="#9a9a9a"
+                                        d="M47.84 74c-1.29 1.24-16.53 19.28-17.38 20.35c-1.09 1.38-1.59 3.04-.36 4.06c1.23 1.01 2.56.01 3.77-.8c1.52-1.01 19.18-16.59 20.35-17.67c1.88-1.74 2.2-4.88.22-6.66c-2.18-1.96-4.64-1.16-6.6.72">
+                                    </path>
+                                    <path fill="#dfdfdf"
+                                        d="M47.29 69.91c-.87-.75-1.95-.25-3.09.98c-.98 1.07-1.43 2.73-.45 3.4c.98.67 2.28-.31 3.09-1.3c.81-.98 1.43-2.23.45-3.08m2.82-5.82c-.9 1.03-2.21 2.73-.98 3.94c1.21 1.19 3.04-.32 3.84-1.22c.79-.9 9.84-11.52 21.29-22.96c11.18-11.18 18.7-18.25 19.86-19.49c.98-1.05.89-2.72.03-3.25c-1.02-.63-2.15-.23-3.55 1.17S79.7 32.37 70.74 41.43S51.23 62.8 50.11 64.09">
+                                    </path>
+                                    <path fill="#3b5361"
+                                        d="M105.47 41.61s-.55-3.72-2.86-2.26c-2.48 1.57-.63 5.83-.63 5.83s.93-.87 1.92-1.91c.82-.85 1.3-1.35 1.57-1.66m-8.87 8.75s-.39-4.77-3.01-2.81c-2.09 1.57-.67 6.26-.67 6.26s1.2-1.09 1.98-1.83c.79-.75 1.7-1.62 1.7-1.62m-8.46 8.02s-.3-3.96-2.65-2.65s-.78 5.99-.78 5.99s1.04-.94 1.74-1.64s1.69-1.7 1.69-1.7m-9.58 9.26s-.18-3.94-2.49-2.89c-2.4 1.09-.96 6.14-.96 6.14s1.17-1.09 1.82-1.7c.66-.6 1.63-1.55 1.63-1.55">
+                                    </path>
+                                </svg></main>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="bg-white sticky w-full bottom-0 z-50 shadow px-2 py-3">
+                <button class="bg-[#307FF8] text-white w-full py-3 rounded-lg">
+                    Apply filters
+                </button>
+            </div>
+        </main>
+    </div>
+    <!-- dilaog end -->
+
     <footer class="w-full">
 
-		<div class=" bg-crs-footer px-20 py-10 mobile:px-7">
-			<div class="flex px-[4.5rem] mobile:px-0 justify-between mobile:flex-col  lg:max-w-[105rem] lg:mx-auto">
-				<div>
-					<img src="/images/UpdateMain/logo.svg" alt="search">
-					<p class="text-lg leading-[1.875rem] mt-2 text-Black/2">
-						Where the Journey Begins and Memories are Made.
-					</p>
-					<div class="mt-10 mx-2 flex gap-2">
-						<div class="bg-white rounded-[0.5rem] p-1 cursor-pointer">
-							<img class="w-12 h-12" src="/icons/search/Instagram.svg" alt="Instagram" />
-						</div>
-						<div class="bg-white rounded-[0.5rem] p-1 cursor-pointer">
-							<img class="w-12 h-12" src="/icons/search/Telegram.svg" alt="Telegram" />
-						</div>
-						<div class="bg-white rounded-[0.5rem] p-1 cursor-pointer">
-							<img class="w-12 h-12" src="/icons/search/Whatsapp.svg" alt="Whatsapp" />
-						</div>
-					</div>
-					<h2 class="font-bold text-crs-first mt-6 px-2">CRSTRIP<span class="text-[#2C160B]">.COM</span></h2>
-				</div>
-				<div class="flex gap-[5.5rem] pt-4 mobile:my-6 mobile:justify-start justify-center">
-					<div>
-						<h4 class="text-2xl leading-[2.5rem] font-bold text-[#2C160B]">Menu</h4>
-						<ul class="mt-6 space-y-4 text-[#5B4A42] text-xl leading-[1.875rem]">
-							<li>Services</li>
-							<li>Support</li>
-							<li>About us</li>
-							<li>Contact us</li>
-						</ul>
-					</div>
-					<div>
-						<h4 class="text-2xl leading-[2.5rem] font-bold text-[#2C160B]">Contact Info</h4>
-						<ul class="mt-6 space-y-4 text-[#5B4A42] text-xl leading-[1.875rem]">
+        <div class=" bg-crs-footer px-20 py-10 mobile:px-7">
+            <div class="flex px-[4.5rem] mobile:px-0 justify-between mobile:flex-col  lg:max-w-[105rem] lg:mx-auto">
+                <div>
+                    <img src="/images/UpdateMain/logo.svg" alt="search">
+                    <p class="text-lg leading-[1.875rem] mt-2 text-Black/2">
+                        Where the Journey Begins and Memories are Made.
+                    </p>
+                    <div class="mt-10 mx-2 flex gap-2">
+                        <div class="bg-white rounded-[0.5rem] p-1 cursor-pointer">
+                            <img class="w-12 h-12" src="/icons/search/Instagram.svg" alt="Instagram" />
+                        </div>
+                        <div class="bg-white rounded-[0.5rem] p-1 cursor-pointer">
+                            <img class="w-12 h-12" src="/icons/search/Telegram.svg" alt="Telegram" />
+                        </div>
+                        <div class="bg-white rounded-[0.5rem] p-1 cursor-pointer">
+                            <img class="w-12 h-12" src="/icons/search/Whatsapp.svg" alt="Whatsapp" />
+                        </div>
+                    </div>
+                    <h2 class="font-bold text-crs-first mt-6 px-2">CRSTRIP<span class="text-[#2C160B]">.COM</span></h2>
+                </div>
+                <div class="flex gap-[5.5rem] pt-4 mobile:my-6 mobile:justify-start justify-center">
+                    <div>
+                        <h4 class="text-2xl leading-[2.5rem] font-bold text-[#2C160B]">Menu</h4>
+                        <ul class="mt-6 space-y-4 text-[#5B4A42] text-xl leading-[1.875rem]">
+                            <li>Services</li>
+                            <li>Support</li>
+                            <li>About us</li>
+                            <li>Contact us</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-2xl leading-[2.5rem] font-bold text-[#2C160B]">Contact Info</h4>
+                        <ul class="mt-6 space-y-4 text-[#5B4A42] text-xl leading-[1.875rem]">
 
-							<li class="flex items-center mobile:justify-center gap-2">
-								<img class="w-6 h-6" src="/icons/UpdateMain/sms.svg" alt="call" /><span
-									dir="ltr">crstrip.com@gmail.com</span>
-							</li>
-							<li class="flex items-center mobile:justify-center gap-2">
-								<img class="w-6 h-6" src="/icons/UpdateMain/call.svg" alt="call" /><span
-									dir="ltr">+9647815639914</span>
-							</li>
-							<li class="flex items-center mobile:justify-center gap-2">
-								<img class="w-6 h-6" src="/icons/UpdateMain/location.svg" alt="location" /><span
-									dir="ltr">Najaf - Iraq</span>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div dir="ltr" class="px-6 bg-white h-[4.5rem] flex items-center justify-center gap-2 text-sm text-[#2C160B]">
-			<img class="w-6 h-6" src="/icons/search/rights.svg" alt="rights" /><span class="pt-1.5">
-				All rights to these services (website and mobile application) are reserved and owned by CRS Trip</span>
-		</div>
-	</footer>
+                            <li class="flex items-center gap-2">
+                                <img class="w-6 h-6" src="/icons/UpdateMain/sms.svg" alt="call" /><span
+                                    dir="ltr">crstrip.com@gmail.com</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <img class="w-6 h-6" src="/icons/UpdateMain/call.svg" alt="call" /><span
+                                    dir="ltr">+9647815639914</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <img class="w-6 h-6" src="/icons/UpdateMain/location.svg" alt="location" /><span
+                                    dir="ltr">Najaf - Iraq</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div dir="ltr" class="px-6 bg-white h-[4.5rem] flex items-center justify-center gap-2 text-sm text-[#2C160B]">
+            <img class="w-6 h-6" src="/icons/search/rights.svg" alt="rights" /><span class="pt-1.5">
+                All rights to these services (website and mobile application) are reserved and owned by CRS Trip</span>
+        </div>
+    </footer>
 </body>
 
 </html>
